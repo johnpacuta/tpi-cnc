@@ -121,7 +121,7 @@ export default async function ThreeDPrintingPage({ params, searchParams }: Props
           </div>
         </section>
 
-        {/* Contact Form Section - Same as employee-retention page */}
+        {/* Contact Form Section */}
         <section className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-2 text-center">Request a Quote</h2>
           <p className="text-gray-600 text-center mb-8">Let's discuss your manufacturing needs and develop a custom solution</p>

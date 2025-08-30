@@ -32,7 +32,6 @@ const primaryNav: (NavItem | NavGroup)[] = [
       { label: "Training", href: "/training" },
       { label: "Consulting", href: "/consulting" },
       { label: "Maintenance", href: "/maintenance" },
-      { label: "Employee Retention & Change Management", href: "/employee-retention" },
     ]
   },
   {

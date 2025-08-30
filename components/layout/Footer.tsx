@@ -182,11 +182,6 @@ export function Footer() {
             
             <div className="flex items-center gap-4">
               <span>©2024 TPI CNC</span>
-              <span>•</span>
-              <span>powered by <a href="https://www.sphoun.ca" className="hover:text-accent transition-colors duration-200">
-                <span className="text-brand-blue">S</span>
-                <span className="text-white">phoun</span>
-              </a></span>
             </div>
           </div>
         </div>
