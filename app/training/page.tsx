@@ -14,92 +14,92 @@ type FormErrors = {
   [K in keyof ContactFormData]?: string[];
 };
 
-export default function Training() {
-    const programs: ProgramDetailData[] = [
-        {
-            title: "CNC Operator Training",
+const programs: ProgramDetailData[] = [
+    {
+        title: "CNC Operator Training",
+        duration: "4 weeks",
+        description: "Training for CNC machine operation, programming, and maintenance",
+        fullDescription: `Our CNC Operator Training program is designed to provide participants with knowledge and hands-on experience in CNC machine operation. This intensive 4-week program covers all essential aspects of CNC operations, from basic principles to advanced techniques.`,
+        imageUrl: "/images/teddy.jpg",
+        curriculum: [
+            "Introduction to CNC Technology",
+            "Machine Setup and Operation",
+            "Programming Fundamentals",
+            "Tool Selection and Management",
+            "Quality Control and Inspection",
+            "Safety Procedures and Best Practices"
+        ],
+        outcomes: [
+            "Proficiency in CNC machine operation",
+            "Understanding of G-code programming",
+            "Ability to perform basic maintenance",
+            "Knowledge of safety protocols",
+            "Quality control expertise"
+        ],
+        schedule: {
             duration: "4 weeks",
-            description: "Training for CNC machine operation, programming, and maintenance",
-            fullDescription: `Our CNC Operator Training program is designed to provide participants with knowledge and hands-on experience in CNC machine operation. This intensive 4-week program covers all essential aspects of CNC operations, from basic principles to advanced techniques.`,
-            imageUrl: "/images/teddy.jpg",
-            curriculum: [
-                "Introduction to CNC Technology",
-                "Machine Setup and Operation",
-                "Programming Fundamentals",
-                "Tool Selection and Management",
-                "Quality Control and Inspection",
-                "Safety Procedures and Best Practices"
-            ],
-            outcomes: [
-                "Proficiency in CNC machine operation",
-                "Understanding of G-code programming",
-                "Ability to perform basic maintenance",
-                "Knowledge of safety protocols",
-                "Quality control expertise"
-            ],
-            schedule: {
-                duration: "4 weeks",
-                hoursPerDay: "6-8 hours",
-                format: "Combination of classroom and hands-on training"
-            }
-        },
-        {
-            title: "Advanced Programming",
-            duration: "2 weeks",
-            description: "Advanced CNC programming techniques and optimization strategies",
-            fullDescription: `Our Advanced Programming course is designed for experienced CNC operators looking to enhance their programming skills. This intensive 2-week program focuses on advanced G-code programming, optimization techniques, and complex machining strategies.`,
-            imageUrl: "/images/teddy.jpg",
-            curriculum: [
-                "Advanced G-code Programming",
-                "CAM Software Integration",
-                "Complex Toolpath Strategies",
-                "Program Optimization Techniques",
-                "Multi-axis Programming",
-                "Macro Programming"
-            ],
-            outcomes: [
-                "Master complex G-code programming",
-                "Optimize machining processes",
-                "Create efficient toolpaths",
-                "Implement advanced programming techniques",
-                "Troubleshoot programming issues"
-            ],
-            schedule: {
-                duration: "2 weeks",
-                hoursPerDay: "6-8 hours",
-                format: "Hands-on programming workshops and practical exercises"
-            }
-        },
-        {
-            title: "Quality Control",
-            duration: "1 week",
-            description: "Training in measurement, inspection, and quality control procedures",
-            fullDescription: `Our Quality Control training program provides instruction in measurement techniques, inspection procedures, and quality control methodologies. This focused 1-week program ensures participants can maintain high manufacturing standards.`,
-            imageUrl: "/images/teddy.jpg",
-            curriculum: [
-                "Measurement Techniques",
-                "Inspection Equipment Operation",
-                "Quality Standards and Specifications",
-                "Documentation Procedures",
-                "Statistical Process Control",
-                "Non-conformance Handling"
-            ],
-            outcomes: [
-                "Proficient in measurement techniques",
-                "Understanding of quality standards",
-                "Ability to perform thorough inspections",
-                "Documentation and reporting skills",
-                "Statistical analysis capabilities"
-            ],
-            schedule: {
-                duration: "1 week",
-                hoursPerDay: "6-8 hours",
-                format: "Combination of classroom instruction and hands-on practice"
-            }
+            hoursPerDay: "6-8 hours",
+            format: "Combination of classroom and hands-on training"
         }
-    ];
+    },
+    {
+        title: "Advanced Programming",
+        duration: "2 weeks",
+        description: "Advanced CNC programming techniques and optimization strategies",
+        fullDescription: `Our Advanced Programming course is designed for experienced CNC operators looking to enhance their programming skills. This intensive 2-week program focuses on advanced G-code programming, optimization techniques, and complex machining strategies.`,
+        imageUrl: "/images/teddy.jpg",
+        curriculum: [
+            "Advanced G-code Programming",
+            "CAM Software Integration",
+            "Complex Toolpath Strategies",
+            "Program Optimization Techniques",
+            "Multi-axis Programming",
+            "Macro Programming"
+        ],
+        outcomes: [
+            "Master complex G-code programming",
+            "Optimize machining processes",
+            "Create efficient toolpaths",
+            "Implement advanced programming techniques",
+            "Troubleshoot programming issues"
+        ],
+        schedule: {
+            duration: "2 weeks",
+            hoursPerDay: "6-8 hours",
+            format: "Hands-on programming workshops and practical exercises"
+        }
+    },
+    {
+        title: "Quality Control",
+        duration: "1 week",
+        description: "Training in measurement, inspection, and quality control procedures",
+        fullDescription: `Our Quality Control training program provides instruction in measurement techniques, inspection procedures, and quality control methodologies. This focused 1-week program ensures participants can maintain high manufacturing standards.`,
+        imageUrl: "/images/teddy.jpg",
+        curriculum: [
+            "Measurement Techniques",
+            "Inspection Equipment Operation",
+            "Quality Standards and Specifications",
+            "Documentation Procedures",
+            "Statistical Process Control",
+            "Non-conformance Handling"
+        ],
+        outcomes: [
+            "Proficient in measurement techniques",
+            "Understanding of quality standards",
+            "Ability to perform thorough inspections",
+            "Documentation and reporting skills",
+            "Statistical analysis capabilities"
+        ],
+        schedule: {
+            duration: "1 week",
+            hoursPerDay: "6-8 hours",
+            format: "Combination of classroom instruction and hands-on practice"
+        }
+    }
+];
 
 
+export default function Training() {
     const [errors, setErrors] = useState<FormErrors>({});
 
   const ErrorMessage = ({ fieldName }: { fieldName: keyof FormErrors }) => {
@@ -154,9 +154,15 @@ export default function Training() {
           </>
         }
       >
-        {/* Training Programs Section stays the same */}
-        
-        {/* Contact Form Section */}
+          {/* Inject one or multiple program details */}
+          <section className="mb-16 space-y-12" id="programs">
+              {programs.map((p, i) => (
+                  <ProgramDetail key={i} data={p} />
+              ))}
+          </section>
+
+
+          {/* Contact Form Section */}
         <section className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-2 text-center">Get Started Today</h2>
           <p className="text-gray-600 text-center mb-8">Take the first step towards optimizing your operations</p>
@@ -245,6 +251,9 @@ export default function Training() {
           </form>
         </section>
       </ContentSection>
+
+
+
     </main>
   );
 }
