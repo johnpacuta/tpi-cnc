@@ -9,6 +9,7 @@ export type ServiceDetailData = {
     features?: string[];
     benefits?: string[];
     includes?: string[];
+    duration?: string;
 };
 
 export default function ServiceDetail({ data }: { data: ServiceDetailData }) {
@@ -23,6 +24,13 @@ export default function ServiceDetail({ data }: { data: ServiceDetailData }) {
                         className="object-cover"
                     />
                 </div>
+                <div className="p-6 md:col-span-2">
+                    <div className="flex items-center gap-3 flex-wrap">
+                        <h2 className="text-2xl font-semibold">{data.title}</h2>
+                        <span className="inline-flex items-center rounded-full bg-brand-blue px-3 py-1 text-sm font-medium text-white">
+                            {data.duration}
+                        </span>
+                    </div>
                 <div className="p-6 md:col-span-2">
                     <h2 className="text-2xl font-semibold">{data.title}</h2>
                     <p className="mt-4 text-gray-700">
@@ -72,6 +80,7 @@ export default function ServiceDetail({ data }: { data: ServiceDetailData }) {
                     ) : null}
                 </div>
             </div>
+                </div>
         </article>
     );
 }
