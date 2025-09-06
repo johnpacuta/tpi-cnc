@@ -3,7 +3,6 @@
 import ContentSection from "../components/about/ContentSection";
 import ProgramDetail, { ProgramDetailData } from "@/components/training/ProgramDetail";
 import ServiceDetail, { ServiceDetailData } from "@/components/training/ServiceDetail";
-import Link from "next/link";
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { submitTrainingForm } from '@/app/actions/training';
@@ -235,13 +234,7 @@ export default function Training() {
   return (
     <main className="min-h-screen py-4">
       <ContentSection 
-        title="Our Programs" 
-        subtitle={
-          <>
-            Also see our <Link href="/maintenance" className="text-brand-blue hover:underline">current maintenance packages</Link>
-          </>
-        }
-      >
+        title="Our Programs">
           {/* Inject one or multiple program details */}
           <section className="mb-16 space-y-12" id="programs">
               {programs.map((p, i) => (
