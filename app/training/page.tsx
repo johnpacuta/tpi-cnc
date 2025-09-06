@@ -3,7 +3,6 @@
 import ContentSection from "../components/about/ContentSection";
 import ProgramDetail, { ProgramDetailData } from "@/components/training/ProgramDetail";
 import ServiceDetail, { ServiceDetailData } from "@/components/training/ServiceDetail";
-import Link from "next/link";
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { submitTrainingForm } from '@/app/actions/training';
