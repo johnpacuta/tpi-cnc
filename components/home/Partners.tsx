@@ -1,5 +1,5 @@
-import ContentSection from "../components/about/ContentSection"
-import { 
+import ContentSection from "@/app/components/about/ContentSection";
+import {
   Gauge, 
   Shield, 
   PuzzleIcon, 
@@ -128,9 +128,9 @@ const benefits = [
   }
 ]
 
-export default function PartnersPage() {
+export default function Partners() {
   return (
-    <main className="min-h-screen py-20">
+    <main className="min-h-screen">
       <ContentSection title="Trusted Partners">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Introduction */}
