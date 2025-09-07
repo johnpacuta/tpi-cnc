@@ -7,12 +7,6 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "John Smith",
-    role: "Founder & CEO",
-    image: "/images/teddy.jpg",
-    description: "With over 25 years of experience in CNC machinery, John leads our company with expertise and vision."
-  },
-  {
     name: "Sarah Johnson",
     role: "Technical Director",
     image: "/images/teddy.jpg",
@@ -49,7 +43,7 @@ export default function About() {
               className="w-32 h-32 rounded-full object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Teddy Powell</h3>
-            <p className="text-brand-blue font-medium mb-2">Founder</p>
+            <p className="text-brand-blue font-medium mb-2">Founder & CEO</p>
             <p className="text-gray-400 text-center">
               Teddy has over 25 years of hands-on CNC experience, leading complex repairs,
               installations, and process optimizations for manufacturers across North America.
