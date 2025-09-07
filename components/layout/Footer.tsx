@@ -20,7 +20,7 @@ const servicesLinks = {
   links: [
     { name: 'Maintenance', href: '/services' },
     { name: 'Training', href: '/training' },
-    { name: 'Consulting', href: '/services' },
+    { name: 'Consulting', href: '/consulting' },
   ]
 }
 
