@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 export function Hero() {
   return (
@@ -28,10 +27,10 @@ export function Hero() {
           </h1>
           
           <p className="mt-8 text-xl md:text-2xl text-white max-w-2xl leading-relaxed font-medium drop-shadow-lg">
-            Supporting your Industry from Indsutrial Service and Supply to Integration – We’ve Got You Covered
+            Supporting your Industry from Industrial Service and Supply to Integration – We’ve Got You Covered
           </p>
 
-          {/* <div className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          {<div className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button 
               size="lg" 
               className="
@@ -48,7 +47,8 @@ export function Hero() {
                 text-black hover:text-white
               "
             >
-              Request a Quote →
+                <a href="tel:+12267875064">Call Now →</a>
+
             </Button>
             <Button 
               variant="outline" 
@@ -66,12 +66,12 @@ export function Hero() {
                 whitespace-nowrap
               "
             >
-              Learn More →
+              <a href="/about">Learn More →</a>
             </Button>
-          </div> */}
+          </div> }
 
-          {/* <div className="mt-16 flex gap-8 items-center"> */}
-            {/* Optional: Add trust indicators, stats, or partner logos here */}
+          {/*/<div className="mt-16 flex gap-8 items-center"> */}
+            {/*Optional: Add trust indicators, stats, or partner logos here */}
             {/* Example:
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-primary" />
