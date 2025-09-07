@@ -5,21 +5,6 @@ import { Services } from "@/components/home/Services"
 import ContactForm from "@/components/shared/ContactForm"
 import Partners from "@/components/home/Partners"
 
-
-const partners = [
-  {
-    name: "Renishaw",
-    logo: "/logos/partners/renishaw.png",
-    url: "https://www.renishaw.com/",
-  },
-  {
-    name: "Mazak",
-    logo: "/logos/partners/mazak.svg",
-    url: "https://www.mazakusa.com/",
-  },
-  // Add more partners as needed
-]
-
 export default function Home() {
   return (
     <main>
