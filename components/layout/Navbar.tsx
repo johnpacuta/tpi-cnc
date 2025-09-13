@@ -38,11 +38,11 @@ const primaryNav: (NavItem | NavGroup)[] = [
   {
     label: "Equipment",
     items: [
-      { label: "Special Deals", href: "/deals" },
+     // { label: "Special Deals", href: "/deals" },
       /*{ label: "Spare Parts Requests", href: "/spare-parts" },
       { label: "3D Printing & Part Manufacturing", href: "/services/3d-printing-part-manufacturing" },*/
-      { label: "Equipment Solutions", href: "/equipment" },
-      { label: "RENISHAW", href: "#" },
+      { label: "Solutions", href: "/equipment" },
+      { label: "RENISHAW", href: "/renishaw-products" },
       /*{ label: "MOLDMAK GUNDRILL (Coming Soon)", href: "#" },
       { label: "SPECIALS (Coming Soon)", href: "#" },
       { label: "IN STOCK (Coming Soon)", href: "#" },

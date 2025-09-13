@@ -66,17 +66,10 @@ export default function Equipment() {
     <main className="min-h-screen py-4">
       <ContentSection 
         title="Equipment Solutions" 
-        subtitle="Comprehensive range of industrial equipment and automation solutions"
+        subtitle="Discover our extensive selection of industrial equipment, from CNC machines
+              and robotics to precision measurement tools. We offer both new and used
+              equipment to meet your specific manufacturing needs."
       >
-        <div className="space-y-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Discover our extensive selection of industrial equipment, from CNC machines 
-              and robotics to precision measurement tools. We offer both new and used 
-              equipment to meet your specific manufacturing needs.
-            </p>
-          </div>
-
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {equipmentCategories.map((category, index) => (
               <EquipmentCard 
@@ -85,7 +78,6 @@ export default function Equipment() {
               />
             ))}
           </div>
-        </div>
       </ContentSection>
     </main>
   );
