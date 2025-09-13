@@ -10,7 +10,7 @@ type DetailPageProps = {
     description: string;
     fullDescription: string | undefined;
     imageUrl: string | string[];
-    videoUrl?: string | string[];
+    //videoUrl?: string | string[];
     methodology?: string[];
     benefits?: {
       title: string;
@@ -24,8 +24,7 @@ type DetailPageProps = {
       timeline: string;
       support: string;
     };
-    features?: string[];
-    specifications?: string[];
+    features?: string[]; specifications?: string[];
     curriculum?: string[];
     outcomes?: string[];
     schedule?: {

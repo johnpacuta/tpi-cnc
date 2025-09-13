@@ -28,7 +28,7 @@ const servicesData = {
       implementation: "Rapid prototyping to full production runs"
     }
   },
-  "part-manufacturing": {
+  /*"part-manufacturing": {
     title: "Part Manufacturing",
     duration: "Varies by project",
     description: "Precision manufacturing combining traditional and modern techniques",
@@ -53,7 +53,7 @@ const servicesData = {
       format: "Custom manufacturing solutions",
       implementation: "From single parts to production runs"
     }
-  }
+  }*/
 };
 
 type Props = {
@@ -63,17 +63,12 @@ type Props = {
 
 export default async function ServiceDetailPage({ params }: Props) {
   const resolvedParams = await params;
-  const service = servicesData[resolvedParams.slug as keyof typeof servicesData];
-
-  if (!service) {
-    notFound();
-  }
 
   return (
     <div className="bg-gray-50">
       <div className="mb-[-60px]">
         <DetailPage 
-          data={service} 
+          data={servicesData}
           type="service" 
           withGenericForm={false}
           backButton={{ 
