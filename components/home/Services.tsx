@@ -1,4 +1,4 @@
-import { Settings, Wrench, GraduationCap, LineChart, Cog, Phone, ShieldCheck, Clock } from "lucide-react"
+import { Settings, Wrench, LineChart, Cog, ShieldCheck, Clock } from "lucide-react"
 import { LucideIcon } from "lucide-react"
 
 // Define the service type
@@ -54,22 +54,6 @@ const services: Service[] = [
     gradientTo: "brand-blue/50"
   },
   {
-    icon: GraduationCap,
-    title: "Training",
-    description: "In-house maintenance training tailored to your needs.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: Phone,
-    title: "Consulting",
-    description: "Optimize performance with TPI’s expert consulting.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
     icon: Clock,
     title: "Service Plans",
     description: "Save with discounted Monthly or Yearly maintenance plans.",
@@ -111,7 +95,7 @@ export function Services() {
               
               <h2 className="relative px-12 py-6">
                 <span className="block text-5xl font-bold text-brand-blue tracking-tight sm:text-6xl">
-                  How We Do It
+                  What We Do
                 </span>
                 {/* <span className="mt-4 block text-xl text-gray-600 font-medium tracking-wide">
                   Comprehensive CNC Solutions
@@ -122,7 +106,7 @@ export function Services() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="relative group h-full">
                 <div className={`absolute inset-0 bg-gradient-to-r from-${service.gradientFrom}/10 via-${service.gradientVia}/10 to-${service.gradientTo}/10 rounded-lg transform scale-[1.02] opacity-0 group-hover:opacity-100 transition-all duration-300`} />
