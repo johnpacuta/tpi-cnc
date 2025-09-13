@@ -28,24 +28,25 @@ const primaryNav: (NavItem | NavGroup)[] = [
   {
     label: "Services",
     items: [
-      { label: "Overview", href: "/services" },
-      { label: "Training", href: "/training" },
-      { label: "Consulting", href: "/consulting" },
-      { label: "Maintenance", href: "/maintenance" },
+        { label: "Overview", href: "/services" },
+        { label: "Consulting", href: "/consulting" },
+        { label: "Part Sourcing", href: "/spare-parts" },
+        { label: "Maintenance", href: "/maintenance" },
+        { label: "3D Printing", href: "/3d-printing" },
     ]
   },
   {
     label: "Equipment",
     items: [
-      { label: "Special Deals", href: "/deals" },
-      { label: "Spare Parts Requests", href: "/spare-parts" },
-      { label: "3D Printing & Part Manufacturing", href: "/services/3d-printing-part-manufacturing" },
-      { label: "Equipment", href: "/equipment" },
-      { label: "RENISHAW (Coming Soon)", href: "#" },
-      { label: "MOLDMAK GUNDRILL (Coming Soon)", href: "#" },
+     // { label: "Special Deals", href: "/deals" },
+      /*{ label: "Spare Parts Requests", href: "/spare-parts" },
+      { label: "3D Printing & Part Manufacturing", href: "/services/3d-printing-part-manufacturing" },*/
+      { label: "Solutions", href: "/equipment" },
+      { label: "RENISHAW", href: "/renishaw-products" },
+      /*{ label: "MOLDMAK GUNDRILL (Coming Soon)", href: "#" },
       { label: "SPECIALS (Coming Soon)", href: "#" },
       { label: "IN STOCK (Coming Soon)", href: "#" },
-      { label: "AUTOMATION (Coming Soon)", href: "#" },
+      { label: "AUTOMATION (Coming Soon)", href: "#" },*/
     ]
   },
   {

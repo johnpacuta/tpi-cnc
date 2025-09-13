@@ -60,7 +60,7 @@ export default function Consulting() {
   return (
     <main className="min-h-screen py-4">
       <ContentSection 
-        title="Our Consulting Services" 
+        title="Consulting"
         subtitle="Expert guidance and solutions to optimize your manufacturing operations"
       >
         {/* Consulting Services Section stays the same */}

@@ -9,8 +9,8 @@ import { submitSubscription } from '@/app/actions/subscribe'
 const productsLinks = {
   title: 'Products',
   links: [
-    { name: 'Equipment', href: '/products' },
-    { name: 'Spare Parts', href: '/spare-parts' },
+    /*{ name: 'Equipment', href: '/products' },*/
+    /*{ name: 'Spare Parts', href: '/spare-parts' },*/
     { name: 'Special Deals', href: '/deals' },
   ]
 }
@@ -20,7 +20,7 @@ const servicesLinks = {
   links: [
     { name: 'Maintenance', href: '/services' },
     { name: 'Training', href: '/training' },
-    { name: 'Consulting', href: '/services' },
+    { name: 'Consulting', href: '/consulting' },
   ]
 }
 
@@ -50,7 +50,7 @@ const sitemapLinks = {
   links: [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Partners', href: '/partners' },
+    //{ name: 'Partners', href: '/partners' },
     { name: 'Services', href: '/#services' },
     { name: 'Contact', href: '/contact' },
   ]

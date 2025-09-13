@@ -3,21 +3,7 @@ import { About } from "@/components/home/About"
 import { Services } from "@/components/home/Services"
 // import { FeaturedProducts } from "@/components/home/FeaturedProducts"
 import ContactForm from "@/components/shared/ContactForm"
-
-
-const partners = [
-  {
-    name: "Renishaw",
-    logo: "/logos/partners/renishaw.png",
-    url: "https://www.renishaw.com/",
-  },
-  {
-    name: "Mazak",
-    logo: "/logos/partners/mazak.svg",
-    url: "https://www.mazakusa.com/",
-  },
-  // Add more partners as needed
-]
+import Partners from "@/components/home/Partners"
 
 export default function Home() {
   return (
@@ -25,56 +11,11 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+        <Partners />
       {/* <FeaturedProducts /> */}
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="inline-block relative">
-              {/* Industrial frame for title */}
-              <div className="absolute inset-0 border-2 border-brand-blue/20" />
-              <div className="absolute left-0 top-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
-              <div className="absolute right-0 top-0 w-4 h-4 border-t-2 border-r-2 border-primary" />
-              <div className="absolute left-0 bottom-0 w-4 h-4 border-b-2 border-l-2 border-primary" />
-              <div className="absolute right-0 bottom-0 w-4 h-4 border-b-2 border-r-2 border-primary" />
-              
-              <h2 className="relative px-12 py-6">
-                <span className="block text-5xl font-bold text-brand-blue tracking-tight sm:text-6xl">
-                  Trusted Partnerships
-                </span>
-                
-                <div className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-brand-blue to-transparent" />
-              </h2>
-            </div>
-            <p className="mt-8 text-gray-600 max-w-2xl mx-auto">
-              We partner with industry-leading manufacturers to deliver exceptional quality and innovation in manufacturing solutions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {partners.map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center p-8 rounded-xl border border-gray-200 
-                  bg-white shadow-sm hover:shadow-md hover:border-brand-blue/30 
-                  transition-all duration-300 ease-in-out"
-              >
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} logo`}
-                  className="w-full max-w-[200px] h-[80px] object-contain filter group-hover:brightness-110"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
       
-      <section className="py-20 bg-brand-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-brand-white">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block relative">
               <div className="absolute inset-0 border-2 border-brand-blue/20" />
