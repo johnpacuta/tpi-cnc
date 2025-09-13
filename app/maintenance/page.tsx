@@ -43,15 +43,6 @@ const scopeOfServices = [
         description: "Set up a streamlined ticketing system to manage and document all maintenance requests and resolutions efficiently."
       }
     ]
-  },
-  {
-    title: "Workforce Development",
-    items: [
-      {
-        subtitle: "Training New In-House Hires",
-        description: "Provide hands-on training to new maintenance hires, equipping them with the skills and knowledge needed to manage and maintain CNC equipment effectively. This initiative ensures the longevity and self-sufficiency of your maintenance operations."
-      }
-    ]
   }
 ];
 
@@ -61,40 +52,35 @@ export default function Maintenance() {
 
   const maintenanceServices = [
     {
-      title: "Annual Blanket Purchase Order",
+      title: "Annual",
       features: [
         "1,000 hours annually (20 hours/week)",
-        "$90/hour discounted rate (Standard: $110/hour)",
+        "20% discounted rate",
         "24-hour guaranteed response time",
         "Priority scheduling",
         "CMMS integration assistance",
-        "In-house hire training program",
-        "Total Annual Cost: $90,000"
+        "Estimated Annual Cost: $90,000"
       ],
       isHighlighted: true
     },
     {
-      title: "Monthly Service Agreement",
+      title: "Monthly",
       features: [
         "80 hours per month (20 hours/week)",
-        "$100/hour discounted rate",
+        "10% discounted rate",
         "48-hour guaranteed response time",
         "Priority scheduling",
         "CMMS integration assistance",
-        "In-house hire training program",
         "Estimated Monthly Cost: $8,000"
       ]
     },
     {
       title: "Time and Material Basis",
       features: [
-        "Standard rate of $110/hour",
         "Services provided as needed",
         "Standard response times",
         "CMMS integration (upon request)",
-        "Training program available",
-        "Flexible scheduling",
-        "Pay only for services used"
+        "Flexible scheduling"
       ]
     }
   ];
@@ -102,7 +88,7 @@ export default function Maintenance() {
   return (
     <main className="min-h-screen py-4">
       <ContentSection 
-        title="Scope of Services" 
+        title="Maintainence Process"
         subtitle="Comprehensive maintenance solutions for your CNC equipment"
       >
         {/* Timeline */}
@@ -184,7 +170,7 @@ export default function Maintenance() {
       </ContentSection>
 
       <ContentSection 
-        title="Service Options" 
+        title="Maintainence Packages"
         subtitle="Professional CNC maintenance solutions with flexible service packages"
         className=""
       >
@@ -233,8 +219,8 @@ export default function Maintenance() {
       </ContentSection>
 
       <ContentSection 
-        title="Additional Information" 
-        subtitle="Recommendations and billing transparency"
+        title="Additional Information"
+        subtitle="Agreement details, billing, and other important information"
       >
         <div className="space-y-6">
           <div className="bg-gray-50 p-6 rounded-lg">
