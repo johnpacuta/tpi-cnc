@@ -1,92 +1,79 @@
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/shared/DetailPage";
 
-const servicesData = {
-  "3d-printing-services": {
-    title: "3D Printing Services",
-    duration: "Varies by project",
-    description: "Advanced additive manufacturing solutions for modern production needs",
-    fullDescription: `Our state-of-the-art 3D printing services offer innovative solutions for rapid prototyping and production manufacturing. We utilize the latest in additive manufacturing technology to create precise, complex parts with a wide range of materials.`,
-    imageUrl: "/images/teddy.jpg",
-    features: [
-      "Layer resolution down to 20 microns",
-      "Build volume up to 300x300x300mm",
-      "Compatible with industrial-grade materials",
-      "Full color and multi-material printing capabilities",
-      "Post-processing and finishing services"
-    ],
-    benefits: [
-      "Rapid prototyping capabilities",
-      "Complex geometries production",
-      "Material flexibility options",
-      "High precision results",
-      "Fast turnaround times"
-    ],
-    schedule: {
-      duration: "Project-dependent",
-      format: "Custom manufacturing solutions",
-      implementation: "Rapid prototyping to full production runs"
-    }
+const pageData = {
+  title: "3D Printing",
+  duration: "Varies by project",
+  description: "Advanced additive manufacturing solutions for modern production needs",
+  fullDescription: `Our state-of-the-art 3D printing services offer innovative solutions for rapid prototyping and production manufacturing. We utilize the latest in additive manufacturing technology to create precise, complex parts with a wide range of materials.`,
+  imageUrl: "/images/teddy.jpg",
+  //methodology: [],
+  benefits: [
+    "Rapid prototyping capabilities",
+    "Complex geometries production",
+    "Material flexibility options",
+    "High precision results",
+    "Fast turnaround times"
+  ],
+  features: [
+    "Layer resolution down to 20 microns",
+    "Build volume up to 300x300x300mm",
+    "Compatible with industrial-grade materials",
+    "Full color and multi-material printing capabilities",
+    "Post-processing and finishing services"
+  ],
+  //specifications: [],
+  //curriculum: [],
+  //outcomes: [],
+  schedule: {
+    duration: "Project-dependent",
+    format: "Custom manufacturing solutions",
+    implementation: "Rapid prototyping to full production runs"
   },
-  /*"part-manufacturing": {
-    title: "Part Manufacturing",
-    duration: "Varies by project",
-    description: "Precision manufacturing combining traditional and modern techniques",
-    fullDescription: `Our part manufacturing services blend traditional CNC machining with cutting-edge technologies to deliver high-quality, precision-engineered components for any application.`,
-    imageUrl: "/images/teddy.jpg",
-    features: [
-      "CNC machining with up to 5-axis capabilities",
-      "Tolerances as tight as ±0.0005 inches",
-      "Broad material selection",
-      "Quality control with advanced measurement",
-      "Production volumes from prototypes to large batches"
-    ],
-    benefits: [
-      "Precision engineered parts",
-      "Hybrid manufacturing capabilities",
-      "Material expertise",
-      "Quality assured results",
-      "Scalable production options"
-    ],
-    schedule: {
-      duration: "Project-dependent",
-      format: "Custom manufacturing solutions",
-      implementation: "From single parts to production runs"
-    }
-  }*/
+  //process: [],
+  useCases: [
+      "Rapid concept models for design validation",
+      "Functional prototypes for fit and assembly testing",
+      "Low-volume production of end-use plastic parts",
+      "Custom jigs, fixtures, and assembly aids",
+      "Replacement components and legacy parts obsolescence",
+      "Customized housings, brackets, and mounts"
+  ],
+  includes: [
+    "Material consultation and selection",
+    "DFAM (Design for Additive Manufacturing) review",
+    "Pre-print slicing and optimization",
+    "Quality inspection and dimensional report (on request)",
+    "Surface finishing and post-processing options",
+    "Packaging and shipping"
+  ]
 };
 
-type Props = {
-  params: Promise<{ slug: string }>,
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default async function ServiceDetailPage({ params }: Props) {
-  const resolvedParams = await params;
+export default async function ServiceDetailPage() {
 
   return (
     <div className="bg-gray-50">
       <div className="mb-[-60px]">
         <DetailPage 
-          data={servicesData}
+          data={pageData}
           type="service" 
           withGenericForm={false}
           backButton={{ 
-            text: "Printing Services", 
-            href: "/services/3d-printing-part-manufacturing" 
+            text: "Services",
+            href: "/services"
           }} 
         />
       </div>
       <section className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 mb-4">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">Request Service Information</h2>
         <p className="text-gray-600 text-center mb-8">
-          Interested in {service.title}? Fill out the form below and we'll get back to you with detailed information.
+          Interested in {pageData.title}? Fill out the form below and we'll get back to you with detailed information.
         </p>
         <form className="space-y-6">
           <input
             type="text"
             name="serviceName"
-            value={service.title}
+            value={pageData.title}
             readOnly
             className="w-full px-4 py-3 rounded-xl border bg-gray-100 text-gray-700 cursor-not-allowed"
           />
