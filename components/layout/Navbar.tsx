@@ -28,10 +28,11 @@ const primaryNav: (NavItem | NavGroup)[] = [
   {
     label: "Services",
     items: [
-      { label: "Overview", href: "/services" },
-      { label: "Training", href: "/training" },
-      { label: "Consulting", href: "/consulting" },
-      { label: "Maintenance", href: "/maintenance" },
+        { label: "Overview", href: "/services" },
+        { label: "Consulting", href: "/consulting" },
+        { label: "Part Sourcing", href: "/spare-parts" },
+        { label: "Maintenance", href: "/maintenance" },
+        { label: "3D Printing", href: "/3d-printing" },
     ]
   },
   {
