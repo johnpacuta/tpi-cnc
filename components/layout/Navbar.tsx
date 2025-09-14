@@ -28,7 +28,7 @@ const primaryNav: (NavItem | NavGroup)[] = [
   {
     label: "Services",
     items: [
-        { label: "Overview", href: "/services" },
+        //{ label: "Overview", href: "/services" },
         { label: "Consulting", href: "/consulting" },
         { label: "Part Sourcing", href: "/spare-parts" },
         { label: "Maintenance", href: "/maintenance" },

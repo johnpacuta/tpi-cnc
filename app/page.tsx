@@ -1,6 +1,6 @@
 import { Hero } from "@/components/home/Hero"
 import { About } from "@/components/home/About"
-import { Services } from "@/components/home/Services"
+import Services from "../components/home/Services2"
 // import { FeaturedProducts } from "@/components/home/FeaturedProducts"
 import ContactForm from "@/components/shared/ContactForm"
 import Partners from "@/components/home/Partners"
@@ -13,27 +13,31 @@ export default function Home() {
       <Services />
         <Partners />
       {/* <FeaturedProducts /> */}
-      
-      <section className="bg-brand-white">
+
+      <section className="bg-brand-white pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block relative">
-              <div className="absolute inset-0 border-2 border-brand-blue/20" />
-              <div className="absolute left-0 top-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
-              <div className="absolute right-0 top-0 w-4 h-4 border-t-2 border-r-2 border-primary" />
-              <div className="absolute left-0 bottom-0 w-4 h-4 border-b-2 border-l-2 border-primary" />
-              <div className="absolute right-0 bottom-0 w-4 h-4 border-b-2 border-r-2 border-primary" />
-              
-              <h2 className="relative px-12 py-6">
-                <span className="block text-5xl font-bold text-brand-blue tracking-tight sm:text-6xl">
-                  Contact Us
-                </span>
-                <span className="mt-4 block text-xl text-gray-600 font-medium tracking-wide">
-                  Let's Start a Conversation
-                </span>
+                <section className={``}>
+                    <div className="container mx-auto px-6 w-[100%]">
+                        <div className="text-center p-8 md:p-12">
+                            <div className="flex items-center justify-center mb-4">
+                                <div className="h-[2px] w-12 bg-brand-blue"></div>
+                                <div className="mx-4">
+              <span className="inline-block px-4 py-1 bg-brand-blue text-white text-sm font-medium rounded-full">
+                TPI CNC
+              </span>
+                                </div>
+                                <div className="h-[2px] w-12 bg-brand-blue"></div>
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 relative inline-block">
+                                    Contact Us
+                                <div className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-accent/90 to-transparent"></div>
+                            </h2>
+                        </div>
+                    </div>
+                </section>
                 
                 <div className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent" />
-              </h2>
             </div>
           </div>
 
@@ -57,7 +61,6 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
       </section>
     </main>
   )
