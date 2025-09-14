@@ -7,38 +7,30 @@ import { toast } from 'react-hot-toast'
 import { submitSubscription } from '@/app/actions/subscribe'
 
 const productsLinks = {
-  title: 'Products',
-  links: [
-    /*{ name: 'Equipment', href: '/products' },*/
-    /*{ name: 'Spare Parts', href: '/spare-parts' },*/
-    { name: 'Special Deals', href: '/deals' },
-  ]
+  title: 'Services',
+    links: [
+        { name: "Consulting", href: "/consulting" },
+        { name: "Part Sourcing", href: "/spare-parts" },
+        { name: "Maintenance", href: "/maintenance" },
+        { name: "3D Printing", href: "/3d-printing" },
+    ]
 }
 
 const servicesLinks = {
-  title: 'Services',
-  links: [
-    { name: 'Maintenance', href: '/services' },
-    { name: 'Training', href: '/training' },
-    { name: 'Consulting', href: '/consulting' },
-  ]
+  title: 'Equipment',
+    links: [
+        { name: "Solutions", href: "/equipment" },
+        { name: "RENISHAW", href: "/renishaw-products" },
+    ]
 }
 
 const supportLinks = {
-  title: 'Support',
-  links: [
-    { name: 'Quote Request', href: '/quote' },
-    { name: 'Technical Support', href: '/contact' },
-  ]
-}
-
-const companyLinks = {
   title: 'Company',
-  links: [
-    { name: 'About Us', href: '/about' },
-    // { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Quote Request', href: '/quote' },
+        { name: 'Contact Us', href: '/contact' },
+    ]
 }
 
 const socialLinks = [
@@ -59,10 +51,10 @@ const sitemapLinks = {
 function FooterColumn({ title, links }: { title: string, links: { name: string, href: string }[] }) {
   return (
     <div>
-      <h4 className="text-sm font-semibold mb-3 relative inline-block">
+      <h2 className="font-semibold mb-3 inline-block">
         {title}
         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
-      </h4>
+      </h2>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.name}>
@@ -158,11 +150,10 @@ export function Footer() {
         </div>
 
         {/* Quick Links Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
           <FooterColumn {...productsLinks} />
           <FooterColumn {...servicesLinks} />
           <FooterColumn {...supportLinks} />
-          <FooterColumn {...companyLinks} />
         </div>
 
         {/* Bottom Bar */}

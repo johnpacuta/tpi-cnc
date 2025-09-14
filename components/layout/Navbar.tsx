@@ -53,7 +53,7 @@ const primaryNav: (NavItem | NavGroup)[] = [
     label: "Company",
     items: [
       { label: 'About Us', href: '/about' },
-      { label: 'Quote Now', href: '/quote' },
+      { label: 'Quote Request', href: '/quote' },
       { label: 'Contact Us', href: '/contact' },
     ]
   },
