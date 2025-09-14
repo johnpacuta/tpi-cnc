@@ -9,7 +9,7 @@ export default function RenishawProducts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <main className="min-h-screen py-8 bg-gray-50">
+    <main className="min-h-screen pt-20 py-8 bg-gray-50">
       <ContentSection 
         title="Renishaw Products & Services" 
         subtitle="Advanced measurement solutions and retrofit services for CNC machines"

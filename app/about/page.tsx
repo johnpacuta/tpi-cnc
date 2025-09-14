@@ -28,7 +28,7 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-4">
 
       <ContentSection 
         title="Our Story" 
