@@ -92,7 +92,7 @@ export default function SpareParts() {
   }
 
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-10">
       
       <ContentSection 
         title="Request Spare Parts" 
