@@ -132,7 +132,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
   }
 
   return (
-    <main className="min-h-screen py-4 sm:py-8 bg-gray-50">
+    <main className="min-h-screen bg-gray-50">
       <ContentSection
         title={service.title}
         subtitle={service.focus}

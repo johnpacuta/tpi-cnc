@@ -3,7 +3,7 @@ import ContactForm from "@/components/shared/ContactForm";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-4">
       <ContentSection 
         title="Get In Touch" 
         subtitle="We're here to help with all your industrial equipment service needs"

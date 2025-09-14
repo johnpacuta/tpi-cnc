@@ -63,7 +63,7 @@ export default function Equipment() {
   ];
 
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-4">
       <ContentSection 
         title="Equipment Solutions" 
         subtitle="Discover our extensive selection of industrial equipment, from CNC machines
