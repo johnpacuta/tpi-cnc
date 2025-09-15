@@ -1,11 +1,17 @@
 import ContentSection from '../components/about/ContentSection';
 import TeamMember from '../components/about/TeamMember';
 import StorySection from '../components/about/StorySection';
-import ExpertiseSection from '../components/about/ExpertiseSection';
 import CommunitySection from '../components/about/CommunitySection';
 import Image from "next/image";
 
 const teamMembers = [
+    {
+        name: "Teddy Powell",
+        role: "Founder",
+        image: "/images/teddy.jpg",
+        description: "Teddy has over 25 years of hands-on CNC experience, leading complex repairs,\n" +
+            "installations, and process optimizations for manufacturers across North America."
+    },
   {
     name: "Sarah Johnson",
     role: "Technical Director",
@@ -28,32 +34,24 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-20 py-4">
-
+    <main className="min-h-screen pt-20">
       <ContentSection 
         title="Our Story" 
-        subtitle="A legacy of excellence in industrial equipment solutions"
+        subtitle='"A legacy of excellence in industrial equipment solutions"'
       >
-        {/* Hero image of Teddy - mobile-friendly portrait */}
-        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
-          <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md w-full sm:w-80 flex-none">
-            <img
-              src="/images/teddy.jpg"
-              alt="Teddy — TPI CNC"
-              className="w-32 h-32 rounded-full object-cover mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">Teddy Powell</h3>
-            <p className="text-brand-blue font-medium mb-2">Founder & CEO</p>
-            <p className="text-gray-400 text-center">
-              Teddy has over 25 years of hands-on CNC experience, leading complex repairs,
-              installations, and process optimizations for manufacturers across North America.
-            </p>
+          <div className="flex justify-center">
+              <Image
+                  src="/images/teddy.jpg"
+                  alt="Teddy"
+                  width={300}
+                  height={200}
+                  priority
+                  className="rounded-md"
+              />
           </div>
-        </div>
-
-        <StorySection
+          <StorySection
           companyHistory="Twenty-five years ago in Windsor, Ontario, Teddy turned a lifelong knack for CNC repair into TPI CNC. Clients trusted Teddy’s blend of practical troubleshooting, control fluency, and follow-through. As needs expanded, he built a team that shares his standards: respond fast, solve root causes, teach operators, and measure results. Today TPI CNC supports repairs, retrofits, and training across North America, still guided by the same ethos—craftsmanship, accountability, and uptime. The tools evolved; the promise didn’t: do it right and stand behind it."
-          missionStatement="Our mission is to provide exceptional CNC repair services and industrial equipment solutions while maintaining the highest standards of quality and customer satisfaction."
+          missionStatement="At TPI, our culture is rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
           yearsOfExperience={25}
           projectsCompleted={1000}
         />
