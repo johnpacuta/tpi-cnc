@@ -14,7 +14,7 @@ export default function ContentSection({
   return (
     <section className={`pb-4 ${className}`}>
       <div className="container mx-auto px-6 w-[100%]">
-        <div className="text-center p-8 md:p-12">
+        <div className="text-center pt-12">
           <div className="flex items-center justify-center mb-4">
             <div className="h-[2px] w-12 bg-brand-blue"></div>
             <div className="mx-4">
