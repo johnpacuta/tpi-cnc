@@ -8,7 +8,7 @@ const servicesData = {
     icon: <Microscope className="w-12 h-12" />,
     description: "Advanced diagnostic solutions for complex industrial equipment",
     fullDescription: "Our expert technicians utilize cutting-edge diagnostic tools to identify and troubleshoot both electrical and mechanical issues in CNC machines and industrial equipment. Through systematic testing and analysis, we ensure accurate fault detection and efficient resolution planning.",
-    imageUrl: ["/images/teddy.jpg", "/images/banner.png"],
+    imageUrl: ["/images/ElectromechanicalDiagnostics.jpg", "/images/banner.png"],
     features: [
       "State-of-the-art diagnostic tools and equipment",
       "Electrical system analysis",
@@ -40,7 +40,7 @@ const servicesData = {
     icon: <Wrench className="w-12 h-12" />,
     description: "Identifying and addressing the source of equipment issues",
     fullDescription: "We go beyond surface-level repairs by conducting thorough root cause analysis. This systematic approach helps identify the underlying causes of equipment failures, allowing us to implement lasting solutions and prevent recurring issues.",
-    imageUrl: "/images/teddy.jpg",
+    imageUrl: "/images/RootCauseAnalysis.jpg",
     features: [
       "Systematic problem investigation",
       "Data-driven analysis methods",
@@ -74,7 +74,7 @@ const servicesData = {
     icon: <Ruler className="w-12 h-12" />,
     description: "Precision calibration services for optimal performance",
     fullDescription: "Our calibration and alignment services ensure your equipment maintains the highest levels of precision and accuracy. Using advanced laser alignment tools and calibration techniques, we optimize your machinery for peak performance.",
-    imageUrl: "/images/teddy.jpg",
+    imageUrl: "/images/CNC_Calibration.jpg",
     features: [
       "Laser alignment services",
       "Geometric accuracy testing",
@@ -107,7 +107,7 @@ const servicesData = {
     icon: <Power className="w-12 h-12" />,
     description: "Complete equipment lifecycle management",
     fullDescription: "From initial setup to end-of-life management, we handle all aspects of equipment commissioning and decommissioning. Our processes ensure safe installation, optimal configuration, and environmentally responsible equipment retirement.",
-    imageUrl: "/images/teddy.jpg",
+    imageUrl: "/images/CommissioningAndDecommissioning.jpg",
     features: [
       "New equipment installation",
       "System configuration and testing",
@@ -140,7 +140,7 @@ const servicesData = {
     icon: <Network className="w-12 h-12" />,
     description: "Seamless integration of multiple systems and components",
     fullDescription: "We specialize in integrating third-party systems with existing CNC equipment, improving workflow efficiency and system compatibility. Our solutions ensure smooth communication between different components and platforms.",
-    imageUrl: "/images/teddy.jpg",
+    imageUrl: "/images/Integration.jpg",
     features: [
       "Cross-platform compatibility",
       "Custom interface development",
