@@ -1,8 +1,5 @@
 'use client';
 
-import ContentSection from "../components/about/ContentSection";
-import Image from "next/image";
-import Link from "next/link";
 import {useState} from 'react';
 import {toast} from 'react-hot-toast';
 import {submitConsultingForm} from '@/app/actions/consulting';

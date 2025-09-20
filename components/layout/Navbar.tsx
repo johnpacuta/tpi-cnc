@@ -127,7 +127,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <Link href="/" className="text-primary font-bold text-xl">
-                <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="h-12 w-auto" width={120} height={96} />
+                <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="w-auto" width={120} height={96} />
               </Link>
               <span className="text-xs md:text-sm lg:text-base tracking-wider font-medium">
                 <span className="text-brand-black">SERVICE</span>

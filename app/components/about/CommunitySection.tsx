@@ -43,7 +43,7 @@ const FeatureCard = ({
 
       <div className="space-y-6">
         <p className="text-gray-600 leading-relaxed">{description}</p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {features.map((feature, index) => (
             <div key={index} className="bg-brand-blue/5 p-4 rounded-lg">
               <div className="flex items-center text-brand-blue mb-2">

@@ -92,7 +92,7 @@ export default function Maintenance() {
         subtitle="Comprehensive maintenance solutions for your CNC equipment"
       >
         {/* Timeline */}
-        <div className="relative mb-12">
+        <div className="relative mt-10 mb-12">
           {/* Timeline line with gradient */}
           <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
             <div className="h-1 bg-gradient-to-r from-gray-200 via-brand-blue to-gray-200"></div>

@@ -176,7 +176,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
 
         {/* Timeline and Implementation Section */}
         <section className="mb-8 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-900 border-b pb-2">Strategic Implementation</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-16 sm:mb-14 text-gray-900 border-b pb-2">Strategic Implementation</h2>
           
           {/* Timeline */}
           <div className="relative mb-8 sm:mb-12">

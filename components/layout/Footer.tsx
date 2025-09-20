@@ -53,7 +53,7 @@ function FooterColumn({ title, links }: { title: string, links: { name: string, 
     <div>
       <h2 className="font-semibold mb-3 inline-block">
         {title}
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
+        <span className="absolute bottom-0 left-0 w-full h-0.5"></span>
       </h2>
       <ul className="space-y-2">
         {links.map((link) => (
@@ -131,17 +131,17 @@ export function Footer() {
           {/* Subscribe Form */}
           <div className="w-full md:w-auto md:ml-auto">
             <h4 className="text-sm font-semibold mb-3">Stay Updated with TPI CNC</h4>
-            <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md">
+            <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-2 max-w-md">
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email for updates"
-                className="flex-1 px-4 py-2 bg-white/10 rounded-sm text-sm text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-accent min-w-[240px]"
+                className="w-full md:flex-1 px-4 py-2 bg-white/10 rounded-sm text-sm text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-accent md:min-w-[240px]"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-brand-blue/100 text-white hover:bg-brand-blue/70 rounded-sm text-sm transition-colors whitespace-nowrap font-medium"
+                className="w-full md:w-auto px-6 py-2 bg-brand-blue/100 text-white hover:bg-brand-blue/70 rounded-sm text-sm transition-colors whitespace-nowrap font-medium"
               >
                 Subscribe
               </button>
@@ -150,7 +150,7 @@ export function Footer() {
         </div>
 
         {/* Quick Links Row */}
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
           <FooterColumn {...productsLinks} />
           <FooterColumn {...servicesLinks} />
           <FooterColumn {...supportLinks} />
@@ -179,4 +179,4 @@ export function Footer() {
       </div>
     </footer>
   )
-} 
+}
