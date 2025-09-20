@@ -47,7 +47,7 @@ export default function CncIndexingTjr() {
         <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
             <Image
-              src="/products/cnc_indexing.webp"
+              src="/images/CNC_Indexing.jpg"
               alt="CNC Indexing"
               width={600}
               height={300}

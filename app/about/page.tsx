@@ -13,23 +13,23 @@ const teamMembers = [
             "installations, and process optimizations for manufacturers across North America."
     },
   {
-    name: "Sarah Johnson",
-    role: "Technical Director",
-    image: "/images/teddy.jpg",
-    description: "Sarah brings 15 years of specialized experience in CNC programming and maintenance solutions."
+    name: "Ben Blythe",
+    role: "CNC Millwright",
+    image: "/images/BenBlythe.jpg",
+    description: "Ben brings 15 years of specialized experience in CNC programming and maintenance solutions."
   },
   {
-    name: "Mike Chen",
-    role: "Service Manager",
-    image: "/images/teddy.jpg",
-    description: "Leading our service team, Mike ensures top-quality repair and maintenance services for all clients."
-  },
-  {
+    name: "Sam Collins",
+    role: "CNC Millwright",
+    image: "/images/SamCollins.jpg",
+    description: "Sam ensures top-quality repair and maintenance services for all clients."
+  }
+  /*{
     name: "Lisa Rodriguez",
     role: "Customer Relations Manager",
     image: "/images/teddy.jpg",
     description: "Lisa coordinates with our clients to ensure their needs are met with the highest level of satisfaction."
-  }
+  }*/
 ];
 
 export default function About() {
