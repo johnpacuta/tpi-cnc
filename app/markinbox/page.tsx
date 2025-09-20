@@ -43,10 +43,10 @@ export default function MarkinBox() {
         subtitle="Dot Peen Marking Machines"
       >
         {/* Hero Section */}
-        <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div className="bg-white rounded-xl shadow-sm mb-12">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
             <Image
-              src="/logos/partners/markinbox.webp"
+              src="/images/MarkinBOX.png"
               alt="MarkinBOX"
               width={300}
               height={100}
