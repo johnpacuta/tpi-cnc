@@ -53,7 +53,7 @@ function FooterColumn({ title, links }: { title: string, links: { name: string, 
     <div>
       <h2 className="font-semibold mb-3 inline-block">
         {title}
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
+        <span className="absolute bottom-0 left-0 w-full h-0.5"></span>
       </h2>
       <ul className="space-y-2">
         {links.map((link) => (
