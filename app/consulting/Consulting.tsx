@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation";
 import { notFound } from 'next/navigation';
 import ContentSection from '@/app/components/about/ContentSection';
 import { useState, use } from 'react';
@@ -126,6 +127,8 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
   const resolvedParams = use(params);
   const [selectedYear, setSelectedYear] = useState<'year1' | 'year3' | 'year5'>('year1');
   const service = servicesData[resolvedParams.slug];
+  const router = useRouter();
+
 
   if (!service) {
     notFound();
@@ -271,9 +274,15 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           <div className="bg-gradient-to-r from-brand-blue to-blue-600 rounded-xl shadow-xl p-4 sm:p-8">
             <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ready to Transform Your Operations?</h2>
             <p className="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base">Let's discuss how we can customize this solution for your specific needs.</p>
-            <button className="bg-white text-brand-blue font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base">
-              Contact Us Today
-            </button>
+              <button
+                  type="button"
+                  onClick={() => router.push("/contact")}
+                  className="bg-white text-brand-blue font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
+                  aria-label="Go to Contact page"
+              >
+                  Contact Us Today
+              </button>
+
           </div>
         </section>
       </ContentSection>
