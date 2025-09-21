@@ -9,7 +9,7 @@ export default function Equipment() {
       icon: <RotateCw className="w-12 h-12" />,
       description: "High-precision barfeeders, indexers, and rotary solutions for advanced manufacturing needs.",
       features: ["Barfeeders", "Indexers", "Rotary Tables"],
-      href: "/cnc-indexing-tjr"
+      href: "#"
     },
     {
       title: "Renishaw Products",
@@ -23,43 +23,43 @@ export default function Equipment() {
       icon: <Box className="w-12 h-12" />,
       description: "Latest CNC machines and robotics systems for modern manufacturing facilities.",
       features: ["CNC Machines", "Robots", "Automation Systems"],
-      href: "/in-stock-equipment"
+      href: "#"
     },
     {
       title: "Used Equipment",
       icon: <Gauge className="w-12 h-12" />,
       description: "Quality pre-owned CNC and robotic equipment, fully tested and certified.",
       features: ["Used CNCs", "Refurbished Robots", "Legacy Systems"],
-      href: "/in-stock-equipment-used"
+      href: "#"
     },
-    {
+    /*{
       title: "MarkinBOX",
       icon: <Microscope className="w-12 h-12" />,
       description: "Advanced part marking systems for permanent identification and traceability.",
       features: ["Marking Systems", "Identification Solutions", "Traceability Tools"],
-      href: "/markinbox"
+      href: "#"
     },
     {
       title: "Robotics Solutions",
       icon: <BotIcon className="w-12 h-12" />,
       description: "Comprehensive robotics solutions for welding and non-welding applications.",
       features: ["Welding Robots", "Automation Robots", "Custom Solutions"],
-      href: "/productive-robotics"
+      href: "#"
     },
     {
       title: "Tracer Barfeeders",
       icon: <Wrench className="w-12 h-12" />,
       description: "Advanced barfeeding systems for improved productivity and automation.",
       features: ["Automatic Barfeeders", "Material Handling", "Feed Systems"],
-      href: "/tracer-barfeeders"
+      href: "#"
     },
     {
       title: "VisionGauge",
       icon: <Zap className="w-12 h-12" />,
       description: "State-of-the-art optical comparators for precise measurement and inspection.",
       features: ["Optical Comparators", "Vision Systems", "Quality Control"],
-      href: "/visiongauge"
-    }
+      href: "#"
+    }*/
   ];
 
   return (
