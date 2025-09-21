@@ -26,11 +26,11 @@ const partners = [
         logo: "/logos/partners/renishaw.png",
         url: "https://www.renishaw.com/",
     },
-    {
+    /*{
         name: "Mazak",
         logo: "/logos/partners/mazak.svg",
         url: "https://www.mazakusa.com/",
-    },
+    },*/
     // Add more partners as needed
 ]
 
@@ -141,7 +141,7 @@ export default function Partners() {
                     {/* Partner Logos */}
                     <div>
                         {/* <h2 className="text-2xl font-semibold text-center mb-8">Our Partners</h2> */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-center justify-items-center">
                             {partners.map((partner) => (
                                 <a
                                     key={partner.name}
