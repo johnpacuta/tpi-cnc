@@ -14,13 +14,13 @@ const teamMembers = [
     },
   {
     name: "Ben Blythe",
-    role: "CNC Millwright",
+    role: "CNC Technician",
     image: "/images/BenBlythe.jpg",
     description: "Ben brings 15 years of specialized experience in CNC programming and maintenance solutions."
   },
   {
     name: "Sam Collins",
-    role: "CNC Millwright",
+    role: "CNC Technician",
     image: "/images/SamCollins.jpg",
     description: "Sam ensures top-quality repair and maintenance services for all clients."
   }
