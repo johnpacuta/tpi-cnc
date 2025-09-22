@@ -9,14 +9,14 @@ const teamMembers = [
         name: "Teddy Powell",
         role: "Founder",
         image: "/images/teddy.jpg",
-        description: "Teddy has over 25 years of hands-on CNC experience, leading complex repairs,\n" +
+        description: "Teddy has over 15 years of hands-on CNC experience, leading complex repairs,\n" +
             "installations, and process optimizations for manufacturers across North America."
     },
   {
     name: "Ben Blythe",
     role: "CNC Technician",
     image: "/images/BenBlythe.jpg",
-    description: "Ben brings 15 years of specialized experience in CNC programming and maintenance solutions."
+    description: "Ben brings 10 years of specialized experience in CNC programming and maintenance solutions."
   },
   {
     name: "Sam Collins",
@@ -50,7 +50,7 @@ export default function About() {
               />
           </div>
           <StorySection
-          companyHistory="Twenty-five years ago in Windsor, Ontario, Teddy turned a lifelong knack for CNC repair into TPI CNC. Clients trusted Teddy’s blend of practical troubleshooting, control fluency, and follow-through. As needs expanded, he built a team that shares his standards: respond fast, solve root causes, teach operators, and measure results. Today TPI CNC supports repairs, retrofits, and training across North America, still guided by the same ethos—craftsmanship, accountability, and uptime. The tools evolved; the promise didn’t: do it right and stand behind it."
+          companyHistory="Fifteen years ago in Windsor, Ontario, Teddy turned a lifelong knack for CNC repair into TPI CNC. Clients trusted Teddy’s blend of practical troubleshooting, control fluency, and follow-through. As needs expanded, he built a team that shares his standards: respond fast, solve root causes, teach operators, and measure results. Today TPI CNC supports repairs, retrofits, and training across North America, still guided by the same ethos—craftsmanship, accountability, and uptime. The tools evolved; the promise didn’t: do it right and stand behind it."
           missionStatement="At TPI, our culture is rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
           yearsOfExperience={25}
           projectsCompleted={1000}
