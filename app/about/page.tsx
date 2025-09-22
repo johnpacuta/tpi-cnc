@@ -9,20 +9,19 @@ const teamMembers = [
         name: "Teddy Powell",
         role: "Founder",
         image: "/images/teddy.jpg",
-        description: "Teddy has over 15 years of hands-on CNC experience, leading complex repairs,\n" +
-            "installations, and process optimizations for manufacturers across North America."
+        description: ""
     },
   {
     name: "Ben Blythe",
     role: "CNC Technician",
     image: "/images/BenBlythe.jpg",
-    description: "Ben brings 10 years of specialized experience in CNC programming and maintenance solutions."
+    description: ""
   },
   {
     name: "Sam Collins",
     role: "CNC Technician",
     image: "/images/SamCollins.jpg",
-    description: "Sam ensures top-quality repair and maintenance services for all clients."
+    description: ""
   }
   /*{
     name: "Lisa Rodriguez",
