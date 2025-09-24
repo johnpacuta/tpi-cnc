@@ -5,7 +5,8 @@ import Image from "next/image";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import ProductSlider from "./ProductSlider"; // We'll create this next
+import ProductSlider from "./ProductSlider";
+import {router} from "next/client"; // We'll create this next
 
 // Product type definition
 interface Product {

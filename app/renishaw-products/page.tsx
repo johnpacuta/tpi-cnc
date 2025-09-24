@@ -4,6 +4,7 @@ import ContentSection from "../components/about/ContentSection";
 import Image from "next/image";
 import ContactModal from "@/components/ContactModal"; // Assuming you have this component
 import { useState } from "react";
+import {router} from "next/client";
 
 export default function RenishawProducts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -58,7 +59,8 @@ export default function RenishawProducts() {
 
         <div className="my-8 text-center">
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => router.push("/quote")
+            }
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
             Request a Quote
@@ -156,8 +158,8 @@ export default function RenishawProducts() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <button 
-            onClick={() => setIsModalOpen(true)}
+          <button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
             Request a Quote

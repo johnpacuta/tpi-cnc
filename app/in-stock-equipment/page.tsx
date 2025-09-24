@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import {router} from "next/client";
 
 // Product type definition
 interface Product {
@@ -211,7 +212,7 @@ export default function InStockEquipment() {
               </Button>
 
               <Button
-                onClick={() => setIsModalOpen(true)}
+                  onClick={() => router.push("/quote")}
                 className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-4"
               >
                 Request a Quote
@@ -240,7 +241,7 @@ export default function InStockEquipment() {
                     <h3 className="text-2xl font-semibold mb-4">{product.title}</h3>
                     <p className="text-gray-600 mb-6">{product.description}</p>
                     <Button
-                      onClick={() => setIsModalOpen(true)}
+                        onClick={() => router.push("/quote")}
                       className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4"
                     >
                       Request a Quote for {product.title.split('-')[0].trim()}
@@ -273,7 +274,7 @@ export default function InStockEquipment() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <Button
-            onClick={() => setIsModalOpen(true)}
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 text-lg"
           >
             Request a Quote

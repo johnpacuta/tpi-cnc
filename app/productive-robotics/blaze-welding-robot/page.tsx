@@ -2,11 +2,11 @@
 
 import ContentSection from "../../components/about/ContentSection";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "../../cnc-indexing-tjr/ProductSlider";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
+import {router} from "next/client";
 
 const products = [
   {
