@@ -6,7 +6,8 @@ import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "./ProductSlider";
-import {router} from "next/client"; // We'll create this next
+import {router} from "next/client";
+import Link from "next/link"; // We'll create this next
 
 // Product type definition
 interface Product {
@@ -107,7 +108,7 @@ export default function CncIndexingTjr() {
               onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
-            Request a Quote
+              <a href="/quote">Request a Quote</a>
           </button>
         </div>
       </ContentSection>

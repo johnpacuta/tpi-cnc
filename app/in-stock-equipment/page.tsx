@@ -6,6 +6,7 @@ import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import {router} from "next/client";
+import Link from "next/link";
 
 // Product type definition
 interface Product {
@@ -215,7 +216,9 @@ export default function InStockEquipment() {
                   onClick={() => router.push("/quote")}
                 className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-4"
               >
+                  <Link href="/quote">
                 Request a Quote
+                  </Link>
               </Button>
             </div>
           </div>
@@ -245,7 +248,7 @@ export default function InStockEquipment() {
                       className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4"
                     >
                       Request a Quote for {product.title.split('-')[0].trim()}
-                    </Button>
+                        </Button>
                   </div>
                 </div>
                 {product.specs && (
@@ -277,7 +280,9 @@ export default function InStockEquipment() {
               onClick={() => router.push("/quote")}
             className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 text-lg"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </Button>
         </div>
       </ContentSection>
