@@ -1,8 +1,9 @@
-'use client';
+'use server';
 
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/shared/DetailPage";
 import { Microscope, Wrench, Ruler, Power, Network } from "lucide-react";
+import ContactForm from "@/components/shared/ContactForm";
 
 const servicesData = {
   "electrical-mechanical-diagnostics": {
@@ -225,58 +226,14 @@ export default async function ServicePage({
         <p className="text-gray-600 text-center mb-8">
           Interested in {service.title}? Fill out the form below and we'll get back to you with detailed information.
         </p>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <input
-            type="text"
-            name="serviceName"
-            value={service.title}
-            readOnly
-            className="w-full px-4 py-3 rounded-xl border bg-gray-100 text-gray-700 cursor-not-allowed"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="First Name"
-              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-              required
-            />
-            <input
-              type="text" 
-              placeholder="Last Name"
-              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-              required
-            />
+          <div className="grid-cols-1 items-start">
+              <div>
+                  <ContactForm
+                      title=""
+                      subtitle="Ready to improve your industrial equipment performance? Get in touch with us today."
+                  />
+              </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Company Name"
-            className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-          />
-          <textarea
-            placeholder="Additional Requirements or Questions"
-            rows={4}
-            className="w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-primary/50"
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition-all duration-300"
-          >
-            Request Information
-          </button>
-        </form>
       </section>
     </div>
   );
