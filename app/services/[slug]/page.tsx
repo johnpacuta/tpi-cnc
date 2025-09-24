@@ -1,5 +1,6 @@
 'use server';
 
+
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/shared/DetailPage";
 import { Microscope, Wrench, Ruler, Power, Network } from "lucide-react";
@@ -230,7 +231,7 @@ export default async function ServicePage({
               <div>
                   <ContactForm
                       title=""
-                      subtitle="Ready to improve your industrial equipment performance? Get in touch with us today."
+                      subtitle=""
                   />
               </div>
           </div>
