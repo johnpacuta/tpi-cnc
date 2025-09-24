@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "../cnc-indexing-tjr/ProductSlider";
 import { ExternalLink } from "lucide-react";
+import {router} from "next/client";
 
 // Product type definition
 interface Product {
@@ -80,8 +81,8 @@ export default function ProductiveRobotics() {
               <h3 className="text-xl font-semibold mb-4 text-brand-blue">
                 Ready to Automate Your Production?
               </h3>
-              <Button 
-                onClick={() => setIsModalOpen(true)}
+              <Button
+                  onClick={() => router.push("/quote")}
                 className="bg-brand-blue text-white px-8 py-6 text-lg font-medium hover:bg-brand-blue/90"
               >
                 Request a Quote
@@ -127,8 +128,8 @@ export default function ProductiveRobotics() {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
-          <Button 
-            onClick={() => setIsModalOpen(true)}
+          <Button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-brand-blue/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
             Request a Quote
