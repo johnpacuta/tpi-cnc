@@ -5,6 +5,7 @@ import Image from "next/image";
 import ContactModal from "@/components/ContactModal"; // Assuming you have this component
 import { useState } from "react";
 import {router} from "next/client";
+import Link from "next/link";
 
 export default function RenishawProducts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,7 +64,9 @@ export default function RenishawProducts() {
             }
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </button>
         </div>
 
