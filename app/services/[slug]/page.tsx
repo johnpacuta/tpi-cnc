@@ -8,7 +8,7 @@ const servicesData = {
     icon: <Microscope className="w-12 h-12" />,
     description: "Advanced diagnostic solutions for complex industrial equipment",
     fullDescription: "Our expert technicians utilize cutting-edge diagnostic tools to identify and troubleshoot both electrical and mechanical issues in CNC machines and industrial equipment. Through systematic testing and analysis, we ensure accurate fault detection and efficient resolution planning.",
-    imageUrl: ["/images/ElectromechanicalDiagnostics.jpg", "/images/banner.png"],
+    imageUrl: ["/images/banner.png"],
     features: [
       "State-of-the-art diagnostic tools and equipment",
       "Electrical system analysis",
