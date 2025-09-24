@@ -1,3 +1,5 @@
+'use client';
+
 import { notFound } from "next/navigation";
 import DetailPage from "@/components/shared/DetailPage";
 import { Microscope, Wrench, Ruler, Power, Network } from "lucide-react";
@@ -170,13 +172,27 @@ const servicesData = {
   }
 };
 
-export default async function ServicePage({ 
-  params 
+export type DetailFormProps = {
+        firstName?: string;
+        lastName?: string;
+        email?: string;
+        phone?: string;
+        company?: string;
+        message?: string;
+};
+
+export default async function ServicePage({
+  params
 }: {
   params: Promise<{ slug: string }>
 }) {
   const resolvedParams = await params;
   const service = servicesData[resolvedParams.slug as keyof typeof servicesData];
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+    }
+
 
   if (!service) {
     notFound();
@@ -209,7 +225,7 @@ export default async function ServicePage({
         <p className="text-gray-600 text-center mb-8">
           Interested in {service.title}? Fill out the form below and we'll get back to you with detailed information.
         </p>
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <input
             type="text"
             name="serviceName"

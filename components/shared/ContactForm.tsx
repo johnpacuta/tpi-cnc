@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from 'react-hot-toast';
 import { submitContactForm } from '@/app/actions/contact';
