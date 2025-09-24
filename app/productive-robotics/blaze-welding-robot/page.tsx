@@ -93,8 +93,8 @@ export default function BlazeWeldingRobot() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <button 
-            onClick={() => setIsModalOpen(true)}
+          <button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
             Request a Quote
