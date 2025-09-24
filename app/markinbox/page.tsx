@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import ProductSlider from "../cnc-indexing-tjr/ProductSlider";
 import { ExternalLink } from "lucide-react";
 import {router} from "next/client";
+import Link from "next/link";
 
 // Product type definition
 interface Product {
@@ -117,7 +118,9 @@ export default function MarkinBox() {
               onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </Button>
         </div>
       </ContentSection>

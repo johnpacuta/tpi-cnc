@@ -165,7 +165,9 @@ export default function RenishawProducts() {
               onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </button>
         </div>
       </ContentSection>

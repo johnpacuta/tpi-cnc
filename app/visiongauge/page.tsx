@@ -115,7 +115,9 @@ export default function VisionGauge() {
               animate-subtle-pulse
             "
           >
+              <Link href="/quote">
             Request a Quote Today
+              </Link>
           </button>
         </div>
       </ContentSection>
