@@ -24,8 +24,8 @@ export async function submitSubscription(formData: FormData) {
     }
 
     await sql`
-      INSERT INTO subscribers (email, created_at)
-      VALUES (${email as string}, NOW())
+      INSERT INTO subscribers (email)
+      VALUES (${email});
     `
 
     return { success: true }
