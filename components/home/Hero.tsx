@@ -66,7 +66,7 @@ export function Hero() {
                 whitespace-nowrap
               "
             >
-              <a href="/about">Learn More →</a>
+              <a href="tpicnc.com/about">Learn More →</a>
             </Button>
           </div> }
 
