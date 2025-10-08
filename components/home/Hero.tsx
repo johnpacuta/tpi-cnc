@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -50,7 +51,7 @@ export function Hero() {
                 <a href="tel:+12267875064">Call Now →</a>
 
             </Button>
-            <Button 
+            <Button asChild
               variant="outline" 
               size="lg"
               className="
@@ -66,7 +67,7 @@ export function Hero() {
                 whitespace-nowrap
               "
             >
-              <a href="tpicnc.com/about">Learn More →</a>
+                <Link href="/about">Learn More →</Link>
             </Button>
           </div> }
 
