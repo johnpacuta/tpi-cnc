@@ -92,7 +92,7 @@ const products: Product[] = [
 
       "Machine Capabilities",
       "• 45° Taper Cutting Capability (wide angle guides and flush cups required)",
-      "• Lead In/Out Function (reduces whitness mark)",
+      "• Lead In/Out Function",
       "• Built in Collision Detection (All Axis)",
       "• Automatic Corner Pro Function",
       "• Automatic Wire Feed System (Re-Thread at Break-Point)",
@@ -105,7 +105,7 @@ const products: Product[] = [
       "• Ergonomic CNC Operator Panel (Swivel Mounted and Adjustable)",
       "• On Board Operation and Help Menus",
       "• AWT Monitor Screen",
-      "• Conversational Cutting Condition Selection with API (automatic program imbedding)",
+      "• Conversational Cutting Condition Selection with API (automatic program embedding)",
 
       "Connectivity & Programming",
       "• Ethernet (standard)",
@@ -117,7 +117,7 @@ const products: Product[] = [
       "Standard Equipment",
       "• Extended Life Filtration Unit",
       "• Chiller Unit (standard)",
-      "• Saftey Door Interlock"
+      "• Safety Door Interlock"
     ]
   },
   {
@@ -151,7 +151,7 @@ const products: Product[] = [
       "• Flush Pump: 100~1900 P.S.I.",
       "• Filter Pump: Standard",
       "• Filter: 10 micron paper element",
-      "• Auxilary Flush Nozzle: Standard"
+      "• Auxiliary Flush Nozzle: Standard"
     ]
   },
   {
@@ -289,7 +289,7 @@ export default function InStockEquipment() {
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );
