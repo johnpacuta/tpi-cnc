@@ -107,7 +107,7 @@ export default function BlazeWeldingRobot() {
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

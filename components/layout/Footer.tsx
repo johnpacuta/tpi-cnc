@@ -37,17 +37,6 @@ const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/tpicnc', icon: FaLinkedin },
 ]
 
-const sitemapLinks = {
-  title: 'Sitemap',
-  links: [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    //{ name: 'Partners', href: '/partners' },
-    { name: 'Services', href: '/#services' },
-    { name: 'Contact', href: '/contact' },
-  ]
-}
-
 function FooterColumn({ title, links }: { title: string, links: { name: string, href: string }[] }) {
   return (
     <div>

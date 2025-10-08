@@ -7,7 +7,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "./ProductSlider";
 import {router} from "next/client";
-import Link from "next/link"; // We'll create this next
 
 // Product type definition
 interface Product {
@@ -115,7 +114,7 @@ export default function CncIndexingTjr() {
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

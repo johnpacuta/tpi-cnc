@@ -117,7 +117,7 @@ export default function TracerBarfeeders() {
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

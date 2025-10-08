@@ -4,7 +4,6 @@ import ContentSection from "../components/about/ContentSection";
 import { Button } from "@/components/ui/button";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
 
 // Product type definition
 interface Product {
@@ -153,7 +152,7 @@ export default function InStockEquipmentUsed() {
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );
