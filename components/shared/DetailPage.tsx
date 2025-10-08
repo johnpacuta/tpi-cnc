@@ -52,7 +52,7 @@ export default function DetailPage({ data, type, backButton, withGenericForm }: 
           {/* Main Image Slider */}
           {Array.isArray(data.imageUrl) && data.imageUrl.length > 1 ? (
             <div className="relative mb-4">
-              <div className="w-full h-[400px] overflow-x-auto snap-x snap-mandatory flex">
+              <div className="w-full h-[300px] md:h-[400px] overflow-x-auto snap-x snap-mandatory flex">
                 {data.imageUrl.map((image, index) => (
                   <div 
                     key={index} 
@@ -62,7 +62,7 @@ export default function DetailPage({ data, type, backButton, withGenericForm }: 
                       src={image}
                       alt={`${data.title} - Image ${index + 1}`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-contain md:object-cover rounded-lg bg-black/5"
                     />
                     
                     {/* Slider Navigation Buttons */}
@@ -129,7 +129,7 @@ export default function DetailPage({ data, type, backButton, withGenericForm }: 
                           aria-label={`Go to image ${dotIndex + 1}`}
                           onClick={() => {
                             const container = document.querySelector('.snap-x');
-                            if (container && typeof dotIndex === 'number') {
+                            if (container) {
                               container.scrollTo({
                                 left: window.innerWidth * dotIndex,
                                 behavior: 'smooth'
@@ -145,12 +145,12 @@ export default function DetailPage({ data, type, backButton, withGenericForm }: 
             </div>
           ) : (
             // Single Image
-            <div className="relative w-full h-[400px] mb-4">
+            <div className="relative w-full h-[300px] md:h-[400px] mb-4">
               <Image
                 src={Array.isArray(data.imageUrl) ? data.imageUrl[0] : data.imageUrl || '/images/teddy.jpg'}
                 alt={data.title}
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain md:object-cover rounded-lg bg-black/5"
               />
             </div>
           )}
@@ -390,7 +390,7 @@ export default function DetailPage({ data, type, backButton, withGenericForm }: 
           </div>
 
           {/* Contact Form Section */}
-          {(withGenericForm === undefined || withGenericForm === true) && (
+          {(withGenericForm === undefined || withGenericForm) && (
             <section className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-12 mt-12">
               <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">Ready to Get Started?</h2>
               <p className="text-gray-600 text-center mb-8">
