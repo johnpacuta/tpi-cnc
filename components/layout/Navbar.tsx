@@ -51,19 +51,6 @@ const primaryNav: (NavItem | NavGroup)[] = [
     },
 ]
 
-const keyframes = {
-    'subtle-pulse': {
-        '0%, 100%': {
-            transform: 'scale(1)',
-            boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
-        },
-        '50%': {
-            transform: 'scale(1.02)',
-            boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
-        }
-    }
-}
-
 export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [openDropdowns, setOpenDropdowns] = useState<number[]>([])
