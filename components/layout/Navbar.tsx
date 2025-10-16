@@ -72,10 +72,10 @@ export function Navbar() {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
-                mobileMenuRef.current &&
-                !mobileMenuRef.current.contains(event.target as Node) &&
-                menuButtonRef.current &&
-                !menuButtonRef.current.contains(event.target as Node)
+                (mobileMenuRef.current &&
+                !mobileMenuRef.current.contains(event.target as Node)) &&
+                (menuButtonRef.current &&
+                !menuButtonRef.current.contains(event.target as Node))
             ) {
                 setIsMobileMenuOpen(false)
                 setOpenDropdowns([])
@@ -157,94 +157,22 @@ export function Navbar() {
 
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-center h-14">
                     {/* Mobile menu button - moved to the right edge */}
-                    <div className="flex md:hidden absolute right-4">
+                    <div className="float-right right-4" ref={mobileMenuRef}>
                         <Button
                             variant="ghost"
                             className="mr-2"
-                            ref={menuButtonRef}
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            onClick={() => setIsMobileMenuOpen(v => !v)}
                         >
                             <Menu className="h-7 w-7"/>
                         </Button>
                     </div>
 
-                    {/* Desktop navigation */}
-                    <div
-                        className="hidden md:flex md:items-center md:justify-center md:flex-wrap lg:flex-nowrap md:gap-3 lg:gap-8">
-                        {primaryNav.map((item, index) => (
-                            isNavGroup(item) ? (
-                                <DropdownMenu key={index}>
-                                    <DropdownMenuTrigger asChild>
-                                        <Button
-                                            variant="ghost"
-                                            className="flex items-center gap-2 px-3 lg:px-5 text-base lg:text-lg font-medium tracking-wide hover:text-brand-blue transition-colors"
-                                        >
-                                            {item.label}
-                                            <ChevronDown className="h-5 w-5"/>
-                                        </Button>
-                                    </DropdownMenuTrigger>
-                                    <DropdownMenuContent className="text-base">
-                                        {item.items.map((subItem, subIndex) => (
-                                            <DropdownMenuItem key={subIndex} asChild>
-                                                {subItem.items ? (
-                                                    <div
-                                                        className="flex flex-col py-2 w-full group cursor-pointer relative">
-                                                        <div
-                                                            className="flex justify-between items-center w-full hover:text-brand-blue">
-                                                            <span className="font-medium">{subItem.label}</span>
-                                                            <ChevronDown className="h-4 w-4 ml-2"/>
-                                                        </div>
-                                                        <div
-                                                            className="absolute left-full top-0 hidden group-hover:block min-w-[200px] bg-white rounded-md shadow-lg">
-                                                            {subItem.items.map((nestedItem, nestedIndex) => (
-                                                                <DropdownMenuItem key={nestedIndex} asChild>
-                                                                    <Link
-                                                                        href={nestedItem.href}
-                                                                        className="flex flex-col py-2 px-4 hover:text-brand-blue hover:bg-gray-50 w-full"
-                                                                    >
-                                                                        <span
-                                                                            className="font-medium whitespace-nowrap">{nestedItem.label}</span>
-                                                                    </Link>
-                                                                </DropdownMenuItem>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                ) : (
-                                                    <Link href={subItem.href} className="flex flex-col py-2 w-full">
-                                                        <span className="font-medium">{subItem.label}</span>
-                                                        {subItem.subheader && (
-                                                            <span
-                                                                className="text-sm text-muted-foreground">{subItem.subheader}</span>
-                                                        )}
-                                                    </Link>
-                                                )}
-                                            </DropdownMenuItem>
-                                        ))}
-                                    </DropdownMenuContent>
-                                </DropdownMenu>
-                            ) : (
-                                <Button
-                                    key={index}
-                                    variant="ghost"
-                                    className="px-3 lg:px-5 text-base lg:text-lg font-medium tracking-wide hover:text-brand-blue transition-colors"
-                                    asChild
-                                >
-                                    <Link href={item.href}>
-                                        {item.label}
-                                    </Link>
-                                </Button>
-                            )
-                        ))}
-                    </div>
-                </div>
-
                 {/* Mobile menu - remains the same */}
                 {isMobileMenuOpen && (
                     <div
                         ref={mobileMenuRef}
-                        className="md:hidden py-4 bg-white border-t"
+                        className="py-4 bg-white border-t"
                     >
                         <div className="flex flex-col items-center space-y-4 p-4">
                             {/* Add Quote button at the top of mobile menu */}
