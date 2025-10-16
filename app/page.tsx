@@ -1,6 +1,6 @@
 import {Hero} from "@/components/home/Hero"
 import {About} from "@/components/home/About"
-import Services from "../components/home/Services2"
+import Services from "../components/home/Services"
 import ContactForm from "@/components/shared/ContactForm"
 import Partners from "@/components/home/Partners"
 
