@@ -31,23 +31,25 @@ export function About() {
                 </div>
             </div>
             <div className="overflow-hidden bg-gray-600 pt-20">
-                <div className="mx-auto max-w-6xl px-6 py-16 pb-32 mt-10">
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                        <div>
-                            <h3 className="text-lg font-semibold text-white">Column One</h3>
-                            <p className="mt-2 text-sm leading-6 text-white">
+                <div className="mx-auto max-w-6xl px-10 py-16 pb-32 mt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
+                        <div className="md:px-14">
+                            <h2 className="font-semibold text-white">SERVICE</h2>
+                            <p className="mt-2 text-white">
                                 Add your descriptive text here. Keep it concise and informative.
                             </p>
                         </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-white">Column Two</h3>
-                            <p className="mt-2 text-sm leading-6 text-white">
+
+                        <div className="md:px-14">
+                            <h2 className="font-semibold text-white">SUPPLY</h2>
+                            <p className="mt-2 text-white">
                                 Provide supporting details, features, or highlights.
                             </p>
                         </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-white">Column Three</h3>
-                            <p className="mt-2 text-sm leading-6 text-white">
+
+                        <div className="md:px-14">
+                            <h2 className="font-semibold text-white">SUPPORT</h2>
+                            <p className="mt-2 text-white">
                                 Wrap up with a summary, callout, or next steps.
                             </p>
                         </div>
