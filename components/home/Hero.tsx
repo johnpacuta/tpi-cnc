@@ -71,15 +71,6 @@ export function Hero() {
             </Button>
           </div> }
 
-          {/*/<div className="mt-16 flex gap-8 items-center"> */}
-            {/*Optional: Add trust indicators, stats, or partner logos here */}
-            {/* Example:
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Trusted by 500+ Companies</span>
-            </div>
-            */}
-          {/* </div> */}
         </div>
       </div>
     </div>
