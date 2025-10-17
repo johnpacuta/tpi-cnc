@@ -24,10 +24,10 @@ export function About() {
                 }}
             >
                 <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2">
-      <span
-          className="select-none uppercase font-extrabold tracking-widest text-gray-900/5 text-[7rem] md:text-[7rem] leading-none">
+      <h1
+          className="select-none uppercase font-extrabold tracking-widest text-gray-900/10 text-[7rem] md:text-[7rem] leading-none">
         TPI CNC
-      </span>
+      </h1>
                 </div>
             </div>
             <div className="overflow-hidden bg-gray-600 pt-20">
