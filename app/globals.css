@@ -7,11 +7,11 @@ html, body {
     overflow-x: hidden;
 }
 
-body,h1,h2,h3,h4,h5,h6,button,a {
-  font-family: "Smooch Sans Thin", Helvetica, sans-serif;
+body,h1,h2,h4,h5,h6,button,a {
+  font-family: Play, sans-serif;
 }
 
-p {
+h3, p {
     font-family: Poppins, Helvetica, sans-serif;
 }
 
