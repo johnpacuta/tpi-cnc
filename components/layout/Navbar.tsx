@@ -104,7 +104,7 @@ export function Navbar() {
                                        height={96}/>
                             </Link>
                             <h3 className="whitespace-wrap text-sm sm:text-base md:text-lg lg:text-xl font-bold min-w-0">
-                                INDUSTRIAL EQUIPMENT SPECIALISTS
+                                CNC EQUIPMENT SPECIALISTS
                             </h3>
                         </div>
 
