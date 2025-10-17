@@ -31,26 +31,26 @@ export function About() {
                 </div>
             </div>
             <div className="overflow-hidden bg-gray-600 pt-20">
-                <div className="mx-auto max-w-6xl px-10 py-16 pb-32 mt-10">
+                <div className="mx-auto max-w-6xl px-10 py-16 pb-36 mt-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
                         <div className="md:px-14">
                             <h2 className="font-semibold text-white">SERVICE</h2>
                             <p className="mt-2 text-white">
-                                Add your descriptive text here. Keep it concise and informative.
+                                Expert on-site technicians deliver comprehensive maintenance, emergency repairs, and precision calibrations.
                             </p>
                         </div>
 
                         <div className="md:px-14">
                             <h2 className="font-semibold text-white">SUPPLY</h2>
                             <p className="mt-2 text-white">
-                                Provide supporting details, features, or highlights.
+                                Reliable, fast fulfillment of genuine parts, tooling, consumables, and accessories ensures consistent quality and minimized downtime.
                             </p>
                         </div>
 
                         <div className="md:px-14">
                             <h2 className="font-semibold text-white">SUPPORT</h2>
                             <p className="mt-2 text-white">
-                                Wrap up with a summary, callout, or next steps.
+                                Responsive, knowledgeable assistance with diagnostics, integration, and workflow optimization.
                             </p>
                         </div>
                     </div>
