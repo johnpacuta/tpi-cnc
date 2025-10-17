@@ -25,13 +25,13 @@ export function About() {
             >
                 <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2">
       <h1
-          className="select-none uppercase font-extrabold tracking-widest text-gray-900/10 text-[7rem] md:text-[7rem] leading-none">
-        TPI CNC
+          className="select-none uppercase font-extrabold tracking-widest text-gray-900/10 text-[10rem] md:text-[10rem] leading-none">
+        TPI
       </h1>
                 </div>
             </div>
-            <div className="overflow-hidden bg-gray-600 pt-20">
-                <div className="mx-auto max-w-6xl px-10 py-16 pb-36 mt-10">
+            <div className="overflow-hidden bg-gray-600">
+                <div className="mx-auto max-w-6xl px-10 pb-36 mt-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
                         <div className="md:px-14">
                             <h2 className="font-semibold text-white">SERVICE</h2>
