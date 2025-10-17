@@ -3,7 +3,7 @@ export function About() {
         <section className="relative ">
             {/*divider */}
             <div
-                className="absolute -top-16 left-0 right-0 overflow-hidden rotate-180 fill-gray-600 transform-skew-y-8">
+                className="absolute -top-16 left-0 right-0 overflow-hidden rotate-180 fill-gray-500 transform-skew-y-8">
                 <svg
                     className="block w-full h-16"
                     viewBox="0 0 1200 120"
@@ -30,25 +30,25 @@ export function About() {
       </h1>
                 </div>
             </div>
-            <div className="overflow-hidden bg-gray-600">
+            <div className="overflow-hidden bg-gray-500">
                 <div className="mx-auto max-w-6xl px-10 pb-36 mt-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
                         <div className="md:px-14">
-                            <h2 className="font-semibold text-white">SERVICE</h2>
+                            <h2 className="text-white">SERVICE</h2>
                             <p className="mt-2 text-white">
                                 Expert on-site technicians deliver comprehensive maintenance, emergency repairs, and precision calibrations.
                             </p>
                         </div>
 
                         <div className="md:px-14">
-                            <h2 className="font-semibold text-white">SUPPLY</h2>
+                            <h2 className="text-white">SUPPLY</h2>
                             <p className="mt-2 text-white">
                                 Reliable, fast fulfillment of genuine parts, tooling, consumables, and accessories ensures consistent quality and minimized downtime.
                             </p>
                         </div>
 
                         <div className="md:px-14">
-                            <h2 className="font-semibold text-white">SUPPORT</h2>
+                            <h2 className="text-white">SUPPORT</h2>
                             <p className="mt-2 text-white">
                                 Responsive, knowledgeable assistance with diagnostics, integration, and workflow optimization.
                             </p>
