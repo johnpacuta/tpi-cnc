@@ -130,7 +130,7 @@ export function Navbar() {
                                 size="lg"
                                 className="
                   bg-brand-blue hover:bg-brand-blue/90 
-                  text-white font-bold 
+                  text-black font-bold
                   px-8 py-6 text-lg
                   shadow-lg hover:shadow-xl
                   transform hover:scale-105
