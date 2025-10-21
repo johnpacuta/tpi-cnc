@@ -1,8 +1,9 @@
 import Link from "next/link";
+import React, {ReactElement} from "react";
 
 interface ServiceCardProps {
   title: string;
-  icon: React.ReactNode;
+  icon: ReactElement;
   description: string;
   features: string[];
   details: string;

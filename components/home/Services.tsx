@@ -1,12 +1,13 @@
+'use client'
 import ContentSection from "../ContentSection";
 import ServiceCard from "../ServiceCard";
-import { Microscope, Wrench, Ruler, Power, Network } from "lucide-react";
+import {BlueprintIcon,CircuitIcon, FactoryIcon, GearIcon, WrenchIcon} from "../ui/EngIcons";
 
 export default function Services() {
   const services = [
     {
       title: "Electrical and Mechanical Diagnostics",
-      icon: <Microscope className="w-12 h-12" />,
+      icon: <CircuitIcon />,
       description: "Advanced diagnostic solutions for complex industrial equipment",
       features: [
         "State-of-the-art diagnostic tools and equipment",
@@ -20,7 +21,7 @@ export default function Services() {
     },
     {
       title: "Root Cause Analysis Repairs",
-      icon: <Wrench className="w-12 h-12" />,
+      icon: <WrenchIcon />,
       description: "Identifying and addressing the source of equipment issues",
       features: [
         "Systematic problem investigation",
@@ -34,7 +35,7 @@ export default function Services() {
     },
     {
       title: "Equipment Alignment and Calibration",
-      icon: <Ruler className="w-12 h-12" />,
+      icon: <GearIcon />,
       description: "Precision calibration services for optimal performance",
       features: [
         "Laser alignment services",
@@ -48,7 +49,7 @@ export default function Services() {
     },
     {
       title: "Commissioning and Decommissioning",
-      icon: <Power className="w-12 h-12" />,
+      icon: <FactoryIcon />,
       description: "Complete equipment lifecycle management",
       features: [
         "New equipment installation",
@@ -62,7 +63,7 @@ export default function Services() {
     },
     {
       title: "Third-Party Integration",
-      icon: <Network className="w-12 h-12" />,
+      icon: <BlueprintIcon />,
       description: "Seamless integration of multiple systems and components",
       features: [
         "Cross-platform compatibility",
