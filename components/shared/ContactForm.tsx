@@ -62,7 +62,7 @@ export default function ContactForm({
             {
                 error: (err: { message: any; }) => err.message || 'Failed to send message',
                 loading: 'Sending message...',
-                success: (response: { success: any; error: any; }) => {
+                success: (response: { success: any; error?: any; }) => {
                     if (response.success) {
                         form.reset();
                         setErrors({});
