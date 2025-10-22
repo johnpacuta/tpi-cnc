@@ -28,13 +28,13 @@ export default function ServiceCard({
         <div className="p-4 md:p-6 md:grid md:grid-cols-3 md:gap-6">
           {/* Title & Description (2nd column) */}
           <div className="text-center md:text-left mb-8">
-              <div className="flex items-center justify-center w-20 h-auto bg-brand-blue/10 rounded-2xl mb-8 mx-aut md:mr-4 md:group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-brand-blue">
-                      {icon}
-                  </div>
+            <div className="mb-8 flex justify-center items-center">
+              <div className="flex items-center justify-center w-20 bg-brand-blue/10 rounded-2xl md:mr-4 md:group-hover:scale-110 transition-transform duration-300">
+                <div className="text-brand-blue">{icon}</div>
               </div>
+            </div>
             <h3 className="text-2xl font-bold mb-3 relative inline-block md:inline">
-              <span className="relative z-10 text-brand-blue md:group-hover:text-white transition-colors duration-300">
+              <span className="relative z-10 text-brand-blue transition-colors duration-300">
                 {title}
               </span>
             </h3>
@@ -78,27 +78,27 @@ export default function ServiceCard({
                   </li>
                 ))}
               </ul>
-                <div className="mt-8 text-center md:mt-6 md:col-span-4 md:text-left md:pl-8">
-                    <div className="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-medium md:group-hover:bg-white md:group-hover:text-brand-blue border-2 border-transparent md:group-hover:border-brand-blue transition-all duration-300 md:transform md:group-hover:scale-105">
-                        Learn More
-                        <svg
-                            className="w-5 h-5 ml-2 md:transform md:group-hover:translate-x-1 transition-transform duration-300"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </div>
+              <div className="mt-8 text-center md:mt-6 md:col-span-4 md:text-left md:pl-8">
+                <div className="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-medium md:group-hover:bg-white md:group-hover:text-brand-blue border-2 border-transparent md:group-hover:border-brand-blue transition-all duration-300 md:transform md:group-hover:scale-105">
+                  Learn More
+                  <svg
+                    className="w-5 h-5 ml-2 md:transform md:group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-          {/* ... existing code ... */}
-          {/* Learn More Button spans full width on mobile; aligns under grid on desktop */}
+            {/* ... existing code ... */}
+            {/* Learn More Button spans full width on mobile; aligns under grid on desktop */}
           </div>
         </div>
       </div>
