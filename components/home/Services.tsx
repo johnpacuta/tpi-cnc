@@ -1,7 +1,7 @@
 'use client'
 import ContentSection from "../ContentSection";
 import ServiceCard from "../ServiceCard";
-import {BlueprintIcon,CircuitIcon, FactoryIcon, GearIcon, WrenchIcon} from "../ui/EngIcons";
+import {BlueprintIcon,CircuitIcon, GearIcon, WrenchIcon, PowerIcon} from "../ui/EngIcons";
 
 export default function Services() {
   const services = [
@@ -49,7 +49,7 @@ export default function Services() {
     },
     {
       title: "Commissioning and Decommissioning",
-      icon: <FactoryIcon />,
+      icon: <PowerIcon />,
       description: "Complete equipment lifecycle management",
       features: [
         "New equipment installation",
