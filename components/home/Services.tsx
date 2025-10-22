@@ -78,13 +78,11 @@ export default function Services() {
   ];
 
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen">
       
       <ContentSection 
-        title="Our Services" 
-        subtitle="Industrial equipment solutions tailored to your needs"
+        title="Our Services"
       >
-        <div className="space-y-16">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gray-600 text-lg leading-relaxed">
               At TPI CNC Inc., we provide industrial equipment services 
@@ -93,7 +91,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1">
             {services.map((service, index) => (
               <ServiceCard 
                 key={index} 
@@ -101,7 +99,6 @@ export default function Services() {
               />
             ))}
           </div>
-        </div>
       </ContentSection>
     </main>
   );
