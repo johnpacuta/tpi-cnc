@@ -43,7 +43,6 @@ export function Hero() {
                 bg-brand-blue hover:bg-brand-blue/90
                 rounded-md
                 border-2 border-brand-blue/20
-                animate-subtle-pulse
                 whitespace-nowrap
                 text-black hover:text-white
               "
