@@ -48,8 +48,7 @@ export function Hero() {
                 text-black hover:text-white
               "
             >
-                <a href="tel:+15195638900">Call Now →</a>
-
+                <Link href="tel:+15195638900">Call Now →</Link>
             </Button>
             <Button asChild
               variant="outline" 
@@ -67,7 +66,7 @@ export function Hero() {
                 whitespace-nowrap
               "
             >
-                <Link href="/about">Learn More →</Link>
+              <Link href="/about">Learn More →</Link>
             </Button>
           </div> }
 
