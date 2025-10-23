@@ -5,7 +5,8 @@ import Image from "next/image";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import ProductSlider from "./ProductSlider"; // We'll create this next
+import ProductSlider from "./ProductSlider";
+import {router} from "next/client";
 
 // Product type definition
 interface Product {
@@ -47,7 +48,7 @@ export default function CncIndexingTjr() {
         <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
             <Image
-              src="/products/cnc_indexing.webp"
+              src="/images/CNC_Indexing.jpg"
               alt="CNC Indexing"
               width={600}
               height={300}
@@ -102,18 +103,18 @@ export default function CncIndexingTjr() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <button 
-            onClick={() => setIsModalOpen(true)}
+          <button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
-            Request a Quote
+              <a href="/quote">Request a Quote</a>
           </button>
         </div>
       </ContentSection>
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

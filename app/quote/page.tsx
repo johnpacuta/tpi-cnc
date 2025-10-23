@@ -57,7 +57,7 @@ export default function Quote() {
   };
 
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-4">
       <ContentSection 
         title="Get a Quote" 
         subtitle="Need a part or solution for your company? Fill out the following and our experts will get you a quote!"

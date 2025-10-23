@@ -6,7 +6,7 @@ const pageData = {
   duration: "Varies by project",
   description: "Advanced additive manufacturing solutions for modern production needs",
   fullDescription: `Our state-of-the-art 3D printing services offer innovative solutions for rapid prototyping and production manufacturing. We utilize the latest in additive manufacturing technology to create precise, complex parts with a wide range of materials.`,
-  imageUrl: "/images/teddy.jpg",
+  imageUrl: "/images/3DPrinting.gif",
   //methodology: [],
   benefits: [
     "Rapid prototyping capabilities",

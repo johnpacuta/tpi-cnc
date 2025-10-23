@@ -7,6 +7,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "../cnc-indexing-tjr/ProductSlider";
 import { ExternalLink } from "lucide-react";
+import {router} from "next/client";
+import Link from "next/link";
 
 // Product type definition
 interface Product {
@@ -43,10 +45,10 @@ export default function MarkinBox() {
         subtitle="Dot Peen Marking Machines"
       >
         {/* Hero Section */}
-        <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
+        <div className="bg-white rounded-xl shadow-sm mb-12">
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
             <Image
-              src="/logos/partners/markinbox.webp"
+              src="/images/MarkinBOX.png"
               alt="MarkinBOX"
               width={300}
               height={100}
@@ -112,18 +114,20 @@ export default function MarkinBox() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <Button 
-            onClick={() => setIsModalOpen(true)}
+          <Button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </Button>
         </div>
       </ContentSection>
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

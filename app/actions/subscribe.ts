@@ -1,11 +1,7 @@
 'use server'
 
-import { z } from 'zod'
-import { sql } from '@vercel/postgres'
-
-const SubscribeSchema = z.object({
-  email: z.string().email('Please enter a valid email address'),
-})
+import { neon } from '@neondatabase/serverless'
+import {SubscribeSchema} from '@/lib/schema'
 
 export async function submitSubscription(formData: FormData) {
   try {
@@ -16,20 +12,20 @@ export async function submitSubscription(formData: FormData) {
       return { success: false, error: 'Please enter a valid email address' }
     }
 
-    // Check if email already exists
+    const sql = neon(process.env.DATABASE_URL!)
+
     const existingSubscriber = await sql`
       SELECT email FROM subscribers 
       WHERE email = ${email as string}
     `
 
-    if (existingSubscriber.rows.length > 0) {
+    if (existingSubscriber.length > 0) {
       return { success: false, error: 'Email already subscribed' }
     }
 
-    // Create new subscriber
     await sql`
-      INSERT INTO subscribers (email, created_at)
-      VALUES (${email as string}, NOW())
+      INSERT INTO subscribers (email)
+      VALUES (${email});
     `
 
     return { success: true }
