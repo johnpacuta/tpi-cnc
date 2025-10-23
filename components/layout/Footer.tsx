@@ -7,62 +7,43 @@ import { toast } from 'react-hot-toast'
 import { submitSubscription } from '@/app/actions/subscribe'
 
 const productsLinks = {
-  title: 'Products',
-  links: [
-    /*{ name: 'Equipment', href: '/products' },*/
-    /*{ name: 'Spare Parts', href: '/spare-parts' },*/
-    { name: 'Special Deals', href: '/deals' },
-  ]
+  title: 'Services',
+    links: [
+        { name: "Consulting", href: "/consulting" },
+        { name: "Part Sourcing", href: "/spare-parts" },
+        { name: "Maintenance", href: "/maintenance" },
+        { name: "3D Printing", href: "/3d-printing" },
+    ]
 }
 
 const servicesLinks = {
-  title: 'Services',
-  links: [
-    { name: 'Maintenance', href: '/services' },
-    { name: 'Training', href: '/training' },
-    { name: 'Consulting', href: '/consulting' },
-  ]
+  title: 'Equipment',
+    links: [
+        { name: "Solutions", href: "/equipment" },
+        { name: "RENISHAW", href: "/renishaw-products" },
+    ]
 }
 
 const supportLinks = {
-  title: 'Support',
-  links: [
-    { name: 'Quote Request', href: '/quote' },
-    { name: 'Technical Support', href: '/contact' },
-  ]
-}
-
-const companyLinks = {
   title: 'Company',
-  links: [
-    { name: 'About Us', href: '/about' },
-    // { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Quote Request', href: '/quote' },
+        { name: 'Contact Us', href: '/contact' },
+    ]
 }
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/tpicnc', icon: FaLinkedin },
 ]
 
-const sitemapLinks = {
-  title: 'Sitemap',
-  links: [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    //{ name: 'Partners', href: '/partners' },
-    { name: 'Services', href: '/#services' },
-    { name: 'Contact', href: '/contact' },
-  ]
-}
-
 function FooterColumn({ title, links }: { title: string, links: { name: string, href: string }[] }) {
   return (
     <div>
-      <h4 className="text-sm font-semibold mb-3 relative inline-block">
+      <h2 className="font-semibold mb-3 inline-block">
         {title}
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"></span>
-      </h4>
+        <span className="absolute bottom-0 left-0 w-full h-0.5"></span>
+      </h2>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.name}>
@@ -139,17 +120,17 @@ export function Footer() {
           {/* Subscribe Form */}
           <div className="w-full md:w-auto md:ml-auto">
             <h4 className="text-sm font-semibold mb-3">Stay Updated with TPI CNC</h4>
-            <form onSubmit={handleSubscribe} className="flex gap-2 max-w-md">
+            <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-2 max-w-md">
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email for updates"
-                className="flex-1 px-4 py-2 bg-white/10 rounded-sm text-sm text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-accent min-w-[240px]"
+                className="w-full md:flex-1 px-4 py-2 bg-white/10 rounded-sm text-sm text-white placeholder:text-white/60 border border-white/20 focus:outline-none focus:border-accent md:min-w-[240px]"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-brand-blue/100 text-white hover:bg-brand-blue/70 rounded-sm text-sm transition-colors whitespace-nowrap font-medium"
+                className="w-full md:w-auto px-6 py-2 bg-brand-blue/100 text-white hover:bg-brand-blue/70 rounded-sm text-sm transition-colors whitespace-nowrap font-medium"
               >
                 Subscribe
               </button>
@@ -158,11 +139,10 @@ export function Footer() {
         </div>
 
         {/* Quick Links Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
           <FooterColumn {...productsLinks} />
           <FooterColumn {...servicesLinks} />
           <FooterColumn {...supportLinks} />
-          <FooterColumn {...companyLinks} />
         </div>
 
         {/* Bottom Bar */}
@@ -188,4 +168,4 @@ export function Footer() {
       </div>
     </footer>
   )
-} 
+}

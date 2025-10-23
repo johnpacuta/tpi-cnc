@@ -86,13 +86,13 @@ export default function Maintenance() {
   ];
 
   return (
-    <main className="min-h-screen py-4">
+    <main className="min-h-screen pt-20 py-4">
       <ContentSection 
         title="Maintainence Process"
         subtitle="Comprehensive maintenance solutions for your CNC equipment"
       >
         {/* Timeline */}
-        <div className="relative mb-12">
+        <div className="relative mt-10 mb-12">
           {/* Timeline line with gradient */}
           <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
             <div className="h-1 bg-gradient-to-r from-gray-200 via-brand-blue to-gray-200"></div>
@@ -206,8 +206,7 @@ export default function Maintenance() {
 
         <div className="mt-8 space-y-4 text-center">
           <p className="text-gray-600 max-w-3xl mx-auto">
-            All service packages include our dual-technician approach, ensuring efficient and high-quality results. 
-            Additional technician support is provided at no extra cost during service visits.
+            All service packages include our dual-technician approach, ensuring efficient and high-quality results.
           </p>
           <a
             href="/contact"

@@ -10,12 +10,12 @@ import ContactForm from "./shared/ContactForm";
 
 type ContactModalProps = {
   open: boolean;
-  onOpenChange: (open: boolean) => void;
+  onOpenChangeAction: (open: boolean) => void;
 }
 
-export default function ContactModal({ open, onOpenChange }: ContactModalProps) {
+export default function ContactModal({ open, onOpenChangeAction }: ContactModalProps) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChangeAction}>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle>Request a Quote</DialogTitle>

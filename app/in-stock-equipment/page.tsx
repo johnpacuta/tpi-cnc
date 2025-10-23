@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import {router} from "next/client";
+import Link from "next/link";
 
 // Product type definition
 interface Product {
@@ -90,7 +92,7 @@ const products: Product[] = [
 
       "Machine Capabilities",
       "• 45° Taper Cutting Capability (wide angle guides and flush cups required)",
-      "• Lead In/Out Function (reduces whitness mark)",
+      "• Lead In/Out Function",
       "• Built in Collision Detection (All Axis)",
       "• Automatic Corner Pro Function",
       "• Automatic Wire Feed System (Re-Thread at Break-Point)",
@@ -103,7 +105,7 @@ const products: Product[] = [
       "• Ergonomic CNC Operator Panel (Swivel Mounted and Adjustable)",
       "• On Board Operation and Help Menus",
       "• AWT Monitor Screen",
-      "• Conversational Cutting Condition Selection with API (automatic program imbedding)",
+      "• Conversational Cutting Condition Selection with API (automatic program embedding)",
 
       "Connectivity & Programming",
       "• Ethernet (standard)",
@@ -115,7 +117,7 @@ const products: Product[] = [
       "Standard Equipment",
       "• Extended Life Filtration Unit",
       "• Chiller Unit (standard)",
-      "• Saftey Door Interlock"
+      "• Safety Door Interlock"
     ]
   },
   {
@@ -149,7 +151,7 @@ const products: Product[] = [
       "• Flush Pump: 100~1900 P.S.I.",
       "• Filter Pump: Standard",
       "• Filter: 10 micron paper element",
-      "• Auxilary Flush Nozzle: Standard"
+      "• Auxiliary Flush Nozzle: Standard"
     ]
   },
   {
@@ -211,10 +213,12 @@ export default function InStockEquipment() {
               </Button>
 
               <Button
-                onClick={() => setIsModalOpen(true)}
+                  onClick={() => router.push("/quote")}
                 className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-4"
               >
+                  <Link href="/quote">
                 Request a Quote
+                  </Link>
               </Button>
             </div>
           </div>
@@ -240,11 +244,11 @@ export default function InStockEquipment() {
                     <h3 className="text-2xl font-semibold mb-4">{product.title}</h3>
                     <p className="text-gray-600 mb-6">{product.description}</p>
                     <Button
-                      onClick={() => setIsModalOpen(true)}
+                        onClick={() => router.push("/quote")}
                       className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4"
                     >
                       Request a Quote for {product.title.split('-')[0].trim()}
-                    </Button>
+                        </Button>
                   </div>
                 </div>
                 {product.specs && (
@@ -273,17 +277,19 @@ export default function InStockEquipment() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <Button
-            onClick={() => setIsModalOpen(true)}
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 text-lg"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </Button>
         </div>
       </ContentSection>
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

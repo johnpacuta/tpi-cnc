@@ -28,7 +28,7 @@ const primaryNav: (NavItem | NavGroup)[] = [
   {
     label: "Services",
     items: [
-        { label: "Overview", href: "/services" },
+        //{ label: "Overview", href: "/services" },
         { label: "Consulting", href: "/consulting" },
         { label: "Part Sourcing", href: "/spare-parts" },
         { label: "Maintenance", href: "/maintenance" },
@@ -50,18 +50,11 @@ const primaryNav: (NavItem | NavGroup)[] = [
     ]
   },
   {
-    label: 'Support',
-    items: [
-      { label: 'Quote Request', href: '/quote' },
-      { label: 'Technical Support', href: '/contact' },
-    ]
-  },
-  {
     label: "Company",
     items: [
       { label: 'About Us', href: '/about' },
-      // { label: 'Partners', href: '/partners' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Quote Request', href: '/quote' },
+      { label: 'Contact Us', href: '/contact' },
     ]
   },
 ]
@@ -134,7 +127,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <Link href="/" className="text-primary font-bold text-xl">
-                <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="h-12 w-auto" width={120} height={96} />
+                <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="w-auto" width={120} height={96} />
               </Link>
               <span className="text-xs md:text-sm lg:text-base tracking-wider font-medium">
                 <span className="text-brand-black">SERVICE</span>

@@ -49,7 +49,7 @@ export function Hero() {
             >
                 <Link href="tel:+15195638900">Call Now →</Link>
             </Button>
-            <Button 
+            <Button asChild
               variant="outline" 
               size="lg"
               className="
