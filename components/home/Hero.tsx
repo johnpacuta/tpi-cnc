@@ -32,7 +32,7 @@ export function Hero() {
           </p>
 
           {<div className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button 
+            <Button asChild
               size="lg" 
               className="
                 px-8 py-7 
