@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -47,8 +48,7 @@ export function Hero() {
                 text-black hover:text-white
               "
             >
-                <a href="tel:+15195638900">Call Now →</a>
-
+                <Link href="tel:+15195638900">Call Now →</Link>
             </Button>
             <Button 
               variant="outline" 
@@ -66,7 +66,7 @@ export function Hero() {
                 whitespace-nowrap
               "
             >
-              <a href="/about">Learn More →</a>
+              <Link href="/about">Learn More →</Link>
             </Button>
           </div> }
 
