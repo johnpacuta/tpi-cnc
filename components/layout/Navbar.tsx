@@ -144,10 +144,10 @@ export function Navbar() {
               <div className="flex items-center gap-2 text-brand-blue">
                 <Phone className="h-5 w-5" />
                 <a 
-                  href="tel:+12267875064" 
+                  href="tel:+15195638900"
                   className="text-lg font-semibold hover:text-brand-blue/80 transition-colors text-primary"
                 >
-                  (226) 787-5064
+                  (519) 563-8900
                 </a>
               </div>
 
