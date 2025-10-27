@@ -69,37 +69,6 @@ export function About() {
                         </div>
 
                         <div className="md:px-14 pb-10">
-                            <h2 className="text-white">SUPPLY</h2>
-                            <p className="mt-2 text-white">
-                                Reliable, fast fulfillment of genuine parts, tooling, consumables, and accessories
-                                ensures consistent quality and minimized downtime.
-                            </p>
-                            <br></br>
-                            {/* CTA Button */}
-                            <Button
-                                asChild
-                                variant="outline"
-                                size="lg"
-                                className="
-                px-8 py-6
-                text-base font-bold
-                shadow-xl hover:shadow-lg
-                transform scale-100 hover:scale-105
-                transition-all duration-200
-                border-2 border-white
-                text-white hover:text-black
-                bg-black hover:bg-white
-                rounded-md
-                whitespace-nowrap
-                "
-                            >
-                                <Link href="/#">
-                                    Learn More
-                                </Link>
-                            </Button>
-                        </div>
-
-                        <div className="md:px-14 pb-10">
                             <h2 className="text-white">SUPPORT</h2>
                             <p className="mt-2 text-white">
                                 Responsive, knowledgeable assistance with diagnostics, integration, and workflow
@@ -129,9 +98,40 @@ export function About() {
                                 </Link>
                             </Button>
                         </div>
+                        <div className="md:px-14 pb-10">
+                            <h2 className="text-white">SUPPLY</h2>
+                            <p className="mt-2 text-white">
+                                Reliable, fast fulfillment of genuine parts, tooling, consumables, and accessories
+                                ensures consistent quality and minimized downtime.
+                            </p>
+                            <br></br>
+                            {/* CTA Button */}
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="
+                px-8 py-6
+                text-base font-bold
+                shadow-xl hover:shadow-lg
+                transform scale-100 hover:scale-105
+                transition-all duration-200
+                border-2 border-white
+                text-white hover:text-black
+                bg-black hover:bg-white
+                rounded-md
+                whitespace-nowrap
+                "
+                            >
+                                <Link href="/#">
+                                    Learn More
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div className="absolute bottom-0 left-0 right-0 overflow-hidden rotate-180 fill-white transform-skew-y-8">
                 <svg
                     className="block w-full h-16"
