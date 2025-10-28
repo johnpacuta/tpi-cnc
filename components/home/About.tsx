@@ -40,8 +40,7 @@ export function About() {
                         <div className="md:px-14 pb-10">
                             <h2 className="text-white">SERVICE</h2>
                             <p className="mt-2 text-white">
-                                Expert on-site technicians deliver comprehensive maintenance, emergency repairs, and
-                                precision calibrations.
+                                Manufacturer-certified technicians deliver 24/7 technical support, expert emergency repairs, and precision calibrations.
                             </p>
                             <br></br>
                             {/* CTA Button */}
@@ -71,8 +70,7 @@ export function About() {
                         <div className="md:px-14 pb-10">
                             <h2 className="text-white">SUPPORT</h2>
                             <p className="mt-2 text-white">
-                                Responsive, knowledgeable assistance with diagnostics, integration, and workflow
-                                optimization.
+                                Rare part sourcing, high-quality consumables, custom 3D-printed components, and personalized maintenance packages.
                             </p>
                             <br></br>
                             {/* CTA Button */}
@@ -101,8 +99,7 @@ export function About() {
                         <div className="md:px-14 pb-10">
                             <h2 className="text-white">SUPPLY</h2>
                             <p className="mt-2 text-white">
-                                Reliable, fast fulfillment of genuine parts, tooling, consumables, and accessories
-                                ensures consistent quality and minimized downtime.
+                                An extensive range of precision machines, advanced technology from world class builders to maximize your productivity.
                             </p>
                             <br></br>
                             {/* CTA Button */}
