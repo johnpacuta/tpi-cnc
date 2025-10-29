@@ -34,7 +34,7 @@ export function About() {
                     />
                 </div>
             </div>
-            <div className="overflow-hidden bg-black pt-20">
+            <div className="overflow-hidden bg-black pt-24">
                 <div className="mx-auto max-w-6xl px-10 pb-36 mt-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
                         <div className="md:px-14 pb-10">
