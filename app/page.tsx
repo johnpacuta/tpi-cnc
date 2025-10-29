@@ -1,12 +1,14 @@
 import {Hero} from "@/components/home/Hero"
 import {About} from "@/components/home/About"
 import ContactForm from "@/components/shared/ContactForm"
+import {BodyHome} from "@/components/home/BodyHome"
 
 export default function Home() {
     return (
         <main>
             <Hero/>
             <About/>
+            <BodyHome/>
             <section className="bg-brand-white pb-20">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
