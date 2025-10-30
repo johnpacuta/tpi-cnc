@@ -1,6 +1,6 @@
 export function Values() {
     return (
-        <section className="relative rounded-xl bg-black text-white mx-auto max-w-6xl px-10 md:px-40 py-20 my-10 shadow-2xl shadow-black/50">
+        <section className="relative rounded-xl bg-black text-white mx-auto max-w-6xl px-10 md:pl-14 md:pr-10 py-10 mb-5 pb-0 shadow-2xl shadow-black/50">
   {/* content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 <div>
