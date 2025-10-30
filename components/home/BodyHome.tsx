@@ -1,6 +1,6 @@
 export function BodyHome() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-28 pb-24 items-center ">
             <div className="flex items-baseline justify-center min-h-28">
                 <a
                     href="https://www.excetek.com/shop"
