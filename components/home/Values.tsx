@@ -8,6 +8,15 @@ export function Values() {
                     <p className="mt-2">
                         We focus on what matters most to our customers and our craft.
                     </p>
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                    >
+                        <source src="https://pniltkutkpe7bvm4.public.blob.vercel-storage.com/muscle_car_engine.mp4" type="video/mp4" />
+                    </video>
                 </div>
 
                 <div className="space-y-6">
