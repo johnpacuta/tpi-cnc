@@ -9,6 +9,7 @@ export function Values() {
                         We focus on what matters most to our customers and our craft.
                     </p>
                     <video
+                        className="p-8"
                         autoPlay
                         muted
                         loop
