@@ -1,6 +1,6 @@
 import {Hero} from "@/components/home/Hero"
 import {About} from "@/components/home/About"
-import {BodyHome} from "@/components/home/BodyHome"
+import {Brands} from "@/components/home/Brands"
 import {Values} from "@/components/home/Values"
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
         <main className="pb-20">
             <Hero/>
             <About/>
-            <BodyHome/>
+            <Brands/>
             <Values/>
         </main>
     )

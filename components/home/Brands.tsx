@@ -1,6 +1,6 @@
-export function BodyHome() {
+export function Brands() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-28 pb-24 items-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-28 pb-24 items-center mx-auto max-w-5xl px-4">
             <div className="flex items-baseline justify-center min-h-28">
                 <a
                     href="https://www.excetek.com/shop"
@@ -16,7 +16,7 @@ export function BodyHome() {
                     />
                 </a>
             </div>
-            <div className="flex items-center justify-center min-h-28">
+            {/*<div className="flex items-center justify-center min-h-28">
                 <a
                     href="https://www.hurco.com/en-us/products#!#allmachines"
                     target="_blank"
@@ -30,7 +30,7 @@ export function BodyHome() {
                         loading="lazy"
                     />
                 </a>
-            </div>
+            </div>*/}
             <div className="flex items-baseline justify-center min-h-28">
                 <a
                     href="https://www.kasto.com/en/saws/overview-saws"
@@ -76,6 +76,7 @@ export function BodyHome() {
                     />
                 </a>
             </div>
+            {/*}
             <div className="flex items-center justify-center min-h-28">
                 <a
                     href="https://takumiusa.com/takumi-usa-product-lineup/"
@@ -91,6 +92,7 @@ export function BodyHome() {
                     />
                 </a>
             </div>
+            */}
         </div>
     );
 }
