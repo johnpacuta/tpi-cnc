@@ -4,12 +4,18 @@ export function Values() {
             className="relative rounded-xl bg-black text-white mx-auto max-w-6xl px-10 md:pl-14 md:pr-10 py-10 mb-5 pb-0 shadow-2xl shadow-black/50">
             {/* content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pb-8">
-                <img src="/images/Gears.png" alt="Gears of TPI CNC" className="w-72 h-auto"/>
+                <div className="flex items-center justify-center h-full">
+                    <img
+                        src="/images/Gears.png"
+                        alt="Gears of TPI CNC"
+                        className="h-3/4 w-auto"
+                    />
+                </div>
 
 
                 <div className="space-y-6">
-                    <h2 className="text-3xl">Our Values</h2>
-                    <p className="mt-2">
+                    <h1 className="text-5xl text-brand-blue">Our Values</h1>
+                    <p className="mt-2 text-2xl">
                         We focus on what matters most to our customers and our craft.
                     </p>
                     <div className="flex items-start space-x-4">
@@ -65,6 +71,20 @@ export function Values() {
                             <h2 className="mb-1">Continuous Innovation</h2>
                             <p className="text-sm">Staying ahead with the latest industry
                                 advancements</p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                        <div className="p-2 rounded-full">
+                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 className="mb-1">The Next Generation</h2>
+                            <p className="text-sm">Investing in our apprentices with the skills, support, and hands-on
+                                experience.</p>
                         </div>
                     </div>
                 </div>
