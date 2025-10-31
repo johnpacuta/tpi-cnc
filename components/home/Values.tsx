@@ -1,26 +1,17 @@
 export function Values() {
     return (
-        <section className="relative rounded-xl bg-black text-white mx-auto max-w-6xl px-10 md:pl-14 md:pr-10 py-10 mb-5 pb-0 shadow-2xl shadow-black/50">
-  {/* content */}
+        <section
+            className="relative rounded-xl bg-black text-white mx-auto max-w-6xl px-10 md:pl-14 md:pr-10 py-10 mb-5 pb-0 shadow-2xl shadow-black/50">
+            {/* content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pb-8">
-                <div>
+                <img src="/images/Gears.png" alt="Gears of TPI CNC" className="w-72 h-auto"/>
+
+
+                <div className="space-y-6">
                     <h2 className="text-3xl">Our Values</h2>
                     <p className="mt-2">
                         We focus on what matters most to our customers and our craft.
                     </p>
-                    <video
-                        className="p-8"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                    >
-                        <source src="https://pniltkutkpe7bvm4.public.blob.vercel-storage.com/muscle_car_engine.mp4" type="video/mp4" />
-                    </video>
-                </div>
-
-                <div className="space-y-6">
                     <div className="flex items-start space-x-4">
                         <div className="p-2 rounded-full">
                             <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
