@@ -14,8 +14,8 @@ export function Values() {
 
 
                 <div className="space-y-6">
-                    <h1 className="text-5xl text-brand-blue">Our Values</h1>
-                    <p className="mt-2 text-xl">
+                    <h1 className="text-5xl text-brand-blue flex items-start space-x-4 pl-2">Our Values</h1>
+                    <p className="mt-2 text-xl pl-2">
                         We focus on what matters most to our customers and our craft.
                     </p>
                     <div className="flex items-start space-x-4">
