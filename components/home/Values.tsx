@@ -1,17 +1,16 @@
 export function Values() {
     return (
         <section
-            className="relative rounded-xl bg-black text-white mx-auto max-w-6xl md:pl-14 md:pr-10 py-10 mb-5 shadow-2xl shadow-black/50">
+            className="relative rounded-xl bg-black text-white mx-auto max-w-6xl md:pl-14 md:pr-10 py-10 px-5 mb-5 shadow-2xl shadow-black/50">
             {/* content */}
             <div className="grid grid-cols-1 md:grid-cols-2 items-start">
-                <div className="flex justify-center self-center">
+                <div className="hidden md:flex justify-center self-center">
                     <img
                         src="/images/Gears.png"
                         alt="Gears of TPI CNC"
                         className="w-3/4 h-auto"
                     />
                 </div>
-
 
                 <div className="space-y-6">
                     <h1 className="text-5xl text-brand-blue flex items-start space-x-4 pl-16 pr-4">Our Values</h1>
