@@ -6,7 +6,6 @@ interface ServiceCardProps {
   icon: ReactElement;
   description: string;
   features: string[];
-  details: string;
   slug: string;
 }
 
@@ -15,7 +14,6 @@ export default function ServiceCard({
   icon,
   description,
   features,
-  details,
   slug
 }: ServiceCardProps) {
   return (
@@ -25,9 +23,9 @@ export default function ServiceCard({
     >
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden md:hover:shadow-xl transition-all duration-300 md:transform md:group-hover:-translate-y-1 border border-gray-100">
         {/* Mobile: stacked; Desktop: 4 auto-width columns with icon at far left */}
-        <div className="p-4 md:p-6 md:grid md:grid-cols-3 md:gap-6">
-          {/* Title & Description (2nd column) */}
-          <div className="text-center md:text-left mb-8">
+        <div className="p-4 md:grid md:gap-6">
+          {/* Title & Description (1st column) */}
+          <div className="text-center md:text-left">
             <div className="mb-8 flex justify-center items-center">
               <div className="flex items-center justify-center w-20 bg-brand-blue/10 rounded-2xl md:mr-4 md:group-hover:scale-110 transition-transform duration-300">
                 <div className="text-brand-blue">{icon}</div>
@@ -42,16 +40,7 @@ export default function ServiceCard({
               {description}
             </p>
           </div>
-          {/* ... existing code ... */}
-          {/* Details (3rd column) */}
-          <div className="space-y-6 md:space-y-0">
-            <div className="bg-gray-50 p-6 rounded-xl md:p-4">
-              <p className="text-gray-700 leading-relaxed">
-                {details}
-              </p>
-            </div>
-          </div>
-          {/* Features (4th column) */}
+          {/* Features (2nd column) */}
           <div>
             <div className="bg-white rounded-xl">
               <ul className="space-y-3">

@@ -10,13 +10,11 @@ export default function Services() {
       icon: <CircuitIcon />,
       description: "Advanced diagnostic solutions for complex industrial equipment",
       features: [
-        "State-of-the-art diagnostic tools and equipment",
+        "State-of-the-art diagnostic tools",
         "Electrical system analysis",
         "Mechanical performance evaluation",
         "Detailed inspection reports",
-        "Preventive maintenance recommendations"
       ],
-      details: "Our expert technicians utilize cutting-edge diagnostic tools to identify and troubleshoot both electrical and mechanical issues in CNC machines and industrial equipment. Through systematic testing and analysis, we ensure accurate fault detection and efficient resolution planning.",
       slug: "electrical-mechanical-diagnostics"
     },
     {
@@ -25,12 +23,10 @@ export default function Services() {
       description: "Identifying and addressing the source of equipment issues",
       features: [
         "Systematic problem investigation",
-        "Data-driven analysis methods",
+        "Data-driven analysis",
         "Corrective action planning",
-        "Implementation of preventive measures",
         "Documentation and reporting"
       ],
-      details: "We go beyond surface-level repairs by conducting thorough root cause analysis. This systematic approach helps identify the underlying causes of equipment failures, allowing us to implement lasting solutions and prevent recurring issues.",
       slug: "root-cause-analysis-repairs"
     },
     {
@@ -38,13 +34,11 @@ export default function Services() {
       icon: <GearIcon />,
       description: "Precision calibration services for optimal performance",
       features: [
-        "Laser alignment services",
         "Geometric accuracy testing",
         "Performance verification",
         "Calibration certification",
         "Regular maintenance schedules"
       ],
-      details: "Our calibration and alignment services ensure your equipment maintains the highest levels of precision and accuracy. Using advanced laser alignment tools and calibration techniques, we optimize your machinery for peak performance.",
       slug: "equipment-alignment-and-calibration"
     },
     {
@@ -55,10 +49,8 @@ export default function Services() {
         "New equipment installation",
         "System configuration and testing",
         "Safe decommissioning procedures",
-        "Environmental compliance",
         "Documentation and training"
       ],
-      details: "From initial setup to end-of-life management, we handle all aspects of equipment commissioning and decommissioning. Our processes ensure safe installation, optimal configuration, and environmentally responsible equipment retirement.",
       slug: "commissioning-and-decommissioning"
     },
     {
@@ -70,9 +62,7 @@ export default function Services() {
         "Custom interface development",
         "System optimization",
         "Performance testing",
-        "Ongoing support"
       ],
-      details: "We specialize in integrating third-party systems with existing CNC equipment, improving workflow efficiency and system compatibility. Our solutions ensure smooth communication between different components and platforms.",
       slug: "third-party-integration"
     }
   ];
@@ -91,7 +81,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid gap-8 grid-cols-1">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <ServiceCard 
                 key={index} 
