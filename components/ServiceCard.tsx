@@ -28,55 +28,50 @@ export default function ServiceCard({
                 {/* Mobile: stacked; Desktop: 4 auto-width columns with icon at far left */}
                 <div className="p-4 md:grid md:gap-6 h-full">
                     {/* Title & Description (1st column) */}
-                    {!img && ( <div className="text-center md:text-left">
-                        <div className="mb-8 flex justify-center items-center">
-                            <div
-                                className="flex items-center justify-center w-20 bg-brand-blue/10 rounded-2xl md:mr-4 md:group-hover:scale-110 transition-transform duration-300">
-                                <div className="text-brand-blue">{icon}</div>
-                            </div>
+                    {!img && (<div className="text-center md:text-left">
+                            <h3 className="flex items-center gap-3 text-2xl font-bold mb-3">
+  <span className="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-brand-blue/10 text-brand-blue">
+    {icon}
+  </span>
+  <span className="text-brand-blue">{title}</span>
+</h3>
+                            <p className="text-gray-600 leading-relaxed mt-4">
+                                {description}
+                            </p>
                         </div>
-                        <h3 className="text-2xl font-bold mb-3 relative inline-block md:inline">
-              <span className="relative z-10 text-brand-blue transition-colors duration-300">
-                {title}
-              </span>
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed mt-4">
-                            {description}
-                        </p>
-                    </div>
                     )}
                     {/* Features (2nd column) */}
-                        <div>
+                    <div>
                         <div className="bg-white rounded-xl">
-                            {!img && ( <ul className="space-y-3">
-                                {features.map((feature, index) => (
-                                    <li key={index} className="flex items-start space-x-3">
-                                        <div className="flex-shrink-0 w-5 h-5 mt-1">
-                                            <svg
-                                                className="w-5 h-5 text-brand-blue"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M5 13l4 4L19 7"
-                                                />
-                                            </svg>
-                                        </div>
-                                        <span
-                                            className="text-gray-600 md:group-hover:text-gray-700 transition-colors duration-300">
+                            {!img && (<ul className="space-y-3">
+                                    {features.map((feature, index) => (
+                                        <li key={index} className="flex items-start space-x-3">
+                                            <div className="flex-shrink-0 w-5 h-5 mt-1">
+                                                <svg
+                                                    className="w-5 h-5 text-brand-blue"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <span
+                                                className="text-gray-600 md:group-hover:text-gray-700 transition-colors duration-300">
                       {feature}
                     </span>
-                                    </li>
-                                ))}
-                            </ul>
-                                )}
-                            {!img && ( <div className="mt-8 text-center md:mt-6 md:col-span-4 md:text-left md:pl-8">
-                                {/* Show button only when no image */}
-                                <div
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                            {!img && (<div className="mt-8 text-center md:mt-6 md:col-span-4 md:text-left md:pl-8">
+                                    {/* Show button only when no image */}
+                                    <div
                                         className="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-medium md:group-hover:bg-white md:group-hover:text-brand-blue border-2 border-transparent md:group-hover:border-brand-blue transition-all duration-300 md:transform md:group-hover:scale-105">
                                         Learn More
                                         <svg
@@ -94,12 +89,12 @@ export default function ServiceCard({
                                         </svg>
                                     </div>
 
-                            </div>
+                                </div>
                             )}
                         </div>
-                            {img && (
-                                <img src={img} alt={title} className="w-auto"/>
-                            )}
+                        {img && (
+                            <img src={img} alt={title} className="w-auto rounded-2xl"/>
+                        )}
                     </div>
                 </div>
             </div>
