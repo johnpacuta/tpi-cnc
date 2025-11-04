@@ -33,6 +33,30 @@ export default function Supply() {
             img: "/logos/home_logos/Excetek.png",
             link: "#"
         },
+        {
+            title: "KASTO",
+            features: [
+                "Metal-Cutting hacksaws, bandsaws, and circular saws",
+"Storage Systems for bar stock, sheet metal, and pre-cut parts",
+"Custom planning, design, and support service",
+"Replacement parts stocked in USA",
+],
+            isHighlighted: true,
+            img: "/logos/home_logos/KASTO.png",
+            link: "#"
+        },
+        {
+            title: "Omega TMM",
+            features: [
+"Manual, semi-automatic and automatic tool presetters",
+"Shrink fit technology with presetting capabilities",
+"User-Friendly Software",
+"Made in USA",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/OMEGA_TMM.png",
+            link: "#"
+        },
     ];
 
     return (
@@ -63,7 +87,7 @@ export default function Supply() {
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
                                 {service.title}
-                                <img src={service.img}/>
+                                <img src={service.img} className="w-auto h-12 ml-4" alt={service.title}/>
                             </h3>
 
                             <ul className="space-y-4">
