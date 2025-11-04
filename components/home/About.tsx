@@ -120,7 +120,7 @@ export function About() {
                 whitespace-nowrap
                 "
                             >
-                                <Link href="/#">
+                                <Link href="/supply">
                                     Learn More
                                 </Link>
                             </Button>

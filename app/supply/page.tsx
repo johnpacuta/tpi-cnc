@@ -5,11 +5,11 @@ import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
 import {useState} from "react";
 
-export default function Support() {
+export default function Supply() {
     const router = useRouter();
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
-        {            title: "Premium: Improve Operations",
+        {            title: "RENISHAW",
             features: [
                 "1,000 hours hours of routine and emergency maintenance per year",
                 "All Offerings of the Comprehensive Package",
@@ -18,66 +18,9 @@ export default function Support() {
                 "Optional Training and Upskilling of In-house techs",
             ],
             isHighlighted: true,
+            img:"/logos/home_logos/Renishaw.png",
             link: "#"
         },
-        {
-            title: "Comprehensive: Support Operations",
-            features: [
-                "1,000 hours hours of routine and emergency maintenance per year",
-                "Includes Enhanced Precision Preventive Maintenance Package",
-                "24-hour guaranteed response time",
-                "Priority scheduling",
-            ],
-            isHighlighted: true,
-            link: "#"
-        },
-        {
-            title: "Preventative: Stop Breakdowns",
-            features: [
-                "Machine Assessment",
-                "Detailed Report",
-                {
-                    label: "2 options:", children: [
-                        "Wear and Tear Package",
-                        "Enhanced Precision Machine Package with Ball Bar Calibration",
-                    ]
-                },
-            ],
-            isHighlighted: true,
-            link: "#"
-        },
-        {
-            title: "Reactive: Get Back Online",
-            features: [
-                "24/7 Emergency Support",
-                "48 hour response time",
-                "3 hour minimum",
-                "Detailed reports"
-            ],
-            isHighlighted: true,
-            link: "#"
-        },
-        {
-            title: "3D Printing",
-            features: [
-                "Cutting-edge 3D printing solutions",
-                "Rapid prototyping",
-                "Production in diverse materials",
-                "Link to 3D Production History"
-            ],
-            isHighlighted: true,
-            link: "/3d-printing"
-        },
-        {
-            title: "CNC Parts",
-            features: [
-                "Request machine parts",
-                "Replace fluids and accessories",
-                "Maintain and elevate your CNC equipment",
-            ],
-            isHighlighted: true,
-            link: "/spare-parts"
-        }
     ];
 
     return (
@@ -108,6 +51,7 @@ export default function Support() {
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
                                 {service.title}
+                                <img src={service.img}/>
                             </h3>
 
                             <ul className="space-y-4">
