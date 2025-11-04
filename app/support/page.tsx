@@ -7,14 +7,13 @@ import {useState} from "react";
 export default function Support() {
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
-        {            title: "Annual",
+        {            title: "Premium: Improve Operations",
             features: [
-                "1,000 hours annually (20 hours/week)",
-                "20% discounted rate",
-                "24-hour guaranteed response time",
-                "Priority scheduling",
-                "CMMS integration assistance",
-                "Estimated Annual Cost: $90,000"
+                "1,000 hours hours of routine and emergency maintenance per year",
+                "All Offerings of the Comprehensive Package",
+                "Installation of a Real-time Digital Maintenance Monitoring System",
+                "Team Training on the Digital Maintenance Monitoring System",
+                "Optional Training and Upskilling of In-house techs",
             ],
             isHighlighted: true
         },
@@ -45,7 +44,7 @@ export default function Support() {
             title: "Reactive: Get Back Online",
             features: [
                 "24/7 Emergency Support",
-                "48h response time",
+                "48 hour response time",
                 "3 hour minimum",
                 "Detailed reports"
             ]
