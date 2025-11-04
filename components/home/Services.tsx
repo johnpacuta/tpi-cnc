@@ -8,7 +8,7 @@ export default function Services() {
     {
       title: "Electrical and Mechanical Diagnostics",
       icon: <CircuitIcon />,
-      description: "Advanced diagnostic solutions for complex industrial equipment",
+      description: "Advanced diagnostic solutions for complex industrial equipment. Our expert technicians utilize cutting-edge diagnostic tools to identify and troubleshoot both electrical and mechanical issues in CNC machines and industrial equipment.",
       features: [
         "State-of-the-art diagnostic tools",
         "Electrical system analysis",
@@ -28,7 +28,7 @@ export default function Services() {
     {
       title: "Root Cause Analysis Repairs",
       icon: <WrenchIcon />,
-      description: "Identifying and addressing the source of equipment issues",
+      description: "Identifying and addressing the source of equipment issues. We go beyond surface-level repairs by conducting thorough root cause analysis. This systematic approach helps identify the underlying causes of equipment failures, allowing us to implement lasting solutions and prevent recurring issues.",
       features: [
         "Systematic problem investigation",
         "Data-driven analysis",
@@ -40,7 +40,7 @@ export default function Services() {
     {
       title: "Equipment Alignment and Calibration",
       icon: <GearIcon />,
-      description: "Precision calibration services for optimal performance",
+      description: "Precision calibration services for optimal performance. Our calibration and alignment services ensure your equipment maintains the highest levels of precision and accuracy. Using advanced laser alignment tools and calibration techniques, we optimize your machinery for peak performance.",
       features: [
         "Geometric accuracy testing",
         "Performance verification",
@@ -52,7 +52,7 @@ export default function Services() {
     {
       title: "Commissioning and Decommissioning",
       icon: <PowerIcon />,
-      description: "Complete equipment lifecycle management",
+      description: "Complete equipment lifecycle management. From initial setup to end-of-life management, we handle all aspects of equipment commissioning and decommissioning. Our processes ensure safe installation, optimal configuration, and environmentally responsible equipment retirement.",
       features: [
         "New equipment installation",
         "System configuration and testing",
@@ -64,7 +64,7 @@ export default function Services() {
     {
       title: "Third-Party Integration",
       icon: <BlueprintIcon />,
-      description: "Seamless integration of multiple systems and components",
+      description: "Seamless integration of multiple systems and components. We specialize in integrating third-party systems with existing CNC equipment, improving workflow efficiency and system compatibility. Our solutions ensure smooth communication between different components and platforms.",
       features: [
         "Cross-platform compatibility",
         "Custom interface development",

@@ -30,7 +30,7 @@ export default function ServiceCard({
                     {/* Title & Description (1st column) */}
                     {!img && (<div className="text-center md:text-left">
                             <h3 className="flex items-center gap-3 text-2xl font-bold mb-3">
-  <span className="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-brand-blue/10 text-brand-blue">
+  <span className="inline-flex items-center justify-center w-20 h-auto rounded-xl bg-brand-blue/10 text-brand-blue">
     {icon}
   </span>
   <span className="text-brand-blue">{title}</span>
@@ -41,7 +41,6 @@ export default function ServiceCard({
                         </div>
                     )}
                     {/* Features (2nd column) */}
-                    <div>
                         <div className="bg-white rounded-xl">
                             {!img && (<ul className="space-y-3">
                                     {features.map((feature, index) => (
@@ -93,9 +92,8 @@ export default function ServiceCard({
                             )}
                         </div>
                         {img && (
-                            <img src={img} alt={title} className="w-auto rounded-2xl"/>
+                            <img src={img} alt={title} className="rounded-2xl items-center justify-center h-auto"/>
                         )}
-                    </div>
                 </div>
             </div>
         </Link>
