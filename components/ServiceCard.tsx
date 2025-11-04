@@ -4,7 +4,6 @@ import React, {ReactElement} from "react";
 interface ServiceCardProps {
     title: string;
     icon: ReactElement | string;
-    description: string;
     features: string[];
     slug: string;
     img?: string;
@@ -13,7 +12,6 @@ interface ServiceCardProps {
 export default function ServiceCard({
                                         title,
                                         icon,
-                                        description,
                                         features,
                                         slug,
                                         img,
@@ -24,7 +22,7 @@ export default function ServiceCard({
             className="block group"
         >
             <div
-                className="bg-white rounded-2xl shadow-lg md:hover:shadow-xl transition-all duration-300 md:transform md:group-hover:-translate-y-1 border border-gray-100">
+                className="bg-white rounded-2xl shadow-lg md:hover:shadow-xl transition-all duration-300 md:transform md:group-hover:-translate-y-1 border border-gray-100 h-[400]">
                 {/* Mobile: stacked; Desktop: 4 auto-width columns with icon at far left */}
                 <div className="p-4 md:grid h-full">
                     {/* Title & Description (1st column) */}
@@ -35,9 +33,6 @@ export default function ServiceCard({
   </span>
                                 <span className="text-brand-blue justify-start">{title}</span>
                             </h3>
-                            <p className="text-gray-600 leading-relaxed mt-4">
-                                {description}
-                            </p>
                         </div>
                     )}
                     {/* Features (2nd column) */}
