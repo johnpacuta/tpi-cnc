@@ -7,6 +7,7 @@ interface ServiceCardProps {
     features: string[];
     slug: string;
     img?: string;
+    hideOnMobile?: boolean;
 }
 
 export default function ServiceCard({
@@ -15,11 +16,12 @@ export default function ServiceCard({
                                         features,
                                         slug,
                                         img,
+                                        hideOnMobile,
                                     }: ServiceCardProps) {
     return (
         <Link
             href={`/services/${slug}`}
-            className="block group"
+            className={`block group ${hideOnMobile ? "hidden md:block" : ""}`}
         >
             <div
                 className="bg-white rounded-2xl shadow-lg md:hover:shadow-xl transition-all duration-300 md:transform md:group-hover:-translate-y-1 border border-gray-100 h-[400]">

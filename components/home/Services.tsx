@@ -22,8 +22,9 @@ export default function Services() {
           icon:"",
           description:"",
           features:[""],
-          slug:"",
+          slug:"electrical-mechanical-diagnostics",
           img: "/images/diagnostics.jpg",
+          hideOnMobile: true,
       },
     {
       title: "Root Cause Analysis Repairs",
