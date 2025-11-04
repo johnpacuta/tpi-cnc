@@ -11,11 +11,10 @@ export default function Supply() {
     const maintenanceServices = [
         {            title: "RENISHAW",
             features: [
-                "1,000 hours hours of routine and emergency maintenance per year",
-                "All Offerings of the Comprehensive Package",
-                "Installation of a Real-time Digital Maintenance Monitoring System",
-                "Team Training on the Digital Maintenance Monitoring System",
-                "Optional Training and Upskilling of In-house techs",
+                "Precision metrology solutions for CNC calibration",
+                "Ballbar, laser, and probing systems expertise",
+                "Installation, integration, and certification support",
+                "Ongoing maintenance, training, and diagnostics",
             ],
             isHighlighted: true,
             img:"/logos/home_logos/Renishaw.png",
@@ -26,7 +25,7 @@ export default function Supply() {
     return (
         <main>
             <ContentSection
-                title="TPI CNC Packages"
+                title="TPI CNC Trusted Partners"
                 subtitle="Professional CNC maintenance solutions with flexible service packages"
                 className="pt-24"
             >
