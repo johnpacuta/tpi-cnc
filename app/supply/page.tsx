@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
 
 import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
@@ -9,7 +9,8 @@ export default function Supply() {
     const router = useRouter();
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
-        {            title: "RENISHAW",
+        {
+            title: "RENISHAW",
             features: [
                 "Precision metrology solutions for CNC calibration",
                 "Ballbar, laser, and probing systems expertise",
@@ -17,7 +18,19 @@ export default function Supply() {
                 "Ongoing maintenance, training, and diagnostics",
             ],
             isHighlighted: true,
-            img:"/logos/home_logos/Renishaw.png",
+            img: "/logos/home_logos/Renishaw.png",
+            link: "#"
+        },
+        {
+            title: "EXCETEK",
+            features: [
+                "Wire Cut EDM",
+                "Die-Sinking EDM",
+                "Hole Drilling EDM",
+                "Patented solutions",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/Excetek.png",
             link: "#"
         },
     ];
