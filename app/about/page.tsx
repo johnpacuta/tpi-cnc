@@ -20,39 +20,34 @@ const teamMembers = [
   {
     name: "Sam Collins",
     role: "CNC Technician",
-    image: "/images/SamCollins.jpg",
+    image: "/images/Sam_Collins.jpg",
     description: ""
-  }
+  },
+    {
+        name: "Katharine Powell",
+        role: "Executive Administrator",
+        image: "/images/Katharine_Powell.jpg",
+        description: ""
+    }
+    ,
+    {
+        name: "Jessica Allison",
+        role: "Sales Administrator",
+        image: "/images/Jessica.jpg",
+        description: ""
+    }
+    ,
+    {
+        name: "Mike Morris",
+        role: "Sales Lead",
+        image: "/images/MikeMorris.jpg",
+        description: ""
+    }
 ];
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-20">
-      <ContentSection 
-        title="Our Story" 
-        subtitle='"A legacy of excellence in industrial equipment solutions"'
-      >
-          <div className="flex justify-center">
-              <Image
-                  src="/images/teddy.jpg"
-                  alt="Teddy"
-                  width={300}
-                  height={200}
-                  priority
-                  className="rounded-md"
-              />
-          </div>
-          <StorySection
-          companyHistory="Fifteen years ago in Windsor, Ontario, Teddy turned a lifelong knack for CNC repair into TPI CNC. Clients trusted Teddy’s blend of practical troubleshooting, control fluency, and follow-through. As needs expanded, he built a team that shares his standards: respond fast, solve root causes, teach operators, and measure results. Today TPI CNC supports repairs, retrofits, and training across North America, still guided by the same ethos—craftsmanship, accountability, and uptime. The tools evolved; the promise didn’t: do it right and stand behind it."
-          missionStatement="At TPI, our culture is rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
-          yearsOfExperience={15}
-          projectsCompleted={1000}
-        />
-      </ContentSection>
-      <ContentSection 
-        title="Our Team" 
-        subtitle="Meet the experts behind our success"
-      >
+    <main className="min-h-screen pt-40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <TeamMember
@@ -64,15 +59,7 @@ export default function About() {
             />
           ))}
         </div>
-      </ContentSection>
-
-      <ContentSection 
-        title="Community Involvement" 
-        subtitle="Building stronger connections for a better future"
-        className="bg-gradient-to-br from-brand-blue/5 to-brand-blue/10"
-      >
         <CommunitySection />
-      </ContentSection>
     </main>
   );
 } 
