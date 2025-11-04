@@ -12,7 +12,7 @@ export default function ContentSection({
   subtitle
 }: ContentSectionProps) {
   return (
-    <section className={`pt-16 pb-4 ${className}`}>
+    <section className={`pt-20 pb-4 ${className}`}>
       <div className="container mx-auto px-6 w-[100%]">
         <div className="text-center p-8 md:p-12">
           <div className="flex items-center justify-center mb-4">

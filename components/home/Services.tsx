@@ -82,7 +82,7 @@ export default function Services() {
         title="Our Services"
       >
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed pb-8">
               At TPI CNC Inc., we provide industrial equipment services 
               designed to maximize your operational efficiency and minimize downtime. 
               Our expert team delivers reliable solutions for all your equipment needs.
