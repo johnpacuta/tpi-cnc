@@ -2,7 +2,7 @@
 
 import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
-import { useState } from "react";
+import {useState} from "react";
 
 export default function Support() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -20,23 +20,23 @@ export default function Support() {
             isHighlighted: true
         },
         {
-            title: "Monthly",
+            title: "Preventative: Stop Breakdowns",
             features: [
-                "80 hours per month (20 hours/week)",
-                "10% discounted rate",
-                "48-hour guaranteed response time",
-                "Priority scheduling",
-                "CMMS integration assistance",
-                "Estimated Monthly Cost: $8,000"
-            ]
+  "Machine Assessment",
+  "Detailed Report",
+  { label: "2 options:", children: [
+    "Wear and Tear Package",
+    "Enhanced Precision Machine Package with Ball Bar Calibration",
+  ]},
+]
         },
         {
-            title: "Time and Material Basis",
+            title: "Reactive: Get Running",
             features: [
-                "Services provided as needed",
-                "Standard response times",
-                "CMMS integration (upon request)",
-                "Flexible scheduling"
+                "24/7 Emergency Support",
+                "48h response time",
+                "3 hour minimum",
+                "Detailed reports"
             ]
         }
     ];
@@ -66,13 +66,48 @@ export default function Support() {
                             </h3>
 
                             <ul className="space-y-4">
-                                {service.features.map((feature, featureIndex) => (
-                                    <li key={featureIndex} className="flex items-start gap-3">
-                                        <CheckCircle2 className={`w-6 h-6 flex-shrink-0 transition-colors duration-300
-                      ${index === activeIndex ? 'text-brand-blue' : 'text-accent'}`} />
-                                        <span className="text-gray-600">{feature}</span>
-                                    </li>
-                                ))}
+                                {service.features.map(
+                                    (
+                                        feature:
+                                            | string
+                                            | { label: string; children: string[] },
+                                        featureIndex: number
+                                    ) => {
+                                        const isGroup = typeof feature !== "string";
+
+                                        if (!isGroup) {
+                                            return (
+                                                <li key={featureIndex} className="flex items-start gap-3">
+                                                    <CheckCircle2
+                                                        className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${
+                                                            index === activeIndex ? "text-brand-blue" : "text-accent"
+                                                        }`}
+                                                    />
+                                                    <span className="text-gray-600">{feature}</span>
+                                                </li>
+                                            );
+                                        }
+
+                                        const group = feature as { label: string; children: string[] };
+                                        return (
+                                            <li key={featureIndex} className="flex flex-col gap-2">
+                                                <div className="flex items-start gap-3">
+                                                    <CheckCircle2
+                                                        className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${
+                                                            index === activeIndex ? "text-brand-blue" : "text-accent"
+                                                        }`}
+                                                    />
+                                                    <span className="text-gray-800 font-semibold">{group.label}</span>
+                                                </div>
+                                                <ul className="ml-9 list-disc space-y-2">
+                                                    {group.children.map((child, i) => (
+                                                        <li key={i} className="text-gray-600">{child}</li>
+                                                    ))}
+                                                </ul>
+                                            </li>
+                                        );
+                                    }
+                                )}
                             </ul>
                         </div>
                     ))}
@@ -80,7 +115,8 @@ export default function Support() {
 
                 <div className="mt-8 space-y-4 text-center">
                     <p className="text-gray-600 max-w-3xl mx-auto">
-                        All service packages include our dual-technician approach, ensuring efficient and high-quality results.
+                        All service packages include our dual-technician approach, ensuring efficient and high-quality
+                        results.
                     </p>
                     <a
                         href="/contact"
