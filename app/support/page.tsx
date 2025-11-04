@@ -1,10 +1,12 @@
-'use client'
+"use client";
+import { useRouter } from "next/navigation";
 
 import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
 import {useState} from "react";
 
 export default function Support() {
+    const router = useRouter();
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
         {            title: "Premium: Improve Operations",
@@ -15,7 +17,8 @@ export default function Support() {
                 "Team Training on the Digital Maintenance Monitoring System",
                 "Optional Training and Upskilling of In-house techs",
             ],
-            isHighlighted: true
+            isHighlighted: true,
+            link: "#"
         },
         {
             title: "Comprehensive: Support Operations",
@@ -25,7 +28,8 @@ export default function Support() {
                 "24-hour guaranteed response time",
                 "Priority scheduling",
             ],
-            isHighlighted: true
+            isHighlighted: true,
+            link: "#"
         },
         {
             title: "Preventative: Stop Breakdowns",
@@ -38,7 +42,9 @@ export default function Support() {
                         "Enhanced Precision Machine Package with Ball Bar Calibration",
                     ]
                 },
-            ]
+            ],
+            isHighlighted: true,
+            link: "#"
         },
         {
             title: "Reactive: Get Back Online",
@@ -47,22 +53,51 @@ export default function Support() {
                 "48 hour response time",
                 "3 hour minimum",
                 "Detailed reports"
-            ]
+            ],
+            isHighlighted: true,
+            link: "#"
+        },
+        {
+            title: "3D Printing",
+            features: [
+                "Cutting-edge 3D printing solutions",
+                "Rapid prototyping",
+                "Production in diverse materials",
+                "Link to 3D Production History"
+            ],
+            isHighlighted: true,
+            link: "/3d-printing"
+        },
+        {
+            title: "Parts",
+            features: [
+                "Request machine parts",
+                "Fluids and accessories ",
+                "Maintain and elevate your CNC equipment",
+            ],
+            isHighlighted: true,
+            link: "/spare-parts"
         }
     ];
 
     return (
         <main>
             <ContentSection
-                title="Maintainence Packages"
+                title="TPI CNC Packages"
                 subtitle="Professional CNC maintenance solutions with flexible service packages"
-                className=""
+                className="pt-24"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {maintenanceServices.map((service, index) => (
                         <div
                             key={index}
-                            onClick={() => setActiveIndex(index)}
+                            onClick={() => {
+                                setActiveIndex(index);
+                                router.push(service.link ?? "/contact");
+                            }}
+                            role="link"
+                            tabIndex={0}
+                            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && router.push(service.link ?? "/contact")}
                             className={`p-6 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl cursor-pointer
                 ${index === activeIndex
                                 ? 'border-brand-blue bg-brand-blue/5'
@@ -133,5 +168,5 @@ export default function Support() {
                 </div>
             </ContentSection>
         </main>
-    )
+    );
 }

@@ -89,7 +89,13 @@ export default function ServiceCard({
                         )}
                     </div>
                     {img && (
-                        <img src={img} alt={title} className="rounded-2xl items-center justify-center h-auto"/>
+                        <div className="w-full flex items-center justify-center overflow-hidden">
+                            <img
+                                src={img}
+                                alt={title}
+                                className="rounded-2xl max-h-[350px] object-contain"
+                            />
+                        </div>
                     )}
                 </div>
             </div>
