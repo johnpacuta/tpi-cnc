@@ -7,8 +7,7 @@ import {useState} from "react";
 export default function Support() {
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
-        {
-            title: "Annual",
+        {            title: "Annual",
             features: [
                 "1,000 hours annually (20 hours/week)",
                 "20% discounted rate",
@@ -20,18 +19,30 @@ export default function Support() {
             isHighlighted: true
         },
         {
-            title: "Preventative: Stop Breakdowns",
+            title: "Comprehensive: Support Operations",
             features: [
-  "Machine Assessment",
-  "Detailed Report",
-  { label: "2 options:", children: [
-    "Wear and Tear Package",
-    "Enhanced Precision Machine Package with Ball Bar Calibration",
-  ]},
-]
+                "1,000 hours hours of routine and emergency maintenance per year",
+                "Includes Enhanced Precision Preventive Maintenance Package",
+                "24-hour guaranteed response time",
+                "Priority scheduling",
+            ],
+            isHighlighted: true
         },
         {
-            title: "Reactive: Get Running",
+            title: "Preventative: Stop Breakdowns",
+            features: [
+                "Machine Assessment",
+                "Detailed Report",
+                {
+                    label: "2 options:", children: [
+                        "Wear and Tear Package",
+                        "Enhanced Precision Machine Package with Ball Bar Calibration",
+                    ]
+                },
+            ]
+        },
+        {
+            title: "Reactive: Get Back Online",
             features: [
                 "24/7 Emergency Support",
                 "48h response time",
@@ -79,9 +90,7 @@ export default function Support() {
                                             return (
                                                 <li key={featureIndex} className="flex items-start gap-3">
                                                     <CheckCircle2
-                                                        className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${
-                                                            index === activeIndex ? "text-brand-blue" : "text-accent"
-                                                        }`}
+                                                        className={`w-6 h-6 flex-shrink-0 text-brand-blue`}
                                                     />
                                                     <span className="text-gray-600">{feature}</span>
                                                 </li>
@@ -93,9 +102,7 @@ export default function Support() {
                                             <li key={featureIndex} className="flex flex-col gap-2">
                                                 <div className="flex items-start gap-3">
                                                     <CheckCircle2
-                                                        className={`w-6 h-6 flex-shrink-0 transition-colors duration-300 ${
-                                                            index === activeIndex ? "text-brand-blue" : "text-accent"
-                                                        }`}
+                                                        className={`w-6 h-6 flex-shrink-0 text-brand-blue`}
                                                     />
                                                     <span className="text-gray-800 font-semibold">{group.label}</span>
                                                 </div>
