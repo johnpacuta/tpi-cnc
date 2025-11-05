@@ -1,8 +1,5 @@
-import ContentSection from '../components/about/ContentSection';
 import TeamMember from '../components/about/TeamMember';
-import StorySection from '../components/about/StorySection';
 import CommunitySection from '../components/about/CommunitySection';
-import Image from "next/image";
 
 const teamMembers = [
     {

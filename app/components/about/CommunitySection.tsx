@@ -2,8 +2,6 @@ interface FeatureCardProps {
   title: string;
   organization: string;
   description: string;
-  imageSrc: string;
-  imageAlt: string;
   features: Array<{
     title: string;
     description: string;
@@ -14,26 +12,13 @@ interface FeatureCardProps {
 const FeatureCard = ({ 
   title, 
   organization, 
-  description, 
-  imageSrc, 
-  imageAlt,
+  description,
   features,
   icon 
 }: FeatureCardProps) => (
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
     <div className="p-8">
-      <div className="relative overflow-hidden rounded-lg mb-8 w-[30%] mx-auto">
-        <div className="aspect-video">
-          <img 
-            src={imageSrc} 
-            alt={imageAlt} 
-            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 to-transparent opacity-75"></div>
-        </div>
-      </div>
-
-      <div className="text-center mb-8">
+      <div className="text-center">
         <h3 className="text-2xl font-semibold text-brand-blue mb-4">{title}</h3>
         <div className="inline-flex items-center justify-center px-4 py-2 bg-brand-blue/5 rounded-full">
           {icon}
@@ -72,8 +57,6 @@ export default function CommunitySection() {
       title: "Educational Partnerships",
       organization: "St. Clair College",
       description: "Our partnership with St. Clair College helps develop the next generation of CNC technicians. Through hands-on training programs and apprenticeships, we're committed to fostering technical excellence in our community.",
-      imageSrc: "/images/banner.png",
-      imageAlt: "St. Clair College Partnership",
       icon: (
         <svg className="w-6 h-6 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -94,8 +77,6 @@ export default function CommunitySection() {
       title: "Industry Associations",
       organization: "CAMM Member",
       description: "As proud members of CAMM (Canadian Association of Mold Makers), we actively participate in industry initiatives and maintain the highest standards of manufacturing excellence in our region.",
-      imageSrc: "/images/banner.png",
-      imageAlt: "CAMM Association",
       icon: (
         <svg className="w-6 h-6 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -122,8 +103,8 @@ export default function CommunitySection() {
       </div>
 
       <div className="relative">
-        <div className="max-w-3xl mx-auto text-center my-12">
-          <h3 className="text-brand-blue text-lg font-semibold mb-4">Growing Together</h3>
+        <div className="max-w-3xl mx-auto text-center mt-12">
+          <h3 className="text-brand-blue text-lg font-semibold">Growing Together</h3>
           <p className="text-gray-600">
             We believe in giving back to our community and fostering the next generation of manufacturing excellence through partnerships and active involvement.
           </p>
