@@ -122,7 +122,7 @@ export default function CommunitySection() {
       </div>
 
       <div className="relative">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center my-12">
           <h3 className="text-brand-blue text-lg font-semibold mb-4">Growing Together</h3>
           <p className="text-gray-600">
             We believe in giving back to our community and fostering the next generation of manufacturing excellence through partnerships and active involvement.
