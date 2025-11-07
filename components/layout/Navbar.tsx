@@ -67,9 +67,9 @@ export function Navbar() {
         const handleClickOutside = (event: MouseEvent) => {
             if (
                 (mobileMenuRef.current &&
-                !mobileMenuRef.current.contains(event.target as Node)) &&
+                    !mobileMenuRef.current.contains(event.target as Node)) &&
                 (menuButtonRef.current &&
-                !menuButtonRef.current.contains(event.target as Node))
+                    !menuButtonRef.current.contains(event.target as Node))
             ) {
                 setIsMobileMenuOpen(false)
                 setOpenDropdowns([])
@@ -103,6 +103,13 @@ export function Navbar() {
                                 <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="w-auto" width={120}
                                        height={96}/>
                             </Link>
+                            <span className="text-xs md:text-sm lg:text-base tracking-wider font-medium">
+                <span className="text-brand-black">SERVICE</span>
+                <span className="text-primary/80 mx-2">•</span>
+                <span className="text-brand-black">SUPPORT</span>
+                <span className="text-primary/80 mx-2">•</span>
+                <span className="text-brand-black">SUPPLY</span>
+              </span>
                         </div>
 
                         {/* Enhanced CTA Button */}
@@ -148,16 +155,16 @@ export function Navbar() {
 
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Mobile menu button - moved to the right edge */}
-                    <div className="float-right right-4" ref={mobileMenuRef}>
-                        <Button
-                            variant="ghost"
-                            className="mr-2"
-                            onClick={() => setIsMobileMenuOpen(v => !v)}
-                        >
-                            <Menu className="h-7 w-7"/>
-                        </Button>
-                    </div>
+                {/* Mobile menu button - moved to the right edge */}
+                <div className="float-right right-4" ref={mobileMenuRef}>
+                    <Button
+                        variant="ghost"
+                        className="mr-2"
+                        onClick={() => setIsMobileMenuOpen(v => !v)}
+                    >
+                        <Menu className="h-7 w-7"/>
+                    </Button>
+                </div>
 
                 {/* Mobile menu - remains the same */}
                 {isMobileMenuOpen && (
