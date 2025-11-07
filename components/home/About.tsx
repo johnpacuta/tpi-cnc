@@ -62,7 +62,7 @@ export function About() {
                 "
                             >
                                 <Link href="/service">
-                                    Learn More
+                                    <span className="text-3xl leading-none">➔</span>
                                 </Link>
                             </Button>
                         </div>
@@ -92,7 +92,7 @@ export function About() {
                 "
                             >
                                 <Link href="/support">
-                                    Learn More
+                                    <span className="text-3xl leading-none">➔</span>
                                 </Link>
                             </Button>
                         </div>
@@ -121,7 +121,7 @@ export function About() {
                 "
                             >
                                 <Link href="/supply">
-                                    Learn More
+                                    <span className="text-3xl leading-none">➔</span>
                                 </Link>
                             </Button>
                         </div>
