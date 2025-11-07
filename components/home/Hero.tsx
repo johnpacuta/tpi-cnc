@@ -52,7 +52,7 @@ export function Hero() {
                 text-black hover:text-white
               "
                         >
-                            <a href="tel:+12267875064">Call Now →</a>
+                            <a href="tel:+15195638900" rel="nofollow noopener">Call Now →</a>
 
                         </Button>
                         <Button asChild

@@ -103,9 +103,6 @@ export function Navbar() {
                                 <Image src="/logos/tpiwbg.png" alt="TPI CNC" className="w-auto" width={120}
                                        height={96}/>
                             </Link>
-                            <h3 className="whitespace-wrap text-sm sm:text-base md:text-lg lg:text-xl font-bold min-w-0">
-                                CNC SPECIALISTS
-                            </h3>
                         </div>
 
                         {/* Enhanced CTA Button */}
@@ -114,10 +111,10 @@ export function Navbar() {
                             <div className="flex items-center gap-2 text-brand-blue">
                                 <Phone className="h-5 w-5"/>
                                 <a
-                                    href="tel:+12267875064"
+                                    href="tel:+15195638900"
                                     className="text-lg font-semibold hover:text-brand-blue/80 transition-colors text-primary"
                                 >
-                                    (226) 787-5064
+                                    (519) 563-8900
                                 </a>
                             </div>
 
