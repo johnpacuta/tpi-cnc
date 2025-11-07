@@ -11,33 +11,39 @@ const teamMembers = [
   {
     name: "Ben Blythe",
     role: "CNC Technician",
-    image: "/images/BenBlythe.jpg",
+    image: "/images/headshots/BenBlythe.jpg",
     description: ""
   },
   {
     name: "Sam Collins",
     role: "CNC Technician",
-    image: "/images/Sam_Collins.jpg",
+    image: "/images/headshots/SamCollins.jpeg",
     description: ""
   },
     {
-        name: "Katharine Powell",
-        role: "Executive Administrator",
-        image: "/images/Katharine_Powell.jpg",
+        name: "Kate Powell",
+        role: "Treasurer",
+        image: "/images/headshots/KatePowell.jpeg",
         description: ""
     }
     ,
     {
         name: "Jessica Allison",
         role: "Sales Administrator",
-        image: "/images/Jessica.jpg",
+        image: "/images/headshots/JessicaAllison.jpeg",
         description: ""
     }
     ,
     {
         name: "Mike Morris",
         role: "Sales Lead",
-        image: "/images/MikeMorris.jpg",
+        image: "/images/headshots/MikeMorris.jpeg",
+        description: ""
+    },
+    {
+        name: "Ross Burniston",
+        role: "Operations Manager",
+        image: "/images/headshots/RossBurniston.jpeg",
         description: ""
     }
 ];
