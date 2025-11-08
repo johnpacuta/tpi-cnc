@@ -19,7 +19,7 @@ const FeatureCard = ({
             <div className="text-center">
                 <h3 className="text-2xl font-semibold text-brand-blue mb-4">{title}</h3>
                 <div className="inline-flex items-center justify-center px-4 py-2 bg-brand-blue/5 rounded-full">
-                    <img src={picture_path} alt={title} className="h-24 pb-4" />
+                    <img src={picture_path} alt={title} className="h-24 object-contain pb-4" />
                 </div>
             </div>
 

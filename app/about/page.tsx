@@ -8,7 +8,7 @@ const teamMembers = [
     {
         name: "Teddy Powell",
         role: "Founder",
-        image: "/images/teddy.jpg",
+        image: "/images//headshots/TeddyPowell.jpg",
         description: ""
     },
   {
@@ -65,12 +65,12 @@ export default function About() {
                         width={300}
                         height={200}
                         priority
-                        className="rounded-md"
+                        className="rounded-lg shadow-lg"
                     />
                 </div>
                 <StorySection
                     missionStatement="At TPI, our culture is rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
-                    yearsOfExperience={25}
+                    yearsOfExperience={15}
                     projectsCompleted={1000}
                 />
             </ContentSection>
