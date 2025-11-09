@@ -162,6 +162,22 @@ export default function Support() {
                     ))}
                 </div>
 
+                <section className="text-center mt-8">
+                    <div className="bg-gradient-to-r from-brand-blue to-blue-600 rounded-xl shadow-xl p-4 sm:p-8">
+                        <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ready to Transform Your Operations?</h2>
+                        <p className="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base">Let's discuss how we can customize this solution for your specific needs.</p>
+                        <button
+                            type="button"
+                            onClick={() => router.push("/contact")}
+                            className="bg-white text-brand-blue font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
+                            aria-label="Go to Contact page"
+                        >
+                            Contact Us Today
+                        </button>
+
+                    </div>
+                </section>
+
                 <div className="mt-8 space-y-4 text-center">
                     <p className="text-gray-600 max-w-3xl mx-auto">
                         All service packages include our dual-technician approach, ensuring efficient and high-quality
