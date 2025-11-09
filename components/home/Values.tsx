@@ -81,7 +81,7 @@ export function Values() {
                         </div>
                         <div>
                             <h2 className="mb-1">The Next Generation</h2>
-                            <p className="text-sm">Investing in our apprentices with the skills, support, and hands-on
+                            <p className="text-sm">Investing in our apprentices with skills, support, and hands-on
                                 experience.</p>
                         </div>
                     </div>
