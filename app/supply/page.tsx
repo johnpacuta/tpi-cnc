@@ -19,7 +19,7 @@ export default function Supply() {
             ],
             isHighlighted: true,
             img: "/logos/home_logos/Renishaw.png",
-            link: "#"
+            link: "https://www.renishaw.com/en/products--32083"
         },
         {
             title: "EXCETEK",
@@ -31,7 +31,7 @@ export default function Supply() {
             ],
             isHighlighted: true,
             img: "/logos/home_logos/Excetek.png",
-            link: "#"
+            link: "https://www.excetek.com/shop"
         },
         {
             title: "KASTO",
@@ -43,7 +43,7 @@ export default function Supply() {
 ],
             isHighlighted: true,
             img: "/logos/home_logos/KASTO.png",
-            link: "#"
+            link: "https://www.kasto.com/en/saws/overview-saws"
         },
         {
             title: "Omega TMM",
@@ -55,15 +55,15 @@ export default function Supply() {
             ],
             isHighlighted: true,
             img: "/logos/home_logos/OMEGA_TMM.png",
-            link: "#"
+            link: "https://omegatmm.com/presetters/"
         },
     ];
 
     return (
         <main>
             <ContentSection
-                title="TPI CNC Trusted Partners"
-                subtitle="Professional CNC maintenance solutions with flexible service packages"
+                title="TPI CNC Partners"
+                subtitle="Professional CNC maintenance solutions with flexible service packages."
                 className="pt-24"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -86,7 +86,6 @@ export default function Supply() {
                 ${index === activeIndex
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
-                                {service.title}
                                 <img src={service.img} className="w-auto h-12 ml-4" alt={service.title}/>
                             </h3>
 
@@ -140,10 +139,10 @@ export default function Supply() {
                         results.
                     </p>
                     <a
-                        href="/contact"
+                        href="/quote"
                         className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-brand-blue rounded-lg hover:bg-brand-blue/90 transition-colors"
                     >
-                        Request Service
+                        Request a Quote
                     </a>
                 </div>
             </ContentSection>

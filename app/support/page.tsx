@@ -14,7 +14,7 @@ type FormErrors = {
 
 const maintenanceServices = [
     {
-        title: "Reactive",
+        title: "Reactive Package",
         subtitle: "Get Back Online",
         features: [
             "24/7 Emergency Support",
@@ -26,7 +26,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Preventative",
+        title: "Preventative Package",
         subtitle: "Stop Breakdowns",
         features: [
             "Machine Assessment",
@@ -42,7 +42,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Comprehensive",
+        title: "Comprehensive Package",
         subtitle: "Support Operations",
         features: [
             "1,000 hours hours of routine and emergency maintenance per year",
@@ -54,7 +54,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Premium",
+        title: "Premium Package",
         subtitle: "Improve Operations",
         features: [
             "All Features of the Comprehensive Package",
@@ -64,6 +64,18 @@ const maintenanceServices = [
         ],
         isHighlighted: true,
         link: "#"
+    },
+    {
+        title: "Metal Working Fluids",
+        subtitle: "",
+        features: [
+            "Coolants: added fungicides, biocides, and surfactants for optimal system performance.",
+            "Cutting Oils: petroleum-based oils for extended tool life.",
+            "Water‑soluble, semi‑synthetic, and synthetic options with corrosion inhibition, EP additives, defoamers, and tramp‑oil control.",
+            "Specialty Fluids: drawing fluids, hydraulic and way oils."
+        ],
+        isHighlighted: true,
+        link: "https://www.polarchemtech.com/products"
     },
     {
         title: "3D Printing",
@@ -303,6 +315,7 @@ export default function Support() {
                                     <option value="Reactive">Reactive Package</option>
                                     <option value="Preventative">Preventative Package</option>
                                     <option value="Comprehensive">Comprehensive Package</option>
+                                    <option value="MWF">Metal Working Fluids</option>
                                     <option value="Premium">Premium Package</option>
                                     <option value="3D_Printing">3D Printing</option>
                                     <option value="CNC_Parts">CNC Parts</option>
