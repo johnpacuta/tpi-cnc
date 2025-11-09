@@ -55,8 +55,8 @@ export default function About() {
   return (
     <main className="min-h-screen pt-16">
             <ContentSection
-                title="Our Story"
-                subtitle='"A legacy of excellence in industrial equipment solutions"'
+                title="TPI CNC"
+                subtitle='"A legacy of excellence in industrial equipment solutions."'
             >
                 <div className="flex justify-center">
                     <Image
