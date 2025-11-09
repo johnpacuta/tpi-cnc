@@ -34,7 +34,7 @@ export default function ContentSection({
             </p>
           )}
         </div>
-        <div className="p-4 md:p-12 bg-white/50">
+        <div className="p-4 bg-white/50">
           {children}
         </div>
       </div>

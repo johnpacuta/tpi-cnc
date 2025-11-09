@@ -77,12 +77,12 @@ export default function Services() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-20">
       
       <ContentSection 
         title="Our Services"
       >
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center pt-0">
             <p className="text-gray-600 text-lg leading-relaxed pb-8">
               At TPI CNC Inc., we provide industrial equipment services 
               designed to maximize your operational efficiency and minimize downtime. 

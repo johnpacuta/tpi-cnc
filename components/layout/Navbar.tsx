@@ -134,7 +134,7 @@ export function Navbar() {
                                 size="lg"
                                 className="
                   bg-brand-blue hover:bg-brand-blue/90 
-                  text-black font-bold
+                  text-white
                   px-8 py-6 text-lg
                   shadow-lg hover:shadow-xl
                   transform hover:scale-105
@@ -145,7 +145,7 @@ export function Navbar() {
                 "
                             >
                                 <Link href="/quote">
-                                    Get a Quote →
+                                    Request Service →
                                 </Link>
                             </Button>
                         </div>
