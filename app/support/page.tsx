@@ -235,22 +235,8 @@ export default function Support() {
 
                         </div>
                     </section>
-
-                    <div className="mt-8 space-y-4 text-center">
-                        <p className="text-gray-600 max-w-3xl mx-auto">
-                            All service packages include our dual-technician approach, ensuring efficient and
-                            high-quality
-                            results.
-                        </p>
-                        <a
-                            href="/contact"
-                            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-brand-blue rounded-lg hover:bg-brand-blue/90 transition-colors"
-                        >
-                            Request Service
-                        </a>
-                    </div>
                     {/* Contact Form Section */}
-                    <section className="max-w-2xl mx-auto">
+                    <section className="max-w-2xl mx-auto pt-16">
                         <h2 className="text-2xl font-semibold mb-2 text-center">Get Started Today</h2>
                         <p className="text-gray-600 text-center mb-8">Take the first step towards optimizing your
                             operations</p>
@@ -313,10 +299,13 @@ export default function Support() {
                                     }`}
                                     required
                                 >
-                                    <option value="">Select Consulting Service</option>
-                                    <option value="process">Lean Manufacturing</option>
-                                    <option value="facility">Maintenance Excellence</option>
-                                    <option value="implementation">Smart Manufacturing</option>
+                                    <option value="">Select a Service</option>
+                                    <option value="Reactive">Reactive Package</option>
+                                    <option value="Preventative">Preventative Package</option>
+                                    <option value="Comprehensive">Comprehensive Package</option>
+                                    <option value="Premium">Premium Package</option>
+                                    <option value="3D_Printing">3D Printing</option>
+                                    <option value="CNC_Parts">CNC Parts</option>
                                 </select>
                                 <ErrorMessage fieldName="serviceType"/>
                             </div>
