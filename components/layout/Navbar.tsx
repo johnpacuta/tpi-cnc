@@ -9,8 +9,6 @@ import {useState, useEffect, useRef} from "react"
 type NavItem = {
     label: string
     href: string
-    subheader?: string
-    items?: NavItem[]
 }
 
 type NavGroup = {
@@ -18,31 +16,11 @@ type NavGroup = {
     items: NavItem[]
 }
 
-const primaryNav: (NavItem | NavGroup)[] = [
-    {
-        label: "Services",
-        items: [
-            {label: "Consulting", href: "/consulting"},
-            {label: "Part Sourcing", href: "/spare-parts"},
-            {label: "Maintenance", href: "/maintenance"},
-            {label: "3D Printing", href: "/3d-printing"},
-        ]
-    },
-    {
-        label: "Equipment",
-        items: [
-            {label: "Solutions", href: "/equipment"},
-            {label: "RENISHAW", href: "/renishaw-products"},
-        ]
-    },
-    {
-        label: "Company",
-        items: [
-            {label: 'About Us', href: '/about'},
-            {label: 'Quote Request', href: '/quote'},
-            {label: 'Contact Us', href: '/contact'},
-        ]
-    },
+const primaryNav: (NavItem)[] = [
+    {label: "SERVICE", href: "/service"},
+    {label: "SUPPORT", href: "/support"},
+    {label: "SUPPLY", href: "/supply"},
+    {label: 'ABOUT US', href: '/about'}
 ]
 
 export function Navbar() {
@@ -176,7 +154,7 @@ export function Navbar() {
                             {/* Add Quote button at the top of mobile menu */}
                             <div className="w-full max-w-xs mb-2">
                                 <Button
-                                    className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold"
+                                    className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white"
                                     asChild
                                     onClick={() => {
                                         setIsMobileMenuOpen(false)
@@ -184,7 +162,7 @@ export function Navbar() {
                                     }}
                                 >
                                     <Link href="/quote">
-                                        Get a Quote
+                                        Request Service
                                     </Link>
                                 </Button>
                             </div>
@@ -204,61 +182,6 @@ export function Navbar() {
                                                     }`}
                                                 />
                                             </Button>
-                                            {openDropdowns.includes(index) && (
-                                                <div className="pl-4 mt-2 space-y-2">
-                                                    {item.items.map((subItem, subIndex) => (
-                                                        <div key={subIndex}>
-                                                            {subItem.items ? (
-                                                                <div>
-                                                                    <Button
-                                                                        variant="ghost"
-                                                                        className="w-full text-left justify-between items-center font-medium"
-                                                                        onClick={() => toggleDropdown(subIndex + 1000)}
-                                                                    >
-                                                                        <span>{subItem.label}</span>
-                                                                        <ChevronDown
-                                                                            className={`h-4 w-4 ml-2 flex-shrink-0 transition-transform duration-200 ${
-                                                                                openDropdowns.includes(subIndex + 1000) ? 'rotate-180' : ''
-                                                                            }`}
-                                                                        />
-                                                                    </Button>
-                                                                    {openDropdowns.includes(subIndex + 1000) && (
-                                                                        <div className="pl-4 mt-2 space-y-2">
-                                                                            {subItem.items.map((nestedItem, nestedIndex) => (
-                                                                                <Button
-                                                                                    key={nestedIndex}
-                                                                                    variant="ghost"
-                                                                                    className="w-full text-left justify-start"
-                                                                                    asChild
-                                                                                    onClick={() => {
-                                                                                        setIsMobileMenuOpen(false)
-                                                                                        setOpenDropdowns([])
-                                                                                    }}
-                                                                                >
-                                                                                    <Link
-                                                                                        href={nestedItem.href}>{nestedItem.label}</Link>
-                                                                                </Button>
-                                                                            ))}
-                                                                        </div>
-                                                                    )}
-                                                                </div>
-                                                            ) : (
-                                                                <Button
-                                                                    variant="ghost"
-                                                                    className="w-full text-left justify-start"
-                                                                    asChild
-                                                                    onClick={() => {
-                                                                        setIsMobileMenuOpen(false)
-                                                                        setOpenDropdowns([])
-                                                                    }}
-                                                                >
-                                                                    <Link href={subItem.href}>{subItem.label}</Link>
-                                                                </Button>
-                                                            )}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
                                         </div>
                                     ) : (
                                         <Button
