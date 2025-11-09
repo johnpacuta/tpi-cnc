@@ -7,19 +7,17 @@ import { toast } from 'react-hot-toast'
 import { submitSubscription } from '@/app/actions/subscribe'
 
 const productsLinks = {
-  title: 'Services',
+  title: 'Our Services',
     links: [
-        { name: "Consulting", href: "/consulting" },
-        { name: "Part Sourcing", href: "/spare-parts" },
-        { name: "Maintenance", href: "/maintenance" },
-        { name: "3D Printing", href: "/3d-printing" },
+        { name: "Service", href: "/service" },
+        { name: "Supply", href: "/supply" },
+        { name: "Support", href: "/support" },
     ]
 }
 
 const servicesLinks = {
   title: 'Equipment',
     links: [
-        { name: "Solutions", href: "/equipment" },
         { name: "RENISHAW", href: "/renishaw-products" },
     ]
 }
