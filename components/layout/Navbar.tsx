@@ -159,10 +159,10 @@ export function Navbar() {
                 <div className="float-right right-4" ref={mobileMenuRef}>
                     <Button
                         variant="ghost"
-                        className="mr-2"
+                        className="h-16 w-16 p-0 m-0"
                         onClick={() => setIsMobileMenuOpen(v => !v)}
                     >
-                        <Menu className="h-7 w-7"/>
+                        <Menu className="h-16 w-16 scale-[2.5]"/>
                     </Button>
                 </div>
 
