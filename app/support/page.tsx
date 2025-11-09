@@ -9,30 +9,21 @@ export default function Support() {
     const router = useRouter();
     const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
-        {            title: "Premium: Improve Operations",
+        {
+            title: "Reactive",
+            subtitle: "Get Back Online",
             features: [
-                "1,000 hours hours of routine and emergency maintenance per year",
-                "All Offerings of the Comprehensive Package",
-                "Installation of a Real-time Digital Maintenance Monitoring System",
-                "Team Training on the Digital Maintenance Monitoring System",
-                "Optional Training and Upskilling of In-house techs",
+                "24/7 Emergency Support",
+                "48 hour response time",
+                "3 hour minimum",
+                "Detailed reports"
             ],
             isHighlighted: true,
             link: "#"
         },
         {
-            title: "Comprehensive: Support Operations",
-            features: [
-                "1,000 hours hours of routine and emergency maintenance per year",
-                "Includes Enhanced Precision Preventive Maintenance Package",
-                "24-hour guaranteed response time",
-                "Priority scheduling",
-            ],
-            isHighlighted: true,
-            link: "#"
-        },
-        {
-            title: "Preventative: Stop Breakdowns",
+            title: "Preventative",
+            subtitle: "Stop Breakdowns",
             features: [
                 "Machine Assessment",
                 "Detailed Report",
@@ -47,18 +38,31 @@ export default function Support() {
             link: "#"
         },
         {
-            title: "Reactive: Get Back Online",
+            title: "Comprehensive",
+            subtitle: "Support Operations",
             features: [
-                "24/7 Emergency Support",
-                "48 hour response time",
-                "3 hour minimum",
-                "Detailed reports"
+                "1,000 hours hours of routine and emergency maintenance per year",
+                "Includes Enhanced Precision Preventive Maintenance Package",
+                "24-hour guaranteed response time",
+                "Priority scheduling",
+            ],
+            isHighlighted: true,
+            link: "#"
+        },
+        {            title: "Premium",
+            subtitle: "Improve Operations",
+            features: [
+                "All Features of the Comprehensive Package",
+                "Installation of a Real-time Digital Maintenance Monitoring System",
+                "Team Training on the Digital Maintenance Monitoring System",
+                "Optional Training and Upskilling of In-house techs",
             ],
             isHighlighted: true,
             link: "#"
         },
         {
             title: "3D Printing",
+            subtitle: "",
             features: [
                 "Cutting-edge 3D printing solutions",
                 "Rapid prototyping",
@@ -70,6 +74,7 @@ export default function Support() {
         },
         {
             title: "CNC Parts",
+            subtitle: "",
             features: [
                 "Request machine parts",
                 "Replace fluids and accessories",
@@ -103,12 +108,15 @@ export default function Support() {
                                 ? 'border-brand-blue bg-brand-blue/5'
                                 : 'border-brand-blue/10 bg-white'}`}
                         >
-                            <h3 className={`text-2xl font-bold mb-6 transition-colors duration-300 relative
+                            <h2 className={`text-3xl font-bold mb-2 transition-colors duration-300 relative
                 ${index === activeIndex
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
                                 {service.title}
-                            </h3>
+                            </h2>
+                            <h4 className={'text-2xl mb-3'}>
+                                {service.subtitle}
+                            </h4>
 
                             <ul className="space-y-4">
                                 {service.features.map(
