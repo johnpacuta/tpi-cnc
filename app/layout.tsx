@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -100,11 +100,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
+  // ... existing code ...
   verification: {
     google: "add-your-google-site-verification-here",
   },
@@ -114,6 +110,13 @@ export const metadata: Metadata = {
     "geo.position": "42.3149;-83.0364",
     "ICBM": "42.3149, -83.0364",
   }
+};
+
+// extract viewport to its own export
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

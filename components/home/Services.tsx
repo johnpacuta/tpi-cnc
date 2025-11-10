@@ -1,150 +1,104 @@
-import { Settings, Wrench, LineChart, Cog, ShieldCheck, Clock } from "lucide-react"
-import { LucideIcon } from "lucide-react"
+'use client'
+import ContentSection from "../ContentSection";
+import ServiceCard from "../ServiceCard";
+import {BlueprintIcon,CircuitIcon, GearIcon, WrenchIcon, PowerIcon} from "../ui/EngIcons";
 
-// Define the service type
-type Service = {
-  icon: LucideIcon
-  title: string
-  description: string
-  gradientFrom: string
-  gradientVia: string
-  gradientTo: string
-}
+export default function Services() {
+  const services = [
+    {
+      title: "Electrical and Mechanical Diagnostics",
+      icon: <CircuitIcon />,
+      description: "Advanced diagnostic solutions for complex industrial equipment. Our expert technicians utilize cutting-edge diagnostic tools to identify and troubleshoot both electrical and mechanical issues in CNC machines and industrial equipment.",
+      features: [
+        "State-of-the-art diagnostic tools",
+        "Electrical system analysis",
+        "Mechanical performance evaluation",
+        "Detailed inspection reports",
+      ],
+      slug: "electrical-mechanical-diagnostics"
+    },
+      {
+          title:"",
+          icon:"",
+          description:"",
+          features:[""],
+          slug:"electrical-mechanical-diagnostics",
+          img: "/images/diagnostics.jpg",
+          hideOnMobile: true,
+      },
+    {
+      title: "Root Cause Analysis Repairs",
+      icon: <WrenchIcon />,
+      description: "Identifying and addressing the source of equipment issues. We go beyond surface-level repairs by conducting thorough root cause analysis. This systematic approach helps identify the underlying causes of equipment failures, allowing us to implement lasting solutions and prevent recurring issues.",
+      features: [
+        "Systematic problem investigation",
+        "Data-driven analysis",
+        "Corrective action planning",
+        "Documentation and reporting"
+      ],
+      slug: "root-cause-analysis-repairs"
+    },
+    {
+      title: "Equipment Alignment and Calibration",
+      icon: <GearIcon />,
+      description: "Precision calibration services for optimal performance. Our calibration and alignment services ensure your equipment maintains the highest levels of precision and accuracy. Using advanced laser alignment tools and calibration techniques, we optimize your machinery for peak performance.",
+      features: [
+        "Geometric accuracy testing",
+        "Performance verification",
+        "Calibration certification",
+        "Regular maintenance schedules"
+      ],
+      slug: "equipment-alignment-and-calibration"
+    },
+    {
+      title: "Commissioning and Decommissioning",
+      icon: <PowerIcon />,
+      description: "Complete equipment lifecycle management. From initial setup to end-of-life management, we handle all aspects of equipment commissioning and decommissioning. Our processes ensure safe installation, optimal configuration, and environmentally responsible equipment retirement.",
+      features: [
+        "New equipment installation",
+        "System configuration and testing",
+        "Safe decommissioning procedures",
+        "Documentation and training"
+      ],
+      slug: "commissioning-and-decommissioning"
+    },
+    {
+      title: "Third-Party Integration",
+      icon: <BlueprintIcon />,
+      description: "Seamless integration of multiple systems and components. We specialize in integrating third-party systems with existing CNC equipment, improving workflow efficiency and system compatibility. Our solutions ensure smooth communication between different components and platforms.",
+      features: [
+        "Cross-platform compatibility",
+        "Custom interface development",
+        "System optimization",
+        "Performance testing",
+      ],
+      slug: "third-party-integration"
+    }
+  ];
 
-// Define the services data
-const services: Service[] = [
-  {
-    icon: Wrench,
-    title: "Field Service",
-    description: "Scheduled or emergency repairs to keep operations running.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: Settings,
-    title: "Preventive Maintenance",
-    description: "Extend equipment lifespan with expert evaluations.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: Cog,
-    title: "Equipment",
-    description: "Industry-leading tools from trusted partners.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: LineChart,
-    title: "Integration",
-    description: "Advanced technology solutions to enhance equipment.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70", 
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: ShieldCheck,
-    title: "Industrial Parts",
-    description: "Hard-to-find parts sourced through TPI's vast network.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  },
-  {
-    icon: Clock,
-    title: "Service Plans",
-    description: "Save with discounted Monthly or Yearly maintenance plans.",
-    gradientFrom: "brand-blue",
-    gradientVia: "brand-blue/70",
-    gradientTo: "brand-blue/50"
-  }
-]
-
-export function Services() {
   return (
-    <section className="relative">
-      {/* Top wave divider */}
-      <div className="absolute top-0 left-0 right-0 overflow-hidden">
-        <svg
-          className="relative block w-full h-[40px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-brand-blue/10"
-          ></path>
-        </svg>
-      </div>
-
-      <div className="py-16 bg-brand-blue/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block relative">
-              {/* Industrial frame for title */}
-              <div className="absolute inset-0 border-2 border-brand-blue/20" />
-              <div className="absolute left-0 top-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
-              <div className="absolute right-0 top-0 w-4 h-4 border-t-2 border-r-2 border-primary" />
-              <div className="absolute left-0 bottom-0 w-4 h-4 border-b-2 border-l-2 border-primary" />
-              <div className="absolute right-0 bottom-0 w-4 h-4 border-b-2 border-r-2 border-primary" />
-              
-              <h2 className="relative px-12 py-6">
-                <span className="block text-5xl font-bold text-brand-blue tracking-tight sm:text-6xl">
-                  What We Do
-                </span>
-                {/* <span className="mt-4 block text-xl text-gray-600 font-medium tracking-wide">
-                  Comprehensive CNC Solutions
-                </span> */}
-                
-                <div className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-brand-blue to-transparent" />
-              </h2>
-            </div>
+    <main className="min-h-screen pt-20">
+      
+      <ContentSection 
+        title="Our Services"
+      >
+          <div className="max-w-3xl mx-auto text-center pt-0">
+            <p className="text-gray-600 text-lg leading-relaxed pb-8">
+              At TPI CNC Inc., we provide industrial equipment services 
+              designed to maximize your operational efficiency and minimize downtime. 
+              Our expert team delivers reliable solutions for all your equipment needs.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <div key={index} className="relative group h-full">
-                <div className={`absolute inset-0 bg-gradient-to-r from-${service.gradientFrom}/10 via-${service.gradientVia}/10 to-${service.gradientTo}/10 rounded-lg transform scale-[1.02] opacity-0 group-hover:opacity-100 transition-all duration-300`} />
-                <div className="bg-white p-8 rounded-lg shadow-sm relative z-10 hover:shadow-md transition-all duration-300 border border-brand-blue/10 h-full flex flex-col">
-                  <div className={`absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-${service.gradientFrom} via-${service.gradientVia} to-${service.gradientTo} rounded-t-lg`} />
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <service.icon className="h-6 w-6 text-brand-blue" />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-black border-b-2 border-brand-blue/20 pb-2">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
+              <ServiceCard 
+                key={index} 
+                {...service}
+              />
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Bottom wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden rotate-180">
-        <svg
-          className="relative block w-full h-[40px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-white"
-          ></path>
-        </svg>
-      </div>
-    </section>
-  )
+      </ContentSection>
+    </main>
+  );
 } 

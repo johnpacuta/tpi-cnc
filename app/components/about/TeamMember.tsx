@@ -11,7 +11,7 @@ export default function TeamMember({ name, role, image, description }: TeamMembe
       <img 
         src={image} 
         alt={name} 
-        className="w-32 h-32 rounded-full object-cover mb-4"
+        className="w-40 h-40 rounded-full object-cover mb-4"
       />
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
       <p className="text-brand-blue font-medium mb-2">{role}</p>
