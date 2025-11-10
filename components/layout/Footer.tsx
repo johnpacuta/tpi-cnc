@@ -9,9 +9,9 @@ import { submitSubscription } from '@/app/actions/subscribe'
 const productsLinks = {
   title: 'Our Services',
     links: [
-        { name: "Service", href: "/service" },
-        { name: "Supply", href: "/supply" },
-        { name: "Support", href: "/support" },
+        { name: "SERVICE", href: "/service" },
+        { name: "SUPPORT", href: "/support" },
+        { name: "SUPPLY", href: "/supply" },
     ]
 }
 
@@ -19,6 +19,11 @@ const servicesLinks = {
   title: 'Equipment',
     links: [
         { name: "RENISHAW", href: "/renishaw-products" },
+        { name: "Electrical and Mechanical Diagnostics", href: "/electrical-mechanical-diagnostics" },
+        { name: "Root Cause Analysis Repairs", href: "/root-cause-analysis-repairs" },
+        { name: "Commissioning and Decommissioning", href: "/commissioning-and-decommissioning" },
+        { name: "Third-Party Integration", href: "/third-party-integration" },
+
     ]
 }
 

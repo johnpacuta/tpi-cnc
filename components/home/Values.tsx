@@ -82,7 +82,7 @@ export function Values() {
                         <div>
                             <h2 className="mb-1">The Next Generation</h2>
                             <p className="text-sm">Investing in our apprentices with skills, support, and hands-on
-                                experience.</p>
+                                experience</p>
                         </div>
                     </div>
                 </div>
