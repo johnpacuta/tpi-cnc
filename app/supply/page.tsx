@@ -146,10 +146,6 @@ export default function Supply() {
                 </div>
 
                 <div className="mt-8 space-y-4 text-center">
-                    <p className="text-gray-600 max-w-3xl mx-auto">
-                        All service packages include our dual-technician approach, ensuring efficient and high-quality
-                        results.
-                    </p>
                     <a
                         href="/quote"
                         className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-brand-blue rounded-lg hover:bg-brand-blue/90 transition-colors"
