@@ -123,12 +123,6 @@ const getProductBySlug = (slug: string) => {
   return products[slug as keyof typeof products];
 };
 
-// Add metadata for SEO
-export const metadata = {
-  title: 'Product Details',
-  description: 'View detailed product information',
-}
-
 export default async function ProductDetails({ 
   params 
 }: {

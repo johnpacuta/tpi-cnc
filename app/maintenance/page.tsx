@@ -1,256 +1,307 @@
 "use client";
+import {useRouter} from "next/navigation";
 
-import ContentSection from "../components/about/ContentSection";
-import { CheckCircle2 } from "lucide-react";
-import { useState } from "react";
+import ContentSection from "@/app/components/about/ContentSection";
+import {CheckCircle2} from "lucide-react";
+import {useState} from "react";
+import {toast} from "react-hot-toast";
+import {submitConsultingForm} from "@/app/actions/consulting";
+import type {ContactFormData} from "@/lib/schema";
 
-const scopeOfServices = [
-  {
-    title: "Initial Assessment",
-    items: [
-      {
-        subtitle: "Site Visit",
-        description: "Conduct a detailed on-site evaluation to understand the operational environment and specific requirements."
-      },
-      {
-        subtitle: "Equipment Review",
-        description: "Inspect each CNC machine to develop a tailored maintenance schedule and address any immediate concerns."
-      }
-    ]
-  },
-  {
-    title: "Maintenance Services",
-    items: [
-      {
-        subtitle: "Routine Maintenance",
-        description: "Perform regular maintenance tasks based on the agreed schedule to prevent unexpected breakdowns and reduce downtime."
-      },
-      {
-        subtitle: "Preventive Maintenance",
-        description: "Implement preventive measures to improve equipment reliability and extend the lifespan of your CNC machines."
-      }
-    ]
-  },
-  {
-    title: "Maintenance Management System Integration",
-    items: [
-      {
-        subtitle: "CMMS Integration",
-        description: "Assist with implementing a Computerized Maintenance Management System (CMMS) to streamline operations, track maintenance history, and schedule future tasks."
-      },
-      {
-        subtitle: "Ticketing System",
-        description: "Set up a streamlined ticketing system to manage and document all maintenance requests and resolutions efficiently."
-      }
-    ]
-  }
+type FormErrors = {
+    [K in keyof ContactFormData]?: string[];
+};
+
+const maintenanceServices = [
+    {
+        title: "Reactive Package",
+        subtitle: "Get Back Online",
+        features: [
+            "24/7 Emergency Support",
+            "48 hour response time",
+            "3 hour minimum",
+            "Detailed reports"
+        ],
+        isHighlighted: true,
+        link: "#"
+    },
+    {
+        title: "Preventative Package",
+        subtitle: "Stop Breakdowns",
+        features: [
+            "Machine Assessment",
+            "Detailed Report",
+            {
+                label: "2 options:", children: [
+                    "Wear and Tear Package",
+                    "Enhanced Precision Machine Package with Ball Bar Calibration",
+                ]
+            },
+        ],
+        isHighlighted: true,
+        link: "#"
+    },
+    {
+        title: "Comprehensive Package",
+        subtitle: "Support Operations",
+        features: [
+            "1,000 hours hours of routine and emergency maintenance per year",
+            "Includes Enhanced Precision Preventive Maintenance Package",
+            "24-hour guaranteed response time",
+            "Priority scheduling",
+        ],
+        isHighlighted: true,
+        link: "#"
+    },
+    {
+        title: "Premium Package",
+        subtitle: "Improve Operations",
+        features: [
+            "All Features of the Comprehensive Package",
+            "Installation of a Real-time Digital Maintenance Monitoring System",
+            "Team Training on the Digital Maintenance Monitoring System",
+            "Optional Training and Upskilling of In-house techs",
+        ],
+        isHighlighted: true,
+        link: "#"
+    }
 ];
 
 export default function Maintenance() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [activeStep, setActiveStep] = useState(0);
+    const router = useRouter();
+    const [activeIndex, setActiveIndex] = useState(0);
 
-  const maintenanceServices = [
-    {
-      title: "Annual",
-      features: [
-        "1,000 hours annually (20 hours/week)",
-        "20% discounted rate",
-        "24-hour guaranteed response time",
-        "Priority scheduling",
-        "CMMS integration assistance",
-        "Estimated Annual Cost: $90,000"
-      ],
-      isHighlighted: true
-    },
-    {
-      title: "Monthly",
-      features: [
-        "80 hours per month (20 hours/week)",
-        "10% discounted rate",
-        "48-hour guaranteed response time",
-        "Priority scheduling",
-        "CMMS integration assistance",
-        "Estimated Monthly Cost: $8,000"
-      ]
-    },
-    {
-      title: "Time and Material Basis",
-      features: [
-        "Services provided as needed",
-        "Standard response times",
-        "CMMS integration (upon request)",
-        "Flexible scheduling"
-      ]
-    }
-  ];
+    const [errors, setErrors] = useState<FormErrors>({});
 
-  return (
-    <main className="min-h-screen py-4">
-      <ContentSection 
-        title="Maintainence Process"
-        subtitle="Comprehensive maintenance solutions for your CNC equipment"
-      >
-        {/* Timeline */}
-        <div className="relative mb-12">
-          {/* Timeline line with gradient */}
-          <div className="absolute top-1/2 left-0 w-full -translate-y-1/2">
-            <div className="h-1 bg-gradient-to-r from-gray-200 via-brand-blue to-gray-200"></div>
-          </div>
-          
-          {/* Timeline nodes */}
-          <div className="relative flex justify-between max-w-xs sm:max-w-2xl mx-auto">
-            {scopeOfServices.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveStep(index)}
-                className="relative flex flex-col items-center group"
-              >
-                {/* Node with pulse animation */}
-                <div className={`relative w-6 h-6 sm:w-8 sm:h-8 rounded-full 
-                  transition-all duration-300 transform
-                  ${activeStep === index 
-                    ? 'bg-brand-blue scale-110 ring-4 ring-brand-blue/30' 
-                    : 'bg-white border-2 border-brand-blue group-hover:border-4 group-hover:border-brand-blue/50'}`}
-                >
-                  {/* Inner dot */}
-                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                    w-2 h-2 sm:w-3 sm:h-3 rounded-full
-                    ${activeStep === index 
-                      ? 'bg-white' 
-                      : 'bg-brand-blue group-hover:bg-brand-blue/50'}`}
-                  />
-                </div>
-                
-                {/* Step label */}
-                <span className={`mt-4 text-sm sm:text-base font-semibold 
-                  transition-all duration-300 transform
-                  ${activeStep === index 
-                    ? 'text-brand-blue scale-110' 
-                    : 'text-gray-600 group-hover:text-brand-blue/70'}`}>
-                  Step {index + 1}
-                </span>
-                
-                {/* Floating title badge */}
-                <div className={`absolute -top-12 left-1/2 -translate-x-1/2 
-                  bg-white shadow-lg rounded-lg px-3 py-2 
-                  transition-all duration-300 whitespace-nowrap
-                  ${activeStep === index 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-2 pointer-events-none'}`}>
-                  <span className="text-xs sm:text-sm font-medium text-gray-800">
-                    {service.title}
-                  </span>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 
-                    rotate-45 w-2 h-2 bg-white">
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Display */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h3 className="text-xl font-bold text-brand-blue mb-6">{scopeOfServices[activeStep].title}</h3>
-          <div className="space-y-6">
-            {scopeOfServices[activeStep].items.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-brand-blue"></div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800 mb-2">{item.subtitle}</h4>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </ContentSection>
-
-      <ContentSection 
-        title="Maintainence Packages"
-        subtitle="Professional CNC maintenance solutions with flexible service packages"
-        className=""
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {maintenanceServices.map((service, index) => (
-            <div 
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`p-6 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl cursor-pointer
-                ${index === activeIndex
-                  ? 'border-brand-blue bg-brand-blue/5' 
-                  : 'border-brand-blue/10 bg-white'}`}
-            >
-              <h3 className={`text-2xl font-bold mb-6 transition-colors duration-300 relative
-                ${index === activeIndex 
-                  ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full' 
-                  : 'text-gray-800'}`}>
-                {service.title}
-              </h3>
-              
-              <ul className="space-y-4">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <CheckCircle2 className={`w-6 h-6 flex-shrink-0 transition-colors duration-300
-                      ${index === activeIndex ? 'text-brand-blue' : 'text-accent'}`} />
-                    <span className="text-gray-600">{feature}</span>
-                  </li>
+    const ErrorMessage = ({fieldName}: { fieldName: keyof FormErrors }) => {
+        if (!errors[fieldName]?.length) return null;
+        return (
+            <div className="mt-1 text-sm text-red-600">
+                {errors[fieldName]?.map((error, index) => (
+                    <div key={index}>{error}</div>
                 ))}
-              </ul>
             </div>
-          ))}
-        </div>
+        );
+    };
 
-        <div className="mt-8 space-y-4 text-center">
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            All service packages include our dual-technician approach, ensuring efficient and high-quality results. 
-            Additional technician support is provided at no extra cost during service visits.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-brand-blue rounded-lg hover:bg-brand-blue/90 transition-colors"
-          >
-            Request Service
-          </a>
-        </div>
-      </ContentSection>
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const formData = new FormData(form);
 
-      <ContentSection 
-        title="Additional Information"
-        subtitle="Agreement details, billing, and other important information"
-      >
-        <div className="space-y-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-brand-blue mb-4">Recommendations</h3>
-            <ul className="list-disc list-inside space-y-3 text-gray-600">
-              <li>
-                <span className="font-semibold">Preventive Maintenance Schedule:</span> A minimum of three preventive maintenance visits annually, supplemented by breakdown services as needed.
-              </li>
-              <li>
-                <span className="font-semibold">Discount Structures:</span> Offering additional discounts for contracted preventive maintenance events to provide added value. For instance, a 15% labor discount could be applied to any service performed on a machine under contract.
-              </li>
-            </ul>
-          </div>
+        // Clear previous errors
+        setErrors({});
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-brand-blue mb-4">Transparency in Billing</h3>
-            <p className="text-gray-600 mb-4">
-              TPI CNC Inc. will ensure full transparency and fairness in billing. Based on the selected service option, detailed reports will be provided:
-            </p>
-            <ul className="list-disc list-inside space-y-3 text-gray-600">
-              <li>
-                <span className="font-semibold">Annual Agreements:</span> End-of-year reports summarizing services performed, hours worked, and associated costs.
-              </li>
-              <li>
-                <span className="font-semibold">Monthly Agreements:</span> End-of-month reports detailing all work performed. Invoices will be reconciled to reflect actual work completed. Any overpayments of up to 100 hours yearly/10 hours monthly will be credited back to you. The discount rates can extend past the commitment of 1,000 hours yearly/80 hours monthly if extra hours are required.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </ContentSection>
-    </main>
-  );
+        toast.promise(
+            submitConsultingForm(formData)
+                .then((response) => {
+                    if (!response.success) {
+                        if (response.fieldErrors) {
+                            setErrors(response.fieldErrors);
+                            throw new Error('Please fix the form errors');
+                        }
+                        throw new Error(response.error);
+                    }
+                    form.reset();
+                    return response;
+                }),
+            {
+                loading: 'Submitting request...',
+                success: 'Request submitted successfully!',
+                error: (err: { message: any; }) => err.message || 'Failed to submit request'
+            }
+        );
+
+
 }
+        return (
+
+            <main>
+                <ContentSection
+                    title="TPI CNC Packages"
+                    subtitle=""
+                    className="pt-24"
+                >
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {maintenanceServices.map((service, index) => (
+                            <div
+                                key={index}
+                                onClick={() => {
+                                    setActiveIndex(index);
+                                    router.push(service.link ?? "/contact");
+                                }}
+                                role="link"
+                                tabIndex={0}
+                                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && router.push(service.link ?? "/contact")}
+                                className={`p-6 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl cursor-pointer
+                ${index === activeIndex
+                                    ? 'border-brand-blue bg-brand-blue/5'
+                                    : 'border-brand-blue/10 bg-white'}`}
+                            >
+                                <h2 className={`text-3xl font-bold mb-2 transition-colors duration-300 relative
+                ${index === activeIndex
+                                    ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
+                                    : 'text-gray-800'}`}>
+                                    {service.title}
+                                </h2>
+                                <h4 className={'text-2xl mb-3'}>
+                                    {service.subtitle}
+                                </h4>
+
+                                <ul className="space-y-4">
+                                    {service.features.map(
+                                        (
+                                            feature:
+                                                | string
+                                                | { label: string; children: string[] },
+                                            featureIndex: number
+                                        ) => {
+                                            const isGroup = typeof feature !== "string";
+
+                                            if (!isGroup) {
+                                                return (
+                                                    <li key={featureIndex} className="flex items-start gap-3">
+                                                        <CheckCircle2
+                                                            className={`w-6 h-6 flex-shrink-0 text-brand-blue`}
+                                                        />
+                                                        <span className="text-gray-600">{feature}</span>
+                                                    </li>
+                                                );
+                                            }
+
+                                            const group = feature as { label: string; children: string[] };
+                                            return (
+                                                <li key={featureIndex} className="flex flex-col gap-2">
+                                                    <div className="flex items-start gap-3">
+                                                        <CheckCircle2
+                                                            className={`w-6 h-6 flex-shrink-0 text-brand-blue`}
+                                                        />
+                                                        <span
+                                                            className="text-gray-800 font-semibold">{group.label}</span>
+                                                    </div>
+                                                    <ul className="ml-9 list-disc space-y-2">
+                                                        {group.children.map((child, i) => (
+                                                            <li key={i} className="text-gray-600">{child}</li>
+                                                        ))}
+                                                    </ul>
+                                                </li>
+                                            );
+                                        }
+                                    )}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+
+                    <section className="text-center mt-8">
+                        <div className="bg-gradient-to-r from-brand-blue to-blue-600 rounded-xl shadow-xl p-4 sm:p-8">
+                            <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ready to Transform
+                                Your Operations?</h2>
+                            <p className="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base">Let's discuss how we can
+                                customize this solution for your specific needs.</p>
+                            <button
+                                type="button"
+                                onClick={() => router.push("/contact")}
+                                className="bg-white text-brand-blue font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
+                                aria-label="Go to Contact page"
+                            >
+                                Contact Us Today
+                            </button>
+
+                        </div>
+                    </section>
+                    {/* Contact Form Section */}
+                    <section className="max-w-2xl mx-auto pt-16">
+                        <h2 className="text-2xl font-semibold mb-2 text-center">Get Started Today</h2>
+                        <p className="text-gray-600 text-center mb-8">Take the first step towards optimizing your
+                            operations</p>
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="First Name"
+                                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                                            errors.firstName ? 'border-red-500' : ''
+                                        }`}
+                                        required
+                                    />
+                                    <ErrorMessage fieldName="firstName"/>
+                                </div>
+                                <div className="space-y-2">
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="Last Name"
+                                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                                            errors.lastName ? 'border-red-500' : ''
+                                        }`}
+                                        required
+                                    />
+                                    <ErrorMessage fieldName="lastName"/>
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email Address"
+                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                                        errors.email ? 'border-red-500' : ''
+                                    }`}
+                                    required
+                                />
+                                <ErrorMessage fieldName="email"/>
+                            </div>
+                            <div className="space-y-2">
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Phone Number"
+                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                                        errors.phone ? 'border-red-500' : ''
+                                    }`}
+                                    required
+                                />
+                                <ErrorMessage fieldName="phone"/>
+                            </div>
+                            <div className="space-y-2">
+                                <select
+                                    name="serviceType"
+                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                                        errors.serviceType ? 'border-red-500' : ''
+                                    }`}
+                                    required
+                                >
+                                    <option value="">Select a Service</option>
+                                    <option value="Reactive">Reactive Package</option>
+                                    <option value="Preventative">Preventative Package</option>
+                                    <option value="Comprehensive">Comprehensive Package</option>
+                                    <option value="Premium">Premium Package</option>
+                                </select>
+                                <ErrorMessage fieldName="serviceType"/>
+                            </div>
+                            <div className="space-y-2">
+              <textarea
+                  name="message"
+                  placeholder="Additional Information"
+                  rows={4}
+                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
+                      errors.message ? 'border-red-500' : ''
+                  }`}
+              ></textarea>
+                                <ErrorMessage fieldName="message"/>
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-brand-blue/80 transition-colors"
+                            >
+                                Submit Request
+                            </button>
+                        </form>
+                    </section>
+                </ContentSection>
+            </main>
+        );
+    }

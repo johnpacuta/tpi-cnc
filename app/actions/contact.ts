@@ -4,6 +4,9 @@ import { neon } from '@neondatabase/serverless';
 import { ContactFormSchema } from '@/lib/schema';
 import type { z } from 'zod';
 import { sendContactEmails } from './email';
+import sgMail, { MailDataRequired } from "@sendgrid/mail";
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 // Define FormErrors type
 type FormErrors = {
@@ -23,7 +26,7 @@ export async function submitContactForm(formData: FormData) {
       message: formData.get('message'),
     });
 
-    if (!validatedFields.success) {
+      if (!validatedFields.success) {
       const fieldErrors: FormErrors = {};
       validatedFields.error.issues.forEach((issue: { path: (string | number | symbol)[]; message: string; }) => {
         const field = issue.path[0] as keyof FormErrors;

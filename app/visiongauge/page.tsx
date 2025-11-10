@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import ProductSlider from "../cnc-indexing-tjr/ProductSlider";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
+import {router} from "next/client";
 
 const products = [
   {
@@ -100,8 +101,8 @@ export default function VisionGauge() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <button 
-            onClick={() => setIsModalOpen(true)}
+          <button
+              onClick={() => router.push("/quote")}
             className="
               bg-brand-blue text-white 
               px-12 py-6 
@@ -114,14 +115,16 @@ export default function VisionGauge() {
               animate-subtle-pulse
             "
           >
+              <Link href="/quote">
             Request a Quote Today
+              </Link>
           </button>
         </div>
       </ContentSection>
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );
