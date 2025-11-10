@@ -1,66 +1,145 @@
-export function About() {
-  return (
-    <section className="relative">
-      {/* Top wave divider */}
-      <div className="absolute top-0 left-0 right-0 overflow-hidden">
-        <svg
-          className="relative block w-full h-[40px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-white"
-          />
-        </svg>
-      </div>
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
-      <div className="py-20 bg-brand-blue/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-block relative mb-12">
-              <div className="absolute inset-0 border-2 border-brand-blue/20" />
-              <div className="absolute left-0 top-0 w-4 h-4 border-t-2 border-l-2 border-primary" />
-              <div className="absolute right-0 top-0 w-4 h-4 border-t-2 border-r-2 border-primary" />
-              <div className="absolute left-0 bottom-0 w-4 h-4 border-b-2 border-l-2 border-primary" />
-              <div className="absolute right-0 bottom-0 w-4 h-4 border-b-2 border-r-2 border-primary" />
-              
-              <h2 className="relative px-16 py-8">
-                <span className="block text-5xl font-bold text-brand-blue tracking-tight sm:text-6xl">
-                  What We Do
-                </span>
-                <span className="mt-6 block text-2xl text-gray-600 font-medium tracking-wide">
-                  Customer Focused Industrial Services
-                </span>
-                <div className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent" />
-              </h2>
+export function About() {
+    return (
+        <section className="relative ">
+            {/*divider */}
+            <div
+                className="absolute -top-16 left-0 right-0 overflow-hidden rotate-180 fill-black transform-skew-y-8">
+                <svg
+                    className="block w-full h-16"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M0,0 L1200,0 L0,120 L0,0 Z"></path>
+                </svg>
+            </div>
+            <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0"
+                style={{
+                    maskImage:
+                        "radial-gradient(ellipse at center, black 40%, transparent 100%)",
+                    WebkitMaskImage:
+                        "radial-gradient(ellipse at center, black 40%, transparent 100%)",
+                }}
+            >
+                <div className="absolute left-1/2 top-24 sm:top-24 md:top-1/4 -translate-x-1/2 -translate-y-1/2">
+                    <img
+                        src="/logos/tpinbg.png"
+                        alt="Company logo"
+                        className="w-100 h-auto opacity-30"
+                    />
+                </div>
+            </div>
+            <div className="overflow-hidden bg-black pt-24">
+                <div className="mx-auto max-w-6xl px-10 pb-36 mt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-white/40">
+                        <div className="md:px-14 pb-10">
+                            <h2 className="text-white text-4xl">SERVICE</h2>
+                            <p className="mt-2 text-white">
+                                Manufacturer-certified technicians deliver 24/7 technical support, expert emergency repairs, and precision calibrations.
+                            </p>
+                            <br></br>
+                            {/* CTA Button */}
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="
+                px-8 py-6
+                text-base font-bold
+                shadow-xl hover:shadow-lg
+                transform scale-100 hover:scale-105
+                transition-all duration-200
+                border-2 border-white
+                text-white hover:text-black
+                bg-black hover:bg-white
+                rounded-md
+                whitespace-nowrap
+                "
+                            >
+                                <Link href="/service">
+                                    <span className="text-3xl leading-none">➔</span>
+                                </Link>
+                            </Button>
+                        </div>
+
+                        <div className="md:px-14 pb-10">
+                            <h2 className="text-white text-4xl">SUPPORT</h2>
+                            <p className="mt-2 text-white">
+                                Rare part sourcing, high-quality consumables, custom 3D-printed components, and personalized maintenance packages.
+                            </p>
+                            <br></br>
+                            {/* CTA Button */}
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="
+                px-8 py-6
+                text-base font-bold
+                shadow-xl hover:shadow-lg
+                transform scale-100 hover:scale-105
+                transition-all duration-200
+                border-2 border-white
+                text-white hover:text-black
+                bg-black hover:bg-white
+                rounded-md
+                whitespace-nowrap
+                "
+                            >
+                                <Link href="/support">
+                                    <span className="text-3xl leading-none">➔</span>
+                                </Link>
+                            </Button>
+                        </div>
+                        <div className="md:px-14 pb-10">
+                            <h2 className="text-white text-4xl">SUPPLY</h2>
+                            <p className="mt-2 text-white">
+                                An extensive range of precision machines, advanced technology from world class builders to maximize your productivity.
+                            </p>
+                            <br></br>
+                            {/* CTA Button */}
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="
+                px-8 py-6
+                text-base font-bold
+                shadow-xl hover:shadow-lg
+                transform scale-100 hover:scale-105
+                transition-all duration-200
+                border-2 border-white
+                text-white hover:text-black
+                bg-black hover:bg-white
+                rounded-md
+                whitespace-nowrap
+                "
+                            >
+                                <Link href="/supply">
+                                    <span className="text-3xl leading-none">➔</span>
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <p className="text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto">
-              With over two decades of experience, TPI CNC delivers a customer-first approach 
-              to industrial solutions and machining services
-            </p>
-          </div>
-        </div>
-      </div>
+            <div className="absolute bottom-0 left-0 right-0 overflow-hidden rotate-180 fill-white transform-skew-y-8">
+                <svg
+                    className="block w-full h-16"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M0,0 L1200,0 L1200,120 L0,0 Z"></path>
+                </svg>
+            </div>
+        </section>
 
-      {/* Bottom wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden rotate-180">
-        <svg
-          className="relative block w-full h-[40px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="fill-white"
-          />
-        </svg>
-      </div>
-    </section>
-  )
+    )
 } 

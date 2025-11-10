@@ -2,11 +2,12 @@
 
 import ContentSection from "../../components/about/ContentSection";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ProductSlider from "../../cnc-indexing-tjr/ProductSlider";
 import ContactModal from "@/components/ContactModal";
 import { useState } from "react";
+import {router} from "next/client";
+import Link from "next/link";
 
 const products = [
   {
@@ -93,18 +94,20 @@ export default function BlazeWeldingRobot() {
 
         {/* CTA Section */}
         <div className="my-8 text-center">
-          <button 
-            onClick={() => setIsModalOpen(true)}
+          <button
+              onClick={() => router.push("/quote")}
             className="bg-brand-blue text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg font-medium shadow-sm hover:shadow-md"
           >
+              <Link href="/quote">
             Request a Quote
+              </Link>
           </button>
         </div>
       </ContentSection>
 
       <ContactModal 
         open={isModalOpen}
-        onOpenChange={setIsModalOpen}
+        onOpenChangeAction={setIsModalOpen}
       />
     </main>
   );

@@ -1,15 +1,16 @@
 import Link from "next/link";
+import React, {ReactElement} from "react";
 
 interface ServiceCardProps {
   title: string;
-  icon: React.ReactNode;
+  icon: ReactElement;
   description: string;
   features: string[];
   details: string;
   slug: string;
 }
 
-export default function ServiceCard({
+export function ServiceCard({
   title,
   icon,
   description,
@@ -107,4 +108,6 @@ export default function ServiceCard({
       </div>
     </Link>
   );
-} 
+}
+
+export default ServiceCard

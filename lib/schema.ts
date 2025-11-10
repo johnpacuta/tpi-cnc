@@ -15,6 +15,10 @@ const BaseFormSchema = z.object({
   formType: z.string().optional(),
 })
 
+export const SubscribeSchema = z.object({
+    email: z.string().email('Invalid email address'),
+})
+
 // Contact form schema (uses base schema as-is)
 export const ContactFormSchema = BaseFormSchema
 
