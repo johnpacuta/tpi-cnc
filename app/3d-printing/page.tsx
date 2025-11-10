@@ -54,14 +54,14 @@ export default async function ServiceDetailPage() {
   return (
     <div className="bg-gray-50">
       <div className="mb-[-60px]">
-        <DetailPage 
+        <DetailPage
           data={pageData}
-          type="service" 
+          type="service"
           withGenericForm={false}
-          backButton={{ 
+          backButton={{
             text: "Services",
-            href: "/services"
-          }} 
+            href: "/service"
+          }}
         />
       </div>
       <section className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 mb-4">
