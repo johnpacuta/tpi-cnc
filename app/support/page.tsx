@@ -14,68 +14,16 @@ type FormErrors = {
 
 const maintenanceServices = [
     {
-        title: "Reactive Package",
-        subtitle: "Get Back Online",
-        features: [
-            "24/7 Emergency Support",
-            "48 hour response time",
-            "3 hour minimum",
-            "Detailed reports"
-        ],
-        isHighlighted: true,
-        link: "#"
-    },
-    {
-        title: "Preventative Package",
-        subtitle: "Stop Breakdowns",
-        features: [
-            "Machine Assessment",
-            "Detailed Report",
-            {
-                label: "2 options:", children: [
-                    "Wear and Tear Package",
-                    "Enhanced Precision Machine Package with Ball Bar Calibration",
-                ]
-            },
-        ],
-        isHighlighted: true,
-        link: "#"
-    },
-    {
-        title: "Comprehensive Package",
-        subtitle: "Support Operations",
-        features: [
-            "1,000 hours hours of routine and emergency maintenance per year",
-            "Includes Enhanced Precision Preventive Maintenance Package",
-            "24-hour guaranteed response time",
-            "Priority scheduling",
-        ],
-        isHighlighted: true,
-        link: "#"
-    },
-    {
-        title: "Premium Package",
-        subtitle: "Improve Operations",
-        features: [
-            "All Features of the Comprehensive Package",
-            "Installation of a Real-time Digital Maintenance Monitoring System",
-            "Team Training on the Digital Maintenance Monitoring System",
-            "Optional Training and Upskilling of In-house techs",
-        ],
-        isHighlighted: true,
-        link: "#"
-    },
-    {
-        title: "Metal Working Fluids",
+        title: "Maintenance Packages",
         subtitle: "",
         features: [
-            "Coolants: added fungicides, biocides, and surfactants for optimal system performance.",
-            "Cutting Oils: petroleum-based oils for extended tool life.",
-            "Water‑soluble, semi‑synthetic, and synthetic options with corrosion inhibition, EP additives, defoamers, and tramp‑oil control.",
-            "Specialty Fluids: drawing fluids, hydraulic and way oils."
+            "Reactive: Rapid response to breakdowns, emergency diagnostics, and quick restoration to minimize downtime.",
+            "Preventative: Scheduled inspections, calibration, and wear tracking to reduce failures and extend machine life.",
+            "Comprehensive: Bundled routine and on‑call support with priority scheduling and guaranteed response times.",
+            "Premium: Everything in Comprehensive plus real‑time condition monitoring and training to optimize operations."
         ],
         isHighlighted: true,
-        link: "https://www.polarchemtech.com/products"
+        link: "/maintenance"
     },
     {
         title: "3D Printing",
