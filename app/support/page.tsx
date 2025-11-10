@@ -17,10 +17,10 @@ const maintenanceServices = [
         title: "Maintenance Packages",
         subtitle: "",
         features: [
-            "Reactive: Rapid response to breakdowns, emergency diagnostics, and quick restoration to minimize downtime.",
-            "Preventative: Scheduled inspections, calibration, and wear tracking to reduce failures and extend machine life.",
-            "Comprehensive: Bundled routine and on‑call support with priority scheduling and guaranteed response times.",
-            "Premium: Everything in Comprehensive plus real‑time condition monitoring and training to optimize operations."
+            "Rapid response to breakdowns, emergency diagnostics, and quick restoration to minimize downtime.",
+            "Scheduled inspections, calibration, and wear tracking to reduce failures and extend machine life.",
+            "Bundled routine and on‑call support with priority scheduling and guaranteed response times.",
+            "Everything in Comprehensive plus real‑time condition monitoring and training to optimize operations."
         ],
         isHighlighted: true,
         link: "/maintenance"

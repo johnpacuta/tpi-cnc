@@ -69,7 +69,7 @@ export default function About() {
                     />
                 </div>
                 <StorySection
-                    missionStatement="At TPI, led by our founder Teddy Powell, our culture is rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
+                    missionStatement="Led by our founder Teddy Powell, we are rooted in integrity, collaboration, and innovation. We value excellence in every aspect of our work, from customer service to technical expertise. Our purpose is clear: to serve as a beacon of reliability and support for local industries, fostering their growth and success on the global stage. Through our unwavering commitment to these values, we aim to inspire trust, drive progress, and make a meaningful impact in the communities we serve."
                     yearsOfExperience={15}
                     projectsCompleted={1000}
                 />
