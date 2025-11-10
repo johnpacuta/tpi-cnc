@@ -16,9 +16,9 @@ export async function submitConsultingForm(formData: FormData) {
       lastName: formData.get('lastName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
-      service: formData.get('service'),
       message: formData.get('message'),
-      serviceType: formData.get('service'),
+      // Map null to undefined so optional schema doesn't error on null
+      serviceType: (formData.get('serviceType') ?? undefined) as string | undefined,
     });
 
     if (!validatedFields.success) {
