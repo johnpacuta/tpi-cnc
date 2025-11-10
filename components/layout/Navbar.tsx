@@ -88,20 +88,20 @@ export function Navbar() {
                 <span className="text-primary/80 mx-2">•</span>
                 <span className="text-brand-black">SUPPLY</span>
               </span>
-                        </div>
-
-                        {/* Enhanced CTA Button */}
-                        <div className="hidden sm:flex items-center gap-6">
-                            {/* Phone Number */}
-                            <div className="flex items-center gap-2 text-brand-blue">
-                                <Phone className="h-5 w-5"/>
-                                <a
-                                    href="tel:+15195638900"
-                                    className="text-lg font-semibold hover:text-brand-blue/80 transition-colors text-primary"
-                                >
-                                    (519) 563-8900
-                                </a>
-                            </div>
+            </div>
+            
+            {/* Enhanced CTA Button */}
+            <div className="hidden sm:flex items-center gap-6">
+              {/* Phone Number */}
+              <div className="flex items-center gap-2 text-brand-blue">
+                <Phone className="h-5 w-5" />
+                <a 
+                  href="tel:+15195638900"
+                  className="text-lg font-semibold hover:text-brand-blue/80 transition-colors text-primary"
+                >
+                  (519) 563-8900
+                </a>
+              </div>
 
                             {/* Separator */}
                             <div className="h-8 w-px bg-gray-200"/>

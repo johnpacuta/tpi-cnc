@@ -35,10 +35,10 @@ export function Hero() {
                         Covered
                     </p>
 
-                    {<div className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                        <Button
-                            size="lg"
-                            className="
+          {<div className="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Button asChild
+              size="lg" 
+              className="
                 px-8 py-7 
                 text-base font-bold
                 shadow-lg hover:shadow-xl 
@@ -47,18 +47,16 @@ export function Hero() {
                 bg-brand-blue hover:bg-brand-blue/90
                 rounded-md
                 border-2 border-brand-blue/20
-                animate-subtle-pulse
                 whitespace-nowrap
                 text-black hover:text-white
               "
-                        >
-                            <a href="tel:+15195638900" rel="nofollow noopener">Call Now →</a>
-
-                        </Button>
-                        <Button asChild
-                                variant="outline"
-                                size="lg"
-                                className="
+            >
+                <a href="tel:+15195638900" rel="nofollow noopener">Call Now →</a>
+            </Button>
+            <Button asChild
+              variant="outline" 
+              size="lg"
+              className="
                 px-8 py-7
                 text-base font-bold
                 shadow-lg hover:shadow-xl
@@ -70,10 +68,10 @@ export function Hero() {
                 rounded-md
                 whitespace-nowrap
               "
-                        >
-                            <Link href="/about">Learn More →</Link>
-                        </Button>
-                    </div>}
+            >
+              <Link href="/about">Learn More →</Link>
+            </Button>
+          </div> }
 
                 </div>
             </div>
