@@ -57,6 +57,18 @@ export default function Supply() {
             img: "/logos/home_logos/OMEGA_TMM.png",
             link: "https://omegatmm.com/presetters/"
         },
+        {
+            title: "Polarchem Technologies",
+            features: [
+                "Coolants: added fungicides, biocides, and surfactants for optimal system performance.",
+                "Cutting Oils: petroleum-based oils for extended tool life.",
+                "Water‑soluble, semi‑synthetic, and synthetic options with corrosion inhibition, EP additives, defoamers, and tramp‑oil control.",
+                "Specialty Fluids: drawing fluids, hydraulic and way oils.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/Polarchem.jpg",
+            link: "https://www.polarchemtech.com/products"
+        },
     ];
 
     return (
@@ -86,7 +98,7 @@ export default function Supply() {
                 ${index === activeIndex
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
-                                <img src={service.img} className="w-auto h-12 ml-4" alt={service.title}/>
+                                <img src={service.img} className="w-auto h-16 ml-4" alt={service.title}/>
                             </h3>
 
                             <ul className="space-y-4">
