@@ -11,7 +11,7 @@ const BaseFormSchema = z.object({
   company: z.string().optional(),
   comments: z.string().optional(),
   category: z.string().optional(),
-  serviceType: z.string().optional().nullable(),
+  serviceType: z.string().optional(),
   formType: z.string().optional(),
 })
 
