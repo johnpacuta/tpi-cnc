@@ -16,28 +16,29 @@ const productsLinks = {
 }
 
 const servicesLinks = {
-  title: 'Services',
+  title: '',
   links: [
-    { name: 'Maintenance', href: '/services' },
-    { name: 'Training', href: '/training' },
-    { name: 'Consulting', href: '/consulting' },
+    { name: 'Services', href: '/services' },
+    { name: 'Maintenance Packages', href: '/maintenance' },
+    { name: 'Spare Parts', href: '/spare-parts' },
   ]
 }
 
 const supportLinks = {
-  title: 'Support',
+  title: '',
   links: [
-    { name: 'Quote Request', href: '/quote' },
-    { name: 'Technical Support', href: '/contact' },
+    { name: '3D Printing', href: '/3d-printing' },
+    { name: 'Equipment', href: '/equipment' },
+      { name: 'Metalworking Fluids', href: 'https://www.polarchemtech.com/products' },
+
   ]
 }
 
 const companyLinks = {
-  title: 'Company',
+  title: '',
   links: [
     { name: 'About Us', href: '/about' },
-    // { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Quote Request', href: '/quote' },
   ]
 }
 
