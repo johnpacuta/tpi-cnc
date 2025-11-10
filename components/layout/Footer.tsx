@@ -34,7 +34,7 @@ const companyLinks = {
 }
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/tpicnc', icon: FaLinkedin },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/tpi-cnc/', icon: FaLinkedin },
 ]
 
 const sitemapLinks = {
