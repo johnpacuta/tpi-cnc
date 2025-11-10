@@ -16,24 +16,30 @@ const productsLinks = {
 }
 
 const servicesLinks = {
-  title: 'Equipment',
-    links: [
-        { name: "RENISHAW", href: "/renishaw-products" },
-        { name: "Electrical and Mechanical Diagnostics", href: "/electrical-mechanical-diagnostics" },
-        { name: "Root Cause Analysis Repairs", href: "/root-cause-analysis-repairs" },
-        { name: "Commissioning and Decommissioning", href: "/commissioning-and-decommissioning" },
-        { name: "Third-Party Integration", href: "/third-party-integration" },
-
-    ]
+  title: '',
+  links: [
+    { name: 'Services', href: '/services' },
+    { name: 'Maintenance Packages', href: '/maintenance' },
+    { name: 'Spare Parts', href: '/spare-parts' },
+  ]
 }
 
 const supportLinks = {
-  title: 'Company',
-    links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Quote Request', href: '/quote' },
-        { name: 'Contact Us', href: '/contact' },
-    ]
+  title: '',
+  links: [
+    { name: '3D Printing', href: '/3d-printing' },
+    { name: 'Equipment', href: '/equipment' },
+      { name: 'Metalworking Fluids', href: 'https://www.polarchemtech.com/products' },
+
+  ]
+}
+
+const companyLinks = {
+  title: '',
+  links: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Quote Request', href: '/quote' },
+  ]
 }
 
 const socialLinks = [
