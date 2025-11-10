@@ -75,7 +75,7 @@ export default function Supply() {
         <main>
             <ContentSection
                 title="TPI CNC Partners"
-                subtitle="Professional CNC maintenance solutions with flexible service packages."
+                subtitle=""
                 className="pt-24"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -98,7 +98,9 @@ export default function Supply() {
                 ${index === activeIndex
                                 ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
                                 : 'text-gray-800'}`}>
-                                <img src={service.img} className="w-auto h-16 ml-4" alt={service.title}/>
+                              <div className="flex items-center justify-center">
+                                  <img src={service.img} alt={service.title} className="h-16" />
+                              </div>
                             </h3>
 
                             <ul className="space-y-4">

@@ -19,8 +19,6 @@ const maintenanceServices = [
         features: [
             "Rapid response to breakdowns, emergency diagnostics, and quick restoration to minimize downtime.",
             "Scheduled inspections, calibration, and wear tracking to reduce failures and extend machine life.",
-            "Bundled routine and on‑call support with priority scheduling and guaranteed response times.",
-            "Everything in Comprehensive plus real‑time condition monitoring and training to optimize operations."
         ],
         isHighlighted: true,
         link: "/maintenance"
@@ -194,100 +192,6 @@ export default function Support() {
                             </button>
 
                         </div>
-                    </section>
-                    {/* Contact Form Section */}
-                    <section className="max-w-2xl mx-auto pt-16">
-                        <h2 className="text-2xl font-semibold mb-2 text-center">Get Started Today</h2>
-                        <p className="text-gray-600 text-center mb-8">Take the first step towards optimizing your
-                            operations</p>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <input
-                                        type="text"
-                                        name="firstName"
-                                        placeholder="First Name"
-                                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                                            errors.firstName ? 'border-red-500' : ''
-                                        }`}
-                                        required
-                                    />
-                                    <ErrorMessage fieldName="firstName"/>
-                                </div>
-                                <div className="space-y-2">
-                                    <input
-                                        type="text"
-                                        name="lastName"
-                                        placeholder="Last Name"
-                                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                                            errors.lastName ? 'border-red-500' : ''
-                                        }`}
-                                        required
-                                    />
-                                    <ErrorMessage fieldName="lastName"/>
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email Address"
-                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                                        errors.email ? 'border-red-500' : ''
-                                    }`}
-                                    required
-                                />
-                                <ErrorMessage fieldName="email"/>
-                            </div>
-                            <div className="space-y-2">
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Phone Number"
-                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                                        errors.phone ? 'border-red-500' : ''
-                                    }`}
-                                    required
-                                />
-                                <ErrorMessage fieldName="phone"/>
-                            </div>
-                            <div className="space-y-2">
-                                <select
-                                    name="serviceType"
-                                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                                        errors.serviceType ? 'border-red-500' : ''
-                                    }`}
-                                    required
-                                >
-                                    <option value="">Select a Service</option>
-                                    <option value="Reactive">Reactive Package</option>
-                                    <option value="Preventative">Preventative Package</option>
-                                    <option value="Comprehensive">Comprehensive Package</option>
-                                    <option value="MWF">Metal Working Fluids</option>
-                                    <option value="Premium">Premium Package</option>
-                                    <option value="3D_Printing">3D Printing</option>
-                                    <option value="CNC_Parts">CNC Parts</option>
-                                </select>
-                                <ErrorMessage fieldName="serviceType"/>
-                            </div>
-                            <div className="space-y-2">
-              <textarea
-                  name="message"
-                  placeholder="Additional Information"
-                  rows={4}
-                  className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue ${
-                      errors.message ? 'border-red-500' : ''
-                  }`}
-              ></textarea>
-                                <ErrorMessage fieldName="message"/>
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full bg-brand-blue text-white px-6 py-3 rounded-lg hover:bg-brand-blue/80 transition-colors"
-                            >
-                                Submit Request
-                            </button>
-                        </form>
                     </section>
                 </ContentSection>
             </main>

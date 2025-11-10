@@ -119,7 +119,7 @@ export default function Maintenance() {
             <main>
                 <ContentSection
                     title="TPI CNC Packages"
-                    subtitle="Professional CNC maintenance solutions with flexible service packages"
+                    subtitle=""
                     className="pt-24"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -278,10 +278,7 @@ export default function Maintenance() {
                                     <option value="Reactive">Reactive Package</option>
                                     <option value="Preventative">Preventative Package</option>
                                     <option value="Comprehensive">Comprehensive Package</option>
-                                    <option value="MWF">Metal Working Fluids</option>
                                     <option value="Premium">Premium Package</option>
-                                    <option value="3D_Printing">3D Printing</option>
-                                    <option value="CNC_Parts">CNC Parts</option>
                                 </select>
                                 <ErrorMessage fieldName="serviceType"/>
                             </div>
