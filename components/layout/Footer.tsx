@@ -6,15 +6,6 @@ import { FaLinkedin } from 'react-icons/fa'
 import { toast } from 'react-hot-toast'
 import { submitSubscription } from '@/app/actions/subscribe'
 
-const productsLinks = {
-  title: 'Products',
-  links: [
-    /*{ name: 'Equipment', href: '/products' },*/
-    /*{ name: 'Spare Parts', href: '/spare-parts' },*/
-    { name: 'Special Deals', href: '/deals' },
-  ]
-}
-
 const servicesLinks = {
   title: '',
   links: [
@@ -159,8 +150,7 @@ export function Footer() {
         </div>
 
         {/* Quick Links Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
-          <FooterColumn {...productsLinks} />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8 border-t border-white/10">
           <FooterColumn {...servicesLinks} />
           <FooterColumn {...supportLinks} />
           <FooterColumn {...companyLinks} />
