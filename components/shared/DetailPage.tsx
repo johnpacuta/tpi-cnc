@@ -46,7 +46,7 @@ type DetailPageProps = {
 
 export default function DetailPage({ data, type, backButton, withGenericForm }: DetailPageProps) {
   return (
-    <main className="min-h-screen py-20">
+    <main className="min-h-screen pt-24">
       <ContentSection title={data.title}>
         <div className="max-w-4xl mx-auto">
           {/* Main Image Slider */}
