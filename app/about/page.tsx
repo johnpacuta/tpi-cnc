@@ -53,7 +53,7 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-16">
+    <main className="min-h-screen pt-20">
             <ContentSection
                 title="TPI CNC"
                 subtitle='"A legacy of excellence in industrial equipment solutions."'
