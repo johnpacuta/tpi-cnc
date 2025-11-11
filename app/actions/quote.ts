@@ -4,6 +4,9 @@ import { neon } from '@neondatabase/serverless'
 import { QuoteFormSchema } from '@/lib/schema'
 import type { z } from 'zod'
 import { sendContactEmails } from './email';
+import sgMail from "@sendgrid/mail";
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 // Define FormErrors type
 type FormErrors = {
@@ -71,7 +74,7 @@ export async function submitQuoteForm(formData: FormData) {
        ${values.message}, ${values.company}, ${values.equipment}, ${values.comments}) 
       RETURNING *`;
 
-    if (!result || result.length === 0) {
+    if (!result || result.length == 0) {
       throw new Error('Insert succeeded but returned no data');
     }
 
