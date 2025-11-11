@@ -101,8 +101,8 @@ export default function Support() {
 
             <main>
                 <ContentSection
-                    title="TPI CNC Packages"
-                    subtitle="Professional CNC maintenance solutions with flexible service packages"
+                    title="TPI CNC Solutions"
+                    subtitle="Professional CNC maintenance solutions."
                     className="pt-24"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
