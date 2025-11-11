@@ -50,7 +50,6 @@ const maintenanceServices = [
 
 export default function Support() {
     const router = useRouter();
-    const [activeIndex, setActiveIndex] = useState(0);
 
     const [errors, setErrors] = useState<FormErrors>({});
 
@@ -110,21 +109,14 @@ export default function Support() {
                             <div
                                 key={index}
                                 onClick={() => {
-                                    setActiveIndex(index);
                                     router.push(service.link ?? "/contact");
                                 }}
                                 role="link"
                                 tabIndex={0}
                                 onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && router.push(service.link ?? "/contact")}
-                                className={`p-6 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl cursor-pointer
-                ${index === activeIndex
-                                    ? 'border-brand-blue bg-brand-blue/5'
-                                    : 'border-brand-blue/10 bg-white'}`}
+                                className={`p-6 rounded-xl shadow-lg border-2 hover:shadow-xl border-brand-blue/10 bg-white`}
                             >
-                                <h2 className={`text-3xl font-bold mb-2 transition-colors duration-300 relative
-                ${index === activeIndex
-                                    ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
-                                    : 'text-gray-800'}`}>
+                                <h2 className={`text-3xl font-bold mb-2 relative text-gray-800`}>
                                     {service.title}
                                 </h2>
                                 <h4 className={'text-2xl mb-3'}>
