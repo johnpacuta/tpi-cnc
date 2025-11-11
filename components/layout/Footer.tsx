@@ -9,7 +9,7 @@ import { submitSubscription } from '@/app/actions/subscribe'
 const servicesLinks = {
   title: '',
   links: [
-    { name: 'Services', href: '/services' },
+    { name: 'Services', href: '/service' },
     { name: 'Maintenance Packages', href: '/maintenance' },
     { name: 'Spare Parts', href: '/spare-parts' },
   ]
@@ -19,7 +19,7 @@ const supportLinks = {
   title: '',
   links: [
     { name: '3D Printing', href: '/3d-printing' },
-    { name: 'Equipment', href: '/equipment' },
+    { name: 'Equipment', href: '/supply' },
       { name: 'Metalworking Fluids', href: 'https://www.polarchemtech.com/products' },
 
   ]
