@@ -3,11 +3,9 @@ import {useRouter} from "next/navigation";
 
 import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
-import {useState} from "react";
 
 export default function Supply() {
     const router = useRouter();
-    const [activeIndex, setActiveIndex] = useState(0);
     const maintenanceServices = [
         {
             title: "RENISHAW",
@@ -83,21 +81,14 @@ export default function Supply() {
                         <div
                             key={index}
                             onClick={() => {
-                                setActiveIndex(index);
                                 router.push(service.link ?? "/contact");
                             }}
                             role="link"
                             tabIndex={0}
                             onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && router.push(service.link ?? "/contact")}
-                            className={`p-6 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl cursor-pointer
-                ${index === activeIndex
-                                ? 'border-brand-blue bg-brand-blue/5'
-                                : 'border-brand-blue/10 bg-white'}`}
+                            className={`p-6 rounded-xl shadow-lg border-2 hover:shadow-xl border-brand-blue/10 bg-white`}
                         >
-                            <h3 className={`text-2xl font-bold mb-6 transition-colors duration-300 relative
-                ${index === activeIndex
-                                ? 'text-brand-blue after:content-[""] after:absolute after:-bottom-2 after:left-0 after:w-16 after:h-1 after:bg-brand-blue after:rounded-full'
-                                : 'text-gray-800'}`}>
+                            <h3 className={`text-2xl font-bold mb-6 relative text-gray-800`}>
                               <div className="flex items-center justify-center">
                                   <img src={service.img} alt={service.title} className="h-16" />
                               </div>

@@ -162,7 +162,7 @@ export function Navbar() {
                                     }}
                                 >
                                     <Link href="/quote">
-                                        Request Service
+                                        Request Service →
                                     </Link>
                                 </Button>
                             </div>
