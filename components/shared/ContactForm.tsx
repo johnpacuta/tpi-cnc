@@ -187,7 +187,7 @@ export default function ContactForm({
 
                     <Button
                         type="submit"
-                        className="bg-brand-blue text-white hover:bg-accent px-8"
+                        className="bg-brand-blue text-white hover:bg-brand-blue/90 px-8"
                     >
                         Send Message
                     </Button>
