@@ -278,7 +278,7 @@ export default function SpareParts() {
               <div className="flex justify-end">
                 <Button 
                   type="submit"
-                  className="bg-brand-blue text-white hover:bg-accent px-8"
+                  className="bg-brand-blue text-white hover:bg-brand-blue/90 px-8"
                 >
                   Submit Request
                 </Button>

@@ -186,7 +186,7 @@ export default function Products() {
         <section className="text-center">
           <h2 className="text-2xl font-semibold mb-4">Need Help Choosing?</h2>
           <p className="mb-6">Our team of experts is here to help you find the perfect solution.</p>
-          <button className="bg-primary/80 text-white px-6 py-3 rounded-lg hover:bg-primary transition-colors">
+          <button className="bg-black/80 text-white px-6 py-3 rounded-lg hover:bg-black transition-colors">
             Contact Us
           </button>
         </section>

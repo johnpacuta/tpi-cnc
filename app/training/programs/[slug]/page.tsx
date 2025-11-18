@@ -180,7 +180,7 @@ export default async function ProgramDetail({ params }: Props) {
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary/90 transition-all duration-300"
+            className="w-full bg-black text-white px-6 py-3 rounded-xl hover:bg-black/90 transition-all duration-300"
           >
             Request Information
           </button>

@@ -93,7 +93,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Top Row: Logo, Subscribe Form, and Social Media */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
