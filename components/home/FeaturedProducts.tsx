@@ -144,7 +144,7 @@ export function FeaturedProducts() {
                       </div>
 
                       <div className="flex justify-end items-center mt-6 pt-4 border-t border-secondary/20 flex-shrink-0">
-                        <span className="inline-flex items-center gap-2 text-primary font-semibold px-4 py-2 hover:bg-primary/5 group relative">
+                        <span className="inline-flex items-center gap-2 text-primary font-semibold px-4 py-2 hover:bg-black/5 group relative">
                           <span className="relative z-10">View Details</span>
                           <ArrowRight className="w-5 h-5 text-primary transform group-hover:translate-x-1 transition-transform" />
                           {/* Button highlight effect */}
