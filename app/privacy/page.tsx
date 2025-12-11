@@ -1,8 +1,10 @@
 import ContentSection from "@/app/components/about/ContentSection";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen py-20">
+        <GoogleTagManager gtmId="G-7385J6MX2L" />
       <ContentSection 
         title="Privacy Policy" 
         subtitle="Last updated: Jan 2025"
