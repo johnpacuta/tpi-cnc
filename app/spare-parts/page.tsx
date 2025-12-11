@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 type FormErrors = {
   [K in keyof SparePartsFormData]?: string[];
@@ -93,8 +94,8 @@ export default function SpareParts() {
 
   return (
     <main className="min-h-screen pt-24">
-      
-      <ContentSection 
+        <GoogleTagManager gtmId="G-7385J6MX2L" />
+        <ContentSection
         title="Request Spare Parts" 
         subtitle="Tell us about the parts you need"
       >
