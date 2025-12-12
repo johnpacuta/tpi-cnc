@@ -127,8 +127,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    <GoogleTagManager gtmId="G-7385J6MX2L" />
       <body className={inter.className}>
-      <GoogleTagManager gtmId="G-7385J6MX2L" />
       <Navbar />
         {children}
         <Footer />
