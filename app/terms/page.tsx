@@ -4,7 +4,6 @@ import {GoogleTagManager} from "@next/third-parties/google";
 export default function TermsAndConditions() {
   return (
     <main className="min-h-screen py-4">
-        <GoogleTagManager gtmId="G-7385J6MX2L" />
         <ContentSection
         title="Terms & Conditions" 
         subtitle="Last updated: March 2024"
