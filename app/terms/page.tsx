@@ -1,4 +1,5 @@
 import ContentSection from "@/app/components/about/ContentSection";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 export default function TermsAndConditions() {
   return (
