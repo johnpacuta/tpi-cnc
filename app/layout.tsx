@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from 'react-hot-toast';
+import {GoogleTagManager} from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -127,7 +128,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+      <GoogleTagManager gtmId="G-7385J6MX2L" />
+      <Navbar />
         {children}
         <Footer />
         <Toaster position="bottom-center" />

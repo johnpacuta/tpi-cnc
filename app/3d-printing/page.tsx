@@ -1,5 +1,4 @@
 import DetailPage from "@/components/shared/DetailPage";
-import {GoogleTagManager} from "@next/third-parties/google";
 
 const pageData = {
   title: "3D Printing",
@@ -53,7 +52,6 @@ export default async function ServiceDetailPage() {
 
   return (
     <div className="bg-gray-50">
-        <GoogleTagManager gtmId="G-7385J6MX2L" />
       <div className="mb-[-60px]">
         <DetailPage
           data={pageData}
