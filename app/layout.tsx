@@ -127,7 +127,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <GoogleTagManager gtmId="G-7385J6MX2L" />
+    <head><GoogleTagManager gtmId="G-7385J6MX2L" /><title>TPI CNC</title></head>
       <body className={inter.className}>
       <Navbar />
         {children}
