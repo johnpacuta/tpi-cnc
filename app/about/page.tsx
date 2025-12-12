@@ -3,7 +3,6 @@ import CommunitySection from '../components/about/CommunitySection';
 import ContentSection from "@/components/ContentSection";
 import StorySection from "@/app/components/about/StorySection";
 import Image from "next/image";
-import {GoogleTagManager} from "@next/third-parties/google";
 
 const teamMembers = [
     {
@@ -55,7 +54,6 @@ const teamMembers = [
 export default function About() {
   return (
     <main className="min-h-screen pt-24">
-        <GoogleTagManager gtmId="G-7385J6MX2L" />
             <ContentSection
                 title="TPI CNC"
                 subtitle='"A legacy of excellence in industrial equipment solutions."'

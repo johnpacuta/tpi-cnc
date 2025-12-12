@@ -6,14 +6,12 @@ import ContactModal from "@/components/ContactModal"; // Assuming you have this 
 import { useState } from "react";
 import {router} from "next/client";
 import Link from "next/link";
-import {GoogleTagManager} from "@next/third-parties/google";
 
 export default function RenishawProducts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <main className="min-h-screen pt-20 py-8 bg-gray-50">
-        <GoogleTagManager gtmId="G-7385J6MX2L" />
       <ContentSection 
         title="Renishaw Products & Services" 
         subtitle="Advanced measurement solutions and retrofit services for CNC machines"
