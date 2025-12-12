@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {GoogleTagManager} from "@next/third-parties/google";
 
 type FormErrors = {
   [K in keyof SparePartsFormData]?: string[];
