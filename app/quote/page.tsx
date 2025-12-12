@@ -5,7 +5,6 @@ import ContentSection from "../components/about/ContentSection";
 import { toast } from 'react-hot-toast';
 import { submitQuoteForm } from '@/app/actions/quote';
 import type { QuoteFormData } from '@/app/actions/quote';
-import {GoogleTagManager} from "@next/third-parties/google";
 
 // Define FormErrors type
 type FormErrors = {
@@ -59,7 +58,6 @@ export default function Quote() {
 
   return (
     <main className="min-h-screen pt-24 py-4">
-        <GoogleTagManager gtmId="G-7385J6MX2L" />
       <ContentSection 
         title="Get a Quote" 
         subtitle="Need a part or solution for your company? Fill out the following and our experts will get you a quote!"

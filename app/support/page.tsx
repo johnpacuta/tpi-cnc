@@ -7,7 +7,6 @@ import {useState} from "react";
 import {toast} from "react-hot-toast";
 import {submitConsultingForm} from "@/app/actions/consulting";
 import type {ContactFormData} from "@/lib/schema";
-import {GoogleTagManager} from "@next/third-parties/google";
 
 type FormErrors = {
     [K in keyof ContactFormData]?: string[];
@@ -100,7 +99,6 @@ export default function Support() {
 
 
             <main>
-                <GoogleTagManager gtmId="G-7385J6MX2L" />
                 <ContentSection
                     title="TPI CNC Solutions"
                     subtitle="Professional CNC maintenance solutions."

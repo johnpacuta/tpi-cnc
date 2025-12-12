@@ -3,7 +3,6 @@ import {useRouter} from "next/navigation";
 
 import ContentSection from "@/app/components/about/ContentSection";
 import {CheckCircle2} from "lucide-react";
-import {GoogleTagManager} from "@next/third-parties/google";
 
 export default function Supply() {
     const router = useRouter();
@@ -72,7 +71,6 @@ export default function Supply() {
 
     return (
         <main>
-            <GoogleTagManager gtmId="G-7385J6MX2L" />
             <ContentSection
                 title="TPI CNC Partners"
                 subtitle=""
