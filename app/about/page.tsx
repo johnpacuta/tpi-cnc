@@ -19,7 +19,7 @@ const teamMembers = [
   },
   {
     name: "Sam Collins",
-    role: "CNC Technician",
+    role: "Senior CNC Technician",
     image: "/images/headshots/SamCollins.jpeg",
     description: ""
   },
@@ -32,19 +32,19 @@ const teamMembers = [
     ,
     {
         name: "Jessica Allison",
-        role: "Sales Support",
+        role: "Inside Sales",
         image: "/images/headshots/JessicaAllison.jpeg",
         description: ""
     }
     ,
     {
         name: "Mike Morris",
-        role: "Technical Sales",
+        role: "Technical Sales Lead",
         image: "/images/headshots/MikeMorris.jpeg",
         description: ""
     },
     {
-        name: "Ross Burniston",
+        name: "Ross Burniston RSE",
         role: "Operations Manager",
         image: "/images/headshots/RossBurniston.jpeg",
         description: ""
