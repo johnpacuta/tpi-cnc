@@ -4,7 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from 'react-hot-toast';
-import {GoogleTagManager} from "@next/third-parties/google";
+import {GoogleAnalytics} from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -125,15 +125,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-    <GoogleTagManager gtmId="GT-NM8WP38T" />
-      <body className={inter.className}>
-      <Navbar />
-        {children}
-        <Footer />
-        <Toaster position="bottom-center" />
-      </body>
-    </html>
-  );
+  return <html lang="en">
+    <body className={inter.className}>
+    <Navbar />
+      {children}
+      <Footer />
+      <Toaster position="bottom-center" />
+    </body>
+    <GoogleAnalytics gaId="G-7385J6MX2L" />
+  </html>;
 }
