@@ -132,6 +132,6 @@ export default function RootLayout({
       <Footer />
       <Toaster position="bottom-center" />
     </body>
-    <GoogleAnalytics gaId="G-7385J6MX2L" />
+    <GoogleAnalytics gaId="GT-NM8WP38T" />
   </html>;
 }
