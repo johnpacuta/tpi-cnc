@@ -9,11 +9,11 @@ import {GoogleAnalytics} from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TPI CNC | Industrial Machining & Manufacturing Solutions Windsor-Essex",
-  description: "Premier CNC machining and industrial automation solutions in Windsor-Essex County, Ontario. Specializing in precision manufacturing, custom machining, equipment maintenance, and advanced industrial technology. Serving Windsor, Essex, Tecumseh, LaSalle, Lakeshore, and surrounding areas.",
+  title: "TPI CNC | Industrial Manufacturing Solutions Windsor-Essex",
+  description: "Your go-to source for premium industrial machinery solutions in Ontario. Service-driven and technology-forward, we're committed to elevating your operations. Serving Windsor, Essex, Tecumseh, LaSalle, Lakeshore, and surrounding areas.",
   openGraph: {
     title: "TPI CNC - Advanced Manufacturing & Industrial Solutions Windsor-Essex",
-    description: "Leading provider of CNC machining, industrial automation, and manufacturing solutions in Windsor-Essex. Expert precision machining, maintenance services, and industrial technology solutions for automotive, aerospace, and manufacturing sectors.",
+    description: "Leading provider of CNC machining, industrial automation, and manufacturing solutions in Windsor-Essex. Expert maintenance services, and industrial technology solutions for automotive, aerospace, and manufacturing sectors.",
     url: "https://tpicnc.com",
     siteName: "TPI CNC",
     images: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/logos/tpiwbg.png",
         width: 500,
         height: 500,
-        alt: "TPI CNC - Industrial Machining & Manufacturing Solutions Windsor-Essex Ontario",
+        alt: "TPI CNC - Industrial Manufacturing Solutions Windsor-Essex Ontario",
       },
     ],
     locale: "en_CA",
