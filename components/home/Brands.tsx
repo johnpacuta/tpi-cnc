@@ -63,14 +63,14 @@ export function Brands() {
             </div>
             <div className="flex items-baseline justify-center min-h-28">
                 <a
-                    href="https://www.excetek.com/shop"
+                    href="https://www.dropsa.com/en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Excetek products"
+                    aria-label="Visit Dropsa products"
                 >
                     <img
-                        src="/logos/home_logos/Excetek.png"
-                        alt="Excetek"
+                        src="/logos/home_logos/Dropsa.png"
+                        alt="Dropsa"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
@@ -78,14 +78,14 @@ export function Brands() {
             </div>
             <div className="flex items-baseline justify-center min-h-28">
                 <a
-                    href="https://www.kasto.com/en/saws/overview-saws"
+                    href="https://www.johnford.com.tw/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit KASTO products"
+                    aria-label="Visit Johnford products"
                 >
                     <img
-                        src="/logos/home_logos/KASTO.png"
-                        alt="KASTO"
+                        src="/logos/home_logos/johnford.png"
+                        alt="Johnford"
                         className="w-auto max-h-20 object-contain"
                         loading="lazy"
                     />
@@ -93,14 +93,14 @@ export function Brands() {
             </div>
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://omegatmm.com/presetters/"
+                    href="https://absolutemachine.com/brand/nexturn/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Omega TMM products"
+                    aria-label="Visit Nexturn products"
                 >
                     <img
-                        src="/logos/home_logos/OMEGA_TMM.png"
-                        alt="OMEGA TMM"
+                        src="/logos/home_logos/nexturn.png"
+                        alt="Nexturn"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
@@ -108,14 +108,14 @@ export function Brands() {
             </div>
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://www.renishaw.com/en/products--32083"
+                    href="https://otinus.com/machines"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Renishaw products"
+                    aria-label="Visit Otinus products"
                 >
                     <img
-                        src="/logos/home_logos/Renishaw.png"
-                        alt="Renishaw"
+                        src="/logos/home_logos/OTINUS.png"
+                        alt="Otinus"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
@@ -123,14 +123,14 @@ export function Brands() {
             </div>
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://omegatmm.com/presetters/"
+                    href="https://www.youji.com/en/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Omega TMM products"
+                    aria-label="Visit YouJi products"
                 >
                     <img
-                        src="/logos/home_logos/OMEGA_TMM.png"
-                        alt="OMEGA TMM"
+                        src="/logos/home_logos/YuJi.jpg"
+                        alt="YuJi"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
