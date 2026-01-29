@@ -121,6 +121,36 @@ export function Brands() {
                     />
                 </a>
             </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://omegatmm.com/presetters/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Omega TMM products"
+                >
+                    <img
+                        src="/logos/home_logos/OMEGA_TMM.png"
+                        alt="OMEGA TMM"
+                        className="w-auto max-h-16 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://www.renishaw.com/en/products--32083"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Renishaw products"
+                >
+                    <img
+                        src="/logos/home_logos/Renishaw.png"
+                        alt="Renishaw"
+                        className="w-auto max-h-16 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
         </div>
     );
 }
