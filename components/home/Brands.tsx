@@ -61,7 +61,7 @@ export function Brands() {
                     />
                 </a>
             </div>
-            <div className="flex items-baseline justify-center min-h-28">
+            <div className="flex items-center justify-center min-h-28">
                 <a
                     href="https://www.dropsa.com/en"
                     target="_blank"
@@ -71,7 +71,7 @@ export function Brands() {
                     <img
                         src="/logos/home_logos/Dropsa.png"
                         alt="Dropsa"
-                        className="w-auto max-h-16 object-contain"
+                        className="w-auto max-h-14 object-contain"
                         loading="lazy"
                     />
                 </a>
