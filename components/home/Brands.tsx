@@ -129,8 +129,8 @@ export function Brands() {
                     aria-label="Visit YouJi products"
                 >
                     <img
-                        src="/logos/home_logos/YuJi.jpg"
-                        alt="YuJi"
+                        src="/logos/home_logos/YouJi.jpg"
+                        alt="YouJi"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
@@ -138,14 +138,14 @@ export function Brands() {
             </div>
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://www.renishaw.com/en/products--32083"
+                    href="https://absolutemachine.com/machine-tool-automation/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Renishaw products"
+                    aria-label="Visit Absolute Machine Tools products"
                 >
                     <img
-                        src="/logos/home_logos/Renishaw.png"
-                        alt="Renishaw"
+                        src="/logos/home_logos/AbsoluteMachineTools.png"
+                        alt="Absolute Machine Tools"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
