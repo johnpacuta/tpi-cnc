@@ -71,7 +71,7 @@ export function Brands() {
                     <img
                         src="/logos/home_logos/Dropsa.png"
                         alt="Dropsa"
-                        className="w-auto max-h-14 object-contain"
+                        className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
                 </a>
@@ -131,7 +131,7 @@ export function Brands() {
                     <img
                         src="/logos/home_logos/YouJi.jpg"
                         alt="YouJi"
-                        className="w-auto max-h-16 object-contain"
+                        className="w-auto max-h-20 object-contain"
                         loading="lazy"
                     />
                 </a>
