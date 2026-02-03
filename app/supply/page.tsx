@@ -67,6 +67,86 @@ export default function Supply() {
             img: "/logos/home_logos/Polarchem.jpg",
             link: "https://www.polarchemtech.com/products"
         },
+        {
+            title: "Dropsa",
+            features: [
+                "Industrial centralized automatic lubrication systems manufacturer",
+                "Focus on high-technological innovation",
+                "Continuous, automatic lubrication while machines run",
+                ],
+            isHighlighted: true,
+            img: "/logos/home_logos/Dropsa.png",
+            link: "https://www.dropsa.com/en"
+        },
+        {
+            title: "Johnford",
+            features: [
+                "Over 35 years of experience designing and manufacturing high-quality and precision CNC machine tools.",
+                    "Offers a wide range of CNC machine tools for diverse machining needs across industries.",
+                "Strong focus on innovation, quality, and customization to meet specific customer requirements.",
+            "Maintains a global presence and reputation with worldwide sales network and service support.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/johnford.png",
+            link: "https://www.johnford.com.tw/"
+        },
+        {
+            title: "Nexturn",
+            features: [
+                "Nexturn CNC Swiss-type lathes deliver high precision and exceptional accuracy for complex, tight-tolerance parts.",
+
+            "Built with premium Japanese and German components for strong performance, rigidity, and reliability.",
+
+                "Offers flexible multi-axis configurations (up to 11 axes and multiple machining channels) for versatile production.",
+        "Designed for high-volume, automated production with integrated bar feeders and support for lights-out manufacturing.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/nexturn.png",
+            link: "https://absolutemachine.com/brand/nexturn/"
+        },
+        {
+            title: "Otinus",
+            features: [
+                "Otinus offers multiple CNC machine series (Base and Pro) to suit both cost-effective and high-performance industrial needs.",
+
+        "Their machines are designed for precision, durability, and versatile metalworking applications like laser cutting, press brakes, and shearing.",
+
+        "Otinus maintains large in-stock inventory with lead times as short as ~7 days to help minimize customer downtime.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/OTINUS.png",
+            link: "https://otinus.com/machines"
+        },
+        {
+            title: "YouJi",
+            features: [
+                "You Ji has over 40 years of machine tool experience.",
+
+                    "Offers a wide range of CNC vertical and horizontal machines.",
+
+                    "First Taiwanese machine maker to gain CE and EMC certification for Europe.",
+
+                "Known as Taiwan’s largest vertical lathe and floor borer manufacturer.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/YouJi.jpg",
+            link: "https://www.youji.com/en/"
+        },
+        {
+            title: "Absolute Machine Tools",
+            features: [
+                "Provides simple, affordable CNC automation for job shops to high-volume production.",
+
+            "Offers robotic and cobot machine-tending solutions with turnkey integration.",
+
+            "Helps increase productivity and reduce labor dependence.",
+
+            "Designed to be easy to implement, scale, and adapt to existing machines.",
+            ],
+            isHighlighted: true,
+            img: "/logos/home_logos/AbsoluteMachineTools.png",
+            link: "https://absolutemachine.com/machine-tool-automation/"
+        },
     ];
 
     return (
