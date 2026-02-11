@@ -2,6 +2,7 @@ import Link from "next/link";
 
 
 export default function Sidebar({ latest }) {
+    return(
 <section aria-label="Latest articles">
   <h2>Latest</h2>
   <ul>
@@ -12,4 +13,4 @@ export default function Sidebar({ latest }) {
       </li>
     ))}
   </ul>
-</section>}
+</section>)}
