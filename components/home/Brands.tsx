@@ -16,21 +16,6 @@ export function Brands() {
                     />
                 </a>
             </div>
-            {/*<div className="flex items-center justify-center min-h-28">
-                <a
-                    href="https://www.hurco.com/en-us/products#!#allmachines"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Hurco products"
-                >
-                    <img
-                        src="/logos/home_logos/hurco.png"
-                        alt="Hurco"
-                        className="w-auto max-h-16 object-contain"
-                        loading="lazy"
-                    />
-                </a>
-            </div>*/}
             <div className="flex items-baseline justify-center min-h-28">
                 <a
                     href="https://www.kasto.com/en/saws/overview-saws"
@@ -76,23 +61,96 @@ export function Brands() {
                     />
                 </a>
             </div>
-            {/*}
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://takumiusa.com/takumi-usa-product-lineup/"
+                    href="https://www.dropsa.com/en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit Takumi products"
+                    aria-label="Visit Dropsa products"
                 >
                     <img
-                        src="/logos/home_logos/TAKUMI.png"
-                        alt="TAKUMI"
+                        src="/logos/home_logos/Dropsa.png"
+                        alt="Dropsa"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"
                     />
                 </a>
             </div>
-            */}
+            <div className="flex items-baseline justify-center min-h-28">
+                <a
+                    href="https://www.johnford.com.tw/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Johnford products"
+                >
+                    <img
+                        src="/logos/home_logos/johnford.png"
+                        alt="Johnford"
+                        className="w-auto max-h-20 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://absolutemachine.com/brand/nexturn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Nexturn products"
+                >
+                    <img
+                        src="/logos/home_logos/nexturn.png"
+                        alt="Nexturn"
+                        className="w-auto max-h-16 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://otinus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Otinus products"
+                >
+                    <img
+                        src="/logos/home_logos/OTINUS.png"
+                        alt="Otinus"
+                        className="w-auto max-h-16 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://www.youji.com/en/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit YouJi products"
+                >
+                    <img
+                        src="/logos/home_logos/YouJi.jpg"
+                        alt="YouJi"
+                        className="w-auto max-h-20 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+            <div className="flex items-center justify-center min-h-28">
+                <a
+                    href="https://absolutemachine.com/machine-tool-automation/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Absolute Machine Tools products"
+                >
+                    <img
+                        src="/logos/home_logos/A_Plus_Automation.png"
+                        alt="Absolute Machine Tools"
+                        className="w-auto max-h-16 object-contain"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
         </div>
     );
 }
