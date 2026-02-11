@@ -4,12 +4,10 @@ import { getLatestNewsArticles } from "@/lib/news";
 
 type Props = {
   children: ReactNode;
-  params: Promise<{ slug: string }>;
 };
 
-export default async function Layout({ children, params }: Props) {
-  const { slug } = await params;
-  const latest = getLatestNewsArticles(6, slug);
+export default function Layout({ children }: Props) {
+  const latest = getLatestNewsArticles(6);
 
   return (
     <main className="pb-20">
