@@ -115,7 +115,7 @@ export default function Supply() {
             ],
             isHighlighted: true,
             img: "/logos/home_logos/OTINUS.png",
-            link: "https://otinus.com/machines"
+            link: "https://otinus.com/"
         },
         {
             title: "YouJi",
