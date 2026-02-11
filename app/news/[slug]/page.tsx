@@ -1,6 +1,5 @@
 
 import { notFound } from "next/navigation";
-import LatestArticlesSidebar from "@/components/articles/Sidebar";
 import { getLatestNewsArticles, getNewsArticleBySlug } from "@/lib/news";
 
 type PageProps = {
@@ -16,18 +15,10 @@ export default async function Home({ params }: PageProps) {
   const latest = getLatestNewsArticles(6, slug);
 
   return (
-    <main className="pb-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-10 md:grid-cols-[1fr_320px]">
-        <article className="rounded-lg border border-gray-200 bg-white p-6">
-          <div className="text-xs text-gray-500">{article.date}</div>
-          <h1 className="mt-2 text-2xl font-semibold text-gray-900">{article.title}</h1>
-          <p className="mt-4 text-sm text-gray-700 whitespace-pre-wrap">{article.content}</p>
-        </article>
-
-        <div className="md:sticky md:top-24 md:self-start">
-          <LatestArticlesSidebar latest={latest} />
-        </div>
-      </div>
-    </main>
+      <article className="rounded-lg border border-gray-200 bg-white p-6">
+        <div className="text-xs text-gray-500">{article.date}</div>
+        <h1 className="mt-2 text-2xl font-semibold text-gray-900">{article.title}</h1>
+        <p className="mt-4 whitespace-pre-wrap text-sm text-gray-700">{article.content}</p>
+      </article>
   );
 }
