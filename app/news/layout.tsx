@@ -4,18 +4,19 @@ import { getLatestNewsArticles } from "@/lib/news";
 
 type Props = {
   children: ReactNode;
-  params?: { slug?: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function Layout({ children, params }: Props) {
-  const latest = getLatestNewsArticles(6, params?.slug);
+export default async function Layout({ children, params }: Props) {
+  const { slug } = await params;
+  const latest = getLatestNewsArticles(6, slug);
 
   return (
-    <main className="pt-40 pb-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:grid-cols-[1fr_320px]">
+    <main className="pb-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-10 md:grid-cols-[1fr_320px]">
         <section>{children}</section>
 
-        <aside className="pt-14 md:sticky md:top-24 md:self-start">
+        <aside className="md:sticky md:top-24 md:self-start">
           <LatestArticlesSidebar latest={latest} />
         </aside>
       </div>

@@ -1,6 +1,6 @@
 
 import { notFound } from "next/navigation";
-import { getLatestNewsArticles, getNewsArticleBySlug } from "@/lib/news";
+import { getNewsArticleBySlug } from "@/lib/news";
 import Link from "next/link";
 
 type PageProps = {
@@ -12,8 +12,6 @@ export default async function Home({ params }: PageProps) {
 
   const article = getNewsArticleBySlug(slug);
   if (!article) notFound();
-
-  const latest = getLatestNewsArticles(6, slug);
 
   return (
       <div>
