@@ -8,7 +8,9 @@ export default function News() {
 
   return (
       <div>
-          <h1 className="text-2xl font-semibold text-gray-900">News</h1>
+          <h1 className="text-2xl font-semibold text-gray-900"><Link href="/news" className="hover:underline">
+              News
+          </Link></h1>
 
           <div className="mt-6 space-y-6">
               {articles.map((a) => (

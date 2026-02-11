@@ -1,6 +1,7 @@
 
 import { notFound } from "next/navigation";
 import { getLatestNewsArticles, getNewsArticleBySlug } from "@/lib/news";
+import Link from "next/link";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -16,7 +17,9 @@ export default async function Home({ params }: PageProps) {
 
   return (
       <div>
-      <h1 className="text-2xl font-semibold text-gray-900">News</h1>
+      <h1 className="text-2xl font-semibold text-gray-900"><Link href="/news" className="hover:underline">
+          News
+      </Link></h1>
       <div className="mt-6 space-y-6">
       <article className="rounded-lg border border-gray-200 bg-white p-6">
         <div className="text-xs text-gray-500">{article.date}</div>
