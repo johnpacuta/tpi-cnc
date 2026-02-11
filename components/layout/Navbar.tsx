@@ -20,7 +20,8 @@ const primaryNav: (NavItem)[] = [
     {label: "SERVICE", href: "/service"},
     {label: "SUPPORT", href: "/support"},
     {label: "SUPPLY", href: "/supply"},
-    {label: 'ABOUT US', href: '/about'}
+    {label: 'ABOUT US', href: '/about'},
+    {label: 'NEWS', href: '/news'}
 ]
 
 export function Navbar() {
