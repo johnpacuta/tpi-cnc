@@ -108,7 +108,7 @@ export function Brands() {
             </div>
             <div className="flex items-center justify-center min-h-28">
                 <a
-                    href="https://otinus.com/machines"
+                    href="https://otinus.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Visit Otinus products"
@@ -144,7 +144,7 @@ export function Brands() {
                     aria-label="Visit Absolute Machine Tools products"
                 >
                     <img
-                        src="/logos/home_logos/AbsoluteMachineTools.png"
+                        src="/logos/home_logos/A_Plus_Automation.png"
                         alt="Absolute Machine Tools"
                         className="w-auto max-h-16 object-contain"
                         loading="lazy"

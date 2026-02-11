@@ -144,7 +144,7 @@ export default function Supply() {
             "Designed to be easy to implement, scale, and adapt to existing machines.",
             ],
             isHighlighted: true,
-            img: "/logos/home_logos/AbsoluteMachineTools.png",
+            img: "/logos/home_logos/A_Plus_Automation.png",
             link: "https://absolutemachine.com/machine-tool-automation/"
         },
     ];
