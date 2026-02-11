@@ -111,7 +111,7 @@ export default function Supply() {
 
         "Their machines are designed for precision, durability, and versatile metalworking applications like laser cutting, press brakes, and shearing.",
 
-        "Otinus maintains large in-stock inventory with lead times as short as ~7 days to help minimize customer downtime.",
+        "Otinus maintains large in-stock inventory with short lead times to help minimize customer downtime.",
             ],
             isHighlighted: true,
             img: "/logos/home_logos/OTINUS.png",
