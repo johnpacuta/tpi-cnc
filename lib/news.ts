@@ -69,7 +69,21 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     date: "2025-12-20",
     imgSrc: "/images/NewLocation.jpg",
     excerpt: "New tooling and process improvements are now live.",
-    content: "Full article content goes here.",
+    content: "We’ve moved! TPI CNC is now operating from our new location.\n" +
+        "\n" +
+        "Why the move\n" +
+        "The new space gives us more room to support customers, coordinate projects, and stay responsive as demand grows.\n" +
+        "\n" +
+        "What’s staying the same\n" +
+        "• The same team and support\n" +
+        "• The same focus on CNC service, troubleshooting, and solutions\n" +
+        "• The same commitment to quick communication and reliable follow-through\n" +
+        "\n" +
+        "What’s improving\n" +
+        "• Better space for organizing equipment, parts, and project workflows\n" +
+        "• More efficient shipping/receiving and staging\n" +
+        "• A smoother experience for ongoing work and new requests\n" +
+        "\n",
   },
 ];
 
