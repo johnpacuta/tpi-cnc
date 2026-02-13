@@ -68,7 +68,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     title: "Shop Upgrade Completed",
     date: "2025-12-20",
     imgSrc: "/images/NewLocation.jpg",
-    excerpt: "New tooling and process improvements are now live.",
+    excerpt: "We've Moved to Oldcastle!",
     content: "We’ve moved! TPI CNC is now operating from our new location.\n" +
         "\n" +
         "Why the move\n" +
