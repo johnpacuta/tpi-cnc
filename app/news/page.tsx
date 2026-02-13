@@ -1,6 +1,7 @@
-
+"use client";
 import Link from "next/link";
 import { getAllNewsArticles } from "@/lib/news";
+import ShareModalButton from "@/components/articles/ShareModalButton";
 
 export default function News() {
   const articles = getAllNewsArticles();
@@ -14,6 +15,12 @@ export default function News() {
           <div className="mt-6 space-y-6">
               {articles.map((a) => (
                   <article key={a.slug} className="rounded-lg border border-black bg-white p-5">
+                      <div className="mt-2 mb-2">
+                      <ShareModalButton
+                          url={`https://tpicnc.com/news/${a.slug}`}
+                          title={a.title}
+                      />
+                      </div>
                       <div className="text-xs text-gray-500">{a.date}</div>
                       <h1 className="mt-1 mb-1 text-2xl font-semibold text-gray-900">
                           <Link href={`/news/${a.slug}`} className="hover:underline">
