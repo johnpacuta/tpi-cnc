@@ -9,7 +9,7 @@ type Props = {
 export default function LatestArticlesSidebar({ latest, title = "Latest Articles" }: Props) {
   return (
     <aside className="w-full">
-      <div className="rounded-lg border border-gray-200 bg-white p-4">
+      <div className="rounded-lg border border-black bg-white p-4">
         <h2 className="text-sm font-semibold tracking-wide text-gray-900">{title}</h2>
 
         <ul className="mt-3 space-y-3">

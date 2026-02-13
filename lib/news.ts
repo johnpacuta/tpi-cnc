@@ -2,6 +2,7 @@ export type NewsArticle = {
   slug: string;
   title: string;
   date: string; // ISO (YYYY-MM-DD) so sorting is reliable
+  imgSrc?: string;
   excerpt: string;
   content: string; // for now: plain text/HTML-ish string
 };
@@ -9,16 +10,18 @@ export type NewsArticle = {
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
     slug: "new-cnc-service",
-    title: "New CNC Service Offering",
+    title: "New CNC Vendors",
     date: "2026-02-01",
-    excerpt: "We’ve expanded our CNC service lineup to reduce lead times.",
+    imgSrc: "/images/TPICNC_Vendors.png",
+    excerpt: "We’ve expanded our CNC Vendor lineup to reduce lead times.",
     content:
       "Full article content goes here. You can later swap this for MDX/markdown or rich components.",
   },
   {
-    slug: "maintenance-tips-winter",
-    title: "Winter Maintenance Tips",
+    slug: "machining-tips-winter",
+    title: "Cold-Weather Tooling: A Guide to Winter Precision",
     date: "2026-01-15",
+    imgSrc: "/images/Winter_Machining.png",
     excerpt: "A quick checklist to keep equipment happy during cold months.",
     content: "Full article content goes here.",
   },
@@ -26,6 +29,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     slug: "shop-upgrade",
     title: "Shop Upgrade Completed",
     date: "2025-12-20",
+    imgSrc: "/images/NewLocation.jpg",
     excerpt: "New tooling and process improvements are now live.",
     content: "Full article content goes here.",
   },

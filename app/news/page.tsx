@@ -1,10 +1,9 @@
 
 import Link from "next/link";
-import { getAllNewsArticles, getLatestNewsArticles } from "@/lib/news";
+import { getAllNewsArticles } from "@/lib/news";
 
 export default function News() {
   const articles = getAllNewsArticles();
-  const latest = getLatestNewsArticles(6);
 
   return (
       <div>
@@ -14,13 +13,14 @@ export default function News() {
 
           <div className="mt-6 space-y-6">
               {articles.map((a) => (
-                  <article key={a.slug} className="rounded-lg border border-gray-200 bg-white p-5">
+                  <article key={a.slug} className="rounded-lg border border-black bg-white p-5">
                       <div className="text-xs text-gray-500">{a.date}</div>
                       <h2 className="mt-1 text-lg font-semibold text-gray-900">
                           <Link href={`/news/${a.slug}`} className="hover:underline">
                               {a.title}
                           </Link>
                       </h2>
+                      <img src={a.imgSrc} alt={a.title} style={{ border: "2px solid #e5e7eb", borderRadius: 8 }}/>
                       <p className="mt-2 text-sm text-gray-700">{a.excerpt}</p>
                   </article>
               ))}
