@@ -34,7 +34,7 @@ export default async function Home({ params }: PageProps) {
                   </Link>
               </h1>
               <img src={article.imgSrc} alt={article.title} style={{ border: "2px solid #e5e7eb", borderRadius: 8 }}/>
-              <h2 className="mt-2 text-xl text-gray-700">{article.content}</h2>
+              <h2 className="mt-2 text-xl text-gray-700 whitespace-pre-line">{article.content}</h2>
           </article>
       </div>
       </div>
