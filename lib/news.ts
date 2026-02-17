@@ -10,7 +10,7 @@ export type NewsArticle = {
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
     slug: "new-cnc-service",
-    title: "New CNC Vendors",
+    title: "New CNC Lineup",
     date: "2026-02-01",
     imgSrc: "/images/TPICNC_Vendors.png",
     excerpt: "We’ve expanded our CNC Vendor lineup to reduce lead times.",
@@ -33,36 +33,6 @@ export const NEWS_ARTICLES: NewsArticle[] = [
         "• Application fit\n" +
         "• Lead time and logistics\n" +
         "• Serviceability and long-term support\n"},
-  {
-    slug: "machining-tips-winter",
-    title: "Cold-Weather Tooling: A Guide to Winter Precision",
-    date: "2026-01-15",
-    imgSrc: "/images/Winter_Machining.png",
-    excerpt: "A quick checklist to keep equipment happy during cold months.",
-    content: "Cold weather can quietly impact accuracy, tool life, and surface finish—especially when machines and material start the day much colder than your normal baseline. Here’s a practical checklist to keep winter machining consistent:" +
-        "\n1) Warm up for repeatability" +
-        "\n• Run spindle and axis warm-up routines before chasing tight tolerances" +
-        "\n• Let the machine stabilize before final passes" +
-        "\n• If your control supports it, use the same warm-up program each morning" +
-        "\n2) Coolant behaves differently in the cold." +
-        "\n• Verify concentration and maintenance schedule (refractometer checks help)" +
-        "\n• Watch for reduced flow/pressure as viscosity changes" +
-        "\n• Keep an eye on foaming, tramp oil, and filtration performance" +
-        "\n3) Material temperature affects size" +
-        "\n• Let stock acclimate to shop temperature when possible" +
-        "\n• Measure parts at a consistent temperature (especially for tight fits)" +
-        "\n• Expect more variation early in the day if the shop warms up over time" +
-        "\n4) Tooling, holders, and runout" +
-        "\n• Inspect tapers/contact surfaces—condensation can lead to rust and poor seating" +
-        "\n• Confirm runout and tool balance (small issues become chatter fast)" +
-        "\n• Re-check offsets if you’re seeing drift between first article and later parts" +
-        "\n5) Air and lubrication systems" +
-        "\n• Drain air system water traps more often as humidity swings" +
-        "\n• Confirm auto-lube is flowing correctly at lower temperatures" +
-        "\n• Check for sticky valves or sluggish pneumatics in tool changers and fixtures" +
-        "\n\nQuick takeaway" +
-        "\nIf accuracy seems to “move” during winter, it’s often thermal stability—not your program. A consistent warm-up + measurement routine typically solves most cold-weather variation."
-  },
   {
     slug: "shop-upgrade",
     title: "Shop Upgrade Completed",
