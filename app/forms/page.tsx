@@ -9,8 +9,9 @@ export default function Forms() {
     poNumber: '',
     deliveryDate: '',
     companyName: '',
-    installationAddress: '',
-    cityStateZip: '',
+    streetAddress: '',
+    postalCode: '',
+    provinceState: '',
     contactName: '',
     contactPhone: '',
     contactEmail: '',
@@ -79,9 +80,9 @@ export default function Forms() {
           <div className="bg-white rounded-lg shadow-lg p-8">
             {/* Introduction */}
             <div className="mb-8 text-gray-700">
-              <p className="mb-4"><strong>Good day,</strong></p>
+              <p className="mb-4"><strong>Greetings,</strong></p>
               <p className="mb-4">
-                We at <strong>TPI CNC</strong> look forward to serving your company for many years through support and service of your machine tool investments. Our factory-trained staff of sales, service, and applications personnel are always ready to assist you with any questions you may have regarding your recent purchase.
+                We at <strong>TPI CNC</strong> look forward to serving your company for many years through support and service of your machine investments. Our factory-trained staff of sales, service, and applications personnel are always ready to assist you with any questions you may have regarding your recent purchase.
               </p>
               <p className="mb-4">
                 Enclosed you will find a pre-installation check-off list to aid you in preparing for delivery and installation of your machine. Unless special arrangements have been agreed upon, all pre-installation items must be complete before a factory representative will start installation.
@@ -154,23 +155,33 @@ export default function Forms() {
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
+                  <div>
+                    <label className="block font-semibold mb-2">Street Address:</label>
+                    <input
+                      type="text"
+                      name="streetAddress"
+                      value={formData.streetAddress}
+                      onChange={handleInputChange}
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Installation Address:</label>
-                      <textarea
-                        name="installationAddress"
-                        value={formData.installationAddress}
+                      <label className="block font-semibold mb-2">Postal Code / ZIP:</label>
+                      <input
+                        type="text"
+                        name="postalCode"
+                        value={formData.postalCode}
                         onChange={handleInputChange}
-                        rows={3}
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">City, State, ZIP:</label>
+                      <label className="block font-semibold mb-2">Province / State:</label>
                       <input
                         type="text"
-                        name="cityStateZip"
-                        value={formData.cityStateZip}
+                        name="provinceState"
+                        value={formData.provinceState}
                         onChange={handleInputChange}
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
@@ -731,43 +742,6 @@ export default function Forms() {
                           type="date"
                           name="customerDate"
                           value={formData.customerDate}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* TPI CNC Representative */}
-                  <div className="border border-gray-300 rounded-lg p-6 bg-gray-50">
-                    <h3 className="text-lg font-bold text-center mb-4">TPI CNC Representative</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block font-semibold mb-2">Name (Print):</label>
-                        <input
-                          type="text"
-                          name="tpiName"
-                          value={formData.tpiName}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label className="block font-semibold mb-2">Title:</label>
-                        <input
-                          type="text"
-                          name="tpiTitle"
-                          value={formData.tpiTitle}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label className="block font-semibold mb-2">Date:</label>
-                        <input
-                          type="date"
-                          name="tpiDate"
-                          value={formData.tpiDate}
                           onChange={handleInputChange}
                           className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
