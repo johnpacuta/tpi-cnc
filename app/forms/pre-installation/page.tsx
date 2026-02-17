@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import ContentSection from "../components/about/ContentSection";
+import ContentSection from "../../components/about/ContentSection";
 
 export default function Forms() {
   const [formData, setFormData] = useState({
