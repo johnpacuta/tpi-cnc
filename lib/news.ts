@@ -9,6 +9,17 @@ export type NewsArticle = {
 
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
+    slug: "excetek",
+    title: "Spark Your Innovation",
+    date: "2026-02-22",
+    imgSrc: "/images/Excetek_Innovation.png",
+    excerpt: "Discover Excetek: high-performance EDM solutions designed for precision work, faster turnaround, and dependable results",
+    content:
+        "Excetek is globally recognized for advanced EDM and high-precision CNC machining solutions—built for accuracy, reliability, and performance.\n" +
+        "From wire EDM and die-sinker EDM systems to high-speed machining centers, Excetek equipment is engineered to meet the demands of today’s precision manufacturers.\n" +
+        "\nWith intelligent controls, energy-efficient operation, and automation-ready platforms, Excetek helps shops increase throughput while maintaining exceptional surface finish and tight tolerances.\n" +
+        "We’re proud to bring these world-class machining solutions to our customers, and we look forward to driving productivity, precision, and performance together."},
+  {
     slug: "new-cnc-service",
     title: "New CNC Lineup",
     date: "2026-02-01",
