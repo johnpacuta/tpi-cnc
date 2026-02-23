@@ -147,20 +147,75 @@ export default function Forms() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const requiredKeys: (keyof typeof formData)[] = [
+      'machineModel',
+      'poNumber',
+      'deliveryDate',
+      'companyName',
+      'streetAddress',
+      'postalCode',
+      'provinceState',
+      'contactName',
+      'contactPhone',
+      'contactEmail',
+      'doorWidth',
+      'doorHeight',
+      'ceilingHeight',
+      'integralSpindle',
+      'requiredVoltage',
+      'requiredAmperage',
+      'electricianCompany',
+      'electricianPhone',
+      'airRequired',
+      'preferredDeliveryDate',
+      'deliveryTime',
+      'riggingCompany',
+      'riggingContact',
+      'riggingPhone',
+      'liftingEquipment',
+      'liftingCapacity',
+      'coolantType',
+      'trainingDays',
+      'additionalNotes',
+      'customerName',
+      'customerTitle',
+      'customerDate',
+    ];
+
+    const missing = requiredKeys.filter((k) => {
+      const val = formData[k];
+      return typeof val === 'string' ? val.trim().length === 0 : false;
+    });
+
+    if (missing.length > 0) {
+      alert(`Please complete all required fields:\n\n${missing.join('\n')}`);
+      return;
+    }
+
+    if (!customerSignatureDataUrl) {
+      alert('Please provide a penned signature before submitting.');
+      return;
+    }
+
     const fd = new FormData();
     for (const [key, value] of Object.entries(formData)) {
       fd.set(key, typeof value === 'boolean' ? (value ? 'yes' : 'no') : String(value ?? ''));
     }
-    fd.set('customerSignature', customerSignatureDataUrl || '');
+    fd.set('customerSignature', customerSignatureDataUrl);
 
     const res = await fetch('/api/forms/pre-installation', {
       method: 'POST',
       body: fd,
     });
 
-    const result = await res.json();
+    let result: any = null;
+    try {
+      result = await res.json();
+    } catch {
+      // ignore non-json responses
+    }
 
-    if (result?.success) {
+    if (res.ok && result?.success) {
       alert('Form submitted successfully!');
     } else {
       alert('Sorry—there was a problem submitting the form. Please try again.');
