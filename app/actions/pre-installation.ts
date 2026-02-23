@@ -1,9 +1,7 @@
-import { NextResponse } from 'next/server';
+'use server';
+
 import sgMail from '@sendgrid/mail';
 import PDFDocument from 'pdfkit';
-
-export const runtime = 'nodejs';
-export const dynamic = 'force-dynamic';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
@@ -34,8 +32,8 @@ async function buildPdfBuffer(fields: Record<string, string>) {
     doc.moveDown(0.5);
 
     const keys = Object.keys(fields)
-      .filter((k) => k !== 'customerSignature') // we render this as an image below
-      .sort();
+        .filter((k) => k !== 'customerSignature')
+        .sort();
 
     for (const key of keys) {
       const value = fields[key] ?? '';
@@ -43,7 +41,6 @@ async function buildPdfBuffer(fields: Record<string, string>) {
       doc.font('Helvetica').text(value);
     }
 
-    // --- Customer penned signature (image) ---
     doc.moveDown(1);
     doc.font('Helvetica-Bold').text('Customer Signature (penned):');
     doc.moveDown(0.5);
@@ -91,11 +88,15 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   });
 }
 
-export async function POST(req: Request) {
+function formDataToObject(formData: FormData) {
+  const fields: Record<string, string> = {};
+  for (const [k, v] of formData.entries()) fields[k] = String(v);
+  return fields;
+}
+
+export async function submitPreInstallationForm(formData: FormData) {
   try {
-    const formData = await req.formData();
-    const fields: Record<string, string> = {};
-    for (const [k, v] of formData.entries()) fields[k] = String(v);
+    const fields = formDataToObject(formData);
 
     const pdfBuffer = await buildPdfBuffer(fields);
     const filename = `pre-installation-${Date.now()}.pdf`;
@@ -116,12 +117,10 @@ export async function POST(req: Request) {
       ],
     } as any);
 
-    return NextResponse.json({ success: true });
+    return { success: true };
   } catch (error: any) {
-    // This gives you the real SendGrid error details in Vercel logs
-    console.error('Pre-installation submit error:', error?.message);
+    console.error('submitPreInstallationForm error:', error?.message);
     console.error('SendGrid response body:', error?.response?.body);
-
-    return NextResponse.json({ success: false, error: 'Failed to submit form' }, { status: 500 });
+    return { success: false, error: 'Failed to submit form' };
   }
 }
