@@ -11,12 +11,17 @@ export async function POST(req: Request) {
         const result = await submitPreInstallationForm(fd);
 
         if (!result?.success) {
-            return NextResponse.json(result ?? { success: false }, { status: 500 });
-        }
-
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        console.error('POST /api/forms/pre-installation failed:', error);
-        return NextResponse.json({ success: false }, { status: 500 });
+      console.error('submitPreInstallationForm failed:', result);
+      return NextResponse.json(result ?? { success: false }, { status: 500 });
     }
+
+    return NextResponse.json({ success: true });
+  } catch (error: any) {
+    console.error('POST /api/forms/pre-installation crashed:', error?.message);
+    console.error('POST /api/forms/pre-installation error object:', error);
+    return NextResponse.json(
+      { success: false, error: error?.message ?? 'Internal Server Error' },
+      { status: 500 }
+    );
+  }
 }
