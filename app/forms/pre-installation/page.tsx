@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ContentSection from "../../components/about/ContentSection";
+import { submitPreInstallationForm } from '@/app/actions/pre-installation';
 
 export default function Forms() {
   const [formData, setFormData] = useState({
@@ -63,12 +64,21 @@ export default function Forms() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Form submitted successfully! We will contact you shortly.');
-  };
+
+    const fd = new FormData();
+    for (const [key, value] of Object.entries(formData)) {
+      fd.set(key, typeof value === 'boolean' ? (value ? 'yes' : 'no') : String(value ?? ''));
+    }
+
+    const result = await submitPreInstallationForm(fd);
+
+    if (result?.success) {
+      alert('Form submitted successfully! A PDF copy (including TPI authorization section) was emailed to john@tpicnc.com.');
+    } else {
+      alert('Sorry—there was a problem submitting the form. Please try again.');
+    }};
 
   return (
     <main className="min-h-screen pt-20 py-4">
@@ -717,7 +727,7 @@ export default function Forms() {
                     <h3 className="text-lg font-bold text-center mb-4">Customer Authorization</h3>
                     <div className="space-y-4">
                       <div>
-                        <label className="block font-semibold mb-2">Name (Print):</label>
+                        <label className="block font-semibold mb-2">Name:</label>
                         <input
                           type="text"
                           name="customerName"
@@ -765,7 +775,6 @@ export default function Forms() {
             {/* Contact Info */}
             <div className="mt-12 pt-6 border-t border-gray-300 text-center text-gray-600">
               <p className="font-bold mb-2">TPI CNC</p>
-              <p className="text-sm">For questions or assistance, please contact us</p>
             </div>
           </div>
         </div>
