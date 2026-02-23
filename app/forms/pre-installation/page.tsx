@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import ContentSection from "../../components/about/ContentSection";
 import { submitPreInstallationForm } from '@/app/actions/pre-installation';
 
@@ -56,6 +57,10 @@ export default function Forms() {
     tpiDate: ''
   });
 
+  const [customerSignatureDataUrl, setCustomerSignatureDataUrl] = useState<string>('');
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const isDrawingRef = useRef(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
     setFormData(prev => ({
@@ -64,6 +69,82 @@ export default function Forms() {
     }));
   };
 
+  const getCanvasPoint = (e: PointerEvent, canvas: HTMLCanvasElement) => {
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: ((e.clientX - rect.left) / rect.width) * canvas.width,
+      y: ((e.clientY - rect.top) / rect.height) * canvas.height,
+    };
+  };
+
+  const clearSignature = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    setCustomerSignatureDataUrl('');
+  };
+
+  const syncSignature = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    setCustomerSignatureDataUrl(canvas.toDataURL('image/png'));
+  };
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Set a consistent internal resolution for the PDF image
+    canvas.width = 900;
+    canvas.height = 250;
+
+    ctx.lineWidth = 4;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#111';
+
+    const onPointerDown = (e: PointerEvent) => {
+      isDrawingRef.current = true;
+      canvas.setPointerCapture(e.pointerId);
+      const p = getCanvasPoint(e, canvas);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDrawingRef.current) return;
+      const p = getCanvasPoint(e, canvas);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    };
+
+    const onPointerUp = () => {
+      if (!isDrawingRef.current) return;
+      isDrawingRef.current = false;
+      syncSignature();
+    };
+
+    canvas.addEventListener('pointerdown', onPointerDown);
+    canvas.addEventListener('pointermove', onPointerMove);
+    canvas.addEventListener('pointerup', onPointerUp);
+    canvas.addEventListener('pointercancel', onPointerUp);
+    canvas.addEventListener('pointerleave', onPointerUp);
+
+    return () => {
+      canvas.removeEventListener('pointerdown', onPointerDown);
+      canvas.removeEventListener('pointermove', onPointerMove);
+      canvas.removeEventListener('pointerup', onPointerUp);
+      canvas.removeEventListener('pointercancel', onPointerUp);
+      canvas.removeEventListener('pointerleave', onPointerUp);
+    };
+  }, []);
+
+  const signatureIsEmpty = useMemo(() => !customerSignatureDataUrl, [customerSignatureDataUrl]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -71,16 +152,18 @@ export default function Forms() {
     for (const [key, value] of Object.entries(formData)) {
       fd.set(key, typeof value === 'boolean' ? (value ? 'yes' : 'no') : String(value ?? ''));
     }
+    fd.set('customerSignature', customerSignatureDataUrl || '');
 
     const result = await submitPreInstallationForm(fd);
 
     if (result?.success) {
-      alert('Form submitted successfully! A PDF copy (including TPI authorization section) was emailed to john@tpicnc.com.');
+      alert('Form submitted successfully! A PDF copy (including the penned signature and TPI authorization section) was emailed to john@tpicnc.com.');
     } else {
       alert('Sorry—there was a problem submitting the form. Please try again.');
-    }};
+    }
+  };
 
-  return (
+return (
     <main className="min-h-screen pt-20 py-4">
       <ContentSection
         title="Pre-Installation Form"
@@ -725,36 +808,63 @@ export default function Forms() {
                   {/* Customer Signature */}
                   <div className="border border-gray-300 rounded-lg p-6 bg-gray-50">
                     <h3 className="text-lg font-bold text-center mb-4">Customer Authorization</h3>
+
                     <div className="space-y-4">
                       <div>
-                        <label className="block font-semibold mb-2">Name:</label>
+                        <label className="block font-semibold mb-2">Name (Print):</label>
                         <input
-                          type="text"
-                          name="customerName"
-                          value={formData.customerName}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            type="text"
+                            name="customerName"
+                            value={formData.customerName}
+                            onChange={handleInputChange}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
+
                       <div>
                         <label className="block font-semibold mb-2">Title:</label>
                         <input
-                          type="text"
-                          name="customerTitle"
-                          value={formData.customerTitle}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            type="text"
+                            name="customerTitle"
+                            value={formData.customerTitle}
+                            onChange={handleInputChange}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
+
                       <div>
                         <label className="block font-semibold mb-2">Date:</label>
                         <input
-                          type="date"
-                          name="customerDate"
-                          value={formData.customerDate}
-                          onChange={handleInputChange}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            type="date"
+                            name="customerDate"
+                            value={formData.customerDate}
+                            onChange={handleInputChange}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
+                      </div>
+
+                      <div>
+                        <label className="block font-semibold mb-2">Signature (pen):</label>
+                        <div className="border border-gray-300 rounded-lg bg-white">
+                          <canvas
+                              ref={canvasRef}
+                              className="w-full h-32 touch-none"
+                          />
+                        </div>
+
+                        <div className="flex items-center justify-between mt-2">
+                          <button
+                              type="button"
+                              onClick={clearSignature}
+                              className="text-sm underline text-gray-600 hover:text-gray-900"
+                          >
+                            Clear signature
+                          </button>
+
+                          <span className="text-xs text-gray-500">
+                            {signatureIsEmpty ? 'No signature yet' : 'Signature captured'}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
