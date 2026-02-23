@@ -3,7 +3,6 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ContentSection from "../../components/about/ContentSection";
-import { submitPreInstallationForm } from '@/app/actions/pre-installation';
 
 export default function Forms() {
   const [formData, setFormData] = useState({
@@ -154,10 +153,15 @@ export default function Forms() {
     }
     fd.set('customerSignature', customerSignatureDataUrl || '');
 
-    const result = await submitPreInstallationForm(fd);
+    const res = await fetch('/api/forms/pre-installation', {
+      method: 'POST',
+      body: fd,
+    });
+
+    const result = await res.json();
 
     if (result?.success) {
-      alert('Form submitted successfully! A PDF copy (including the penned signature and TPI authorization section) was emailed to john@tpicnc.com.');
+      alert('Form submitted successfully!');
     } else {
       alert('Sorry—there was a problem submitting the form. Please try again.');
     }
