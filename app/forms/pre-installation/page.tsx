@@ -182,6 +182,17 @@ export default function Forms() {
       'customerDate',
     ];
 
+    const requiredSet = useMemo(() => new Set<string>(requiredKeys as string[]), []);
+    const isRequired = (name: string) => requiredSet.has(name);
+
+    const RequiredMark = ({ name }: { name: string }) => (
+        isRequired(name) ? (
+            <span className="ml-2 text-red-600 font-bold">
+        * <span className="font-normal">(Required)</span>
+      </span>
+        ) : null
+    );
+
     const missing = requiredKeys.filter((k) => {
       const val = formData[k];
       return typeof val === 'string' ? val.trim().length === 0 : false;
@@ -263,6 +274,7 @@ return (
                       name="machineModel"
                       value={formData.machineModel}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -274,6 +286,7 @@ return (
                         name="poNumber"
                         value={formData.poNumber}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -284,6 +297,7 @@ return (
                         name="deliveryDate"
                         value={formData.deliveryDate}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -304,6 +318,7 @@ return (
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -314,6 +329,7 @@ return (
                       name="streetAddress"
                       value={formData.streetAddress}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -325,6 +341,7 @@ return (
                         name="postalCode"
                         value={formData.postalCode}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -335,6 +352,7 @@ return (
                         name="provinceState"
                         value={formData.provinceState}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -347,6 +365,7 @@ return (
                         name="contactName"
                         value={formData.contactName}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -357,6 +376,7 @@ return (
                         name="contactPhone"
                         value={formData.contactPhone}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -368,6 +388,7 @@ return (
                       name="contactEmail"
                       value={formData.contactEmail}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -389,6 +410,7 @@ return (
                       name="foundationComplete"
                       checked={formData.foundationComplete}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Foundation has been completed per specifications</span>
@@ -399,6 +421,7 @@ return (
                       name="foundationLevel"
                       checked={formData.foundationLevel}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Foundation has been leveled and is ready for machine placement</span>
@@ -427,6 +450,7 @@ return (
                       name="doorWidth"
                       value={formData.doorWidth}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -437,6 +461,7 @@ return (
                       name="doorHeight"
                       value={formData.doorHeight}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -447,6 +472,7 @@ return (
                       name="ceilingHeight"
                       value={formData.ceilingHeight}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -457,6 +483,7 @@ return (
                     name="spaceCleared"
                     checked={formData.spaceCleared}
                     onChange={handleInputChange}
+                    required
                     className="w-5 h-5 text-blue-600"
                   />
                   <span>Installation area has been cleared and is ready for machine placement</span>
@@ -480,6 +507,7 @@ return (
                       value="yes"
                       checked={formData.integralSpindle === 'yes'}
                       onChange={handleInputChange}
+                      required
                       className="w-4 h-4 text-blue-600"
                     />
                     <span>Yes</span>
@@ -491,6 +519,7 @@ return (
                       value="no"
                       checked={formData.integralSpindle === 'no'}
                       onChange={handleInputChange}
+                      required
                       className="w-4 h-4 text-blue-600"
                     />
                     <span>No</span>
@@ -515,6 +544,7 @@ return (
                       value={formData.requiredVoltage}
                       onChange={handleInputChange}
                       placeholder="e.g., 220V 3-phase"
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -526,6 +556,7 @@ return (
                       value={formData.requiredAmperage}
                       onChange={handleInputChange}
                       placeholder="e.g., 60A"
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -537,6 +568,7 @@ return (
                       name="electricInstalled"
                       checked={formData.electricInstalled}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Electrical service has been installed to machine location</span>
@@ -547,6 +579,7 @@ return (
                       name="electricGrounded"
                       checked={formData.electricGrounded}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>True earth ground has been installed</span>
@@ -557,6 +590,7 @@ return (
                       name="electricTested"
                       checked={formData.electricTested}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Electrical service has been tested and verified</span>
@@ -570,6 +604,7 @@ return (
                       name="electricianCompany"
                       value={formData.electricianCompany}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -580,6 +615,7 @@ return (
                       name="electricianPhone"
                       value={formData.electricianPhone}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -603,6 +639,7 @@ return (
                       value="yes"
                       checked={formData.airRequired === 'yes'}
                       onChange={handleInputChange}
+                      required
                       className="w-4 h-4 text-blue-600"
                     />
                     <span>Yes</span>
@@ -614,6 +651,7 @@ return (
                       value="no"
                       checked={formData.airRequired === 'no'}
                       onChange={handleInputChange}
+                      required
                       className="w-4 h-4 text-blue-600"
                     />
                     <span>No</span>
@@ -626,6 +664,7 @@ return (
                       name="airInstalled"
                       checked={formData.airInstalled}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Compressed air line has been installed to machine location</span>
@@ -636,6 +675,7 @@ return (
                       name="airTested"
                       checked={formData.airTested}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Air pressure has been tested (minimum 90 PSI required)</span>
@@ -659,6 +699,7 @@ return (
                       name="preferredDeliveryDate"
                       value={formData.preferredDeliveryDate}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -670,6 +711,7 @@ return (
                       value={formData.deliveryTime}
                       onChange={handleInputChange}
                       placeholder="e.g., 8:00 AM - 5:00 PM"
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -680,6 +722,7 @@ return (
                     name="deliveryAccess"
                     checked={formData.deliveryAccess}
                     onChange={handleInputChange}
+                    required
                     className="w-5 h-5 text-blue-600"
                   />
                   <span>Delivery truck will have clear access to loading dock/facility</span>
@@ -702,6 +745,7 @@ return (
                       name="riggingCompany"
                       value={formData.riggingCompany}
                       onChange={handleInputChange}
+                      required
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -713,6 +757,7 @@ return (
                         name="riggingContact"
                         value={formData.riggingContact}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -723,6 +768,7 @@ return (
                         name="riggingPhone"
                         value={formData.riggingPhone}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -736,6 +782,7 @@ return (
                         value={formData.liftingEquipment}
                         onChange={handleInputChange}
                         placeholder="e.g., crane, forklift"
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -746,6 +793,7 @@ return (
                         name="liftingCapacity"
                         value={formData.liftingCapacity}
                         onChange={handleInputChange}
+                        required
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -768,6 +816,7 @@ return (
                       name="coolantPurchased"
                       checked={formData.coolantPurchased}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Coolant has been purchased</span>
@@ -778,6 +827,7 @@ return (
                       name="coolantOnsite"
                       checked={formData.coolantOnsite}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Coolant will be on-site before installation</span>
@@ -790,6 +840,7 @@ return (
                     name="coolantType"
                     value={formData.coolantType}
                     onChange={handleInputChange}
+                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -807,6 +858,7 @@ return (
                       name="tpiInstallation"
                       checked={formData.tpiInstallation}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>TPI CNC is responsible for installation</span>
@@ -817,6 +869,7 @@ return (
                       name="tpiTraining"
                       checked={formData.tpiTraining}
                       onChange={handleInputChange}
+                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>TPI CNC is responsible for training</span>
@@ -829,6 +882,7 @@ return (
                     name="trainingDays"
                     value={formData.trainingDays}
                     onChange={handleInputChange}
+                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -845,6 +899,7 @@ return (
                   onChange={handleInputChange}
                   rows={5}
                   placeholder="Any additional information, special requirements, or concerns..."
+                  required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </section>
@@ -876,6 +931,7 @@ return (
                             name="customerName"
                             value={formData.customerName}
                             onChange={handleInputChange}
+                            required
                             className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -887,6 +943,7 @@ return (
                             name="customerTitle"
                             value={formData.customerTitle}
                             onChange={handleInputChange}
+                            required
                             className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -898,6 +955,7 @@ return (
                             name="customerDate"
                             value={formData.customerDate}
                             onChange={handleInputChange}
+                            required
                             className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
