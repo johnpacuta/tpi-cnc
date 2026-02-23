@@ -1,7 +1,9 @@
-'use server';
-
+import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 import PDFDocument from 'pdfkit';
+
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
@@ -59,35 +61,20 @@ async function buildPdfBuffer(fields: Record<string, string>) {
       const boxWidth = 320;
       const boxHeight = 90;
 
-      doc
-        .rect(x, y, boxWidth, boxHeight)
-        .lineWidth(1)
-        .strokeColor('#999')
-        .stroke();
-
-      doc.image(sigBuffer, x + 8, y + 8, {
-        fit: [boxWidth - 16, boxHeight - 16],
-        align: undefined,
-        valign: 'center',
-      });
-
+      doc.rect(x, y, boxWidth, boxHeight).lineWidth(1).strokeColor('#999').stroke();
+      doc.image(sigBuffer, x + 8, y + 8, { fit: [boxWidth - 16, boxHeight - 16], valign: 'center' });
       doc.moveDown(6);
     } else {
       doc.fillColor('#666').font('Helvetica').text('(No signature provided)');
       doc.fillColor('#000');
     }
 
-    // --- TPI Authorization (added ONLY to the generated PDF after submission) ---
     doc.addPage();
-
-    doc.fontSize(16).text("TPI Authorization (to be completed by TPI after submission)", {
-      align: 'center',
-    });
+    doc.fontSize(16).text("TPI Authorization (to be completed by TPI after submission)", { align: 'center' });
     doc.moveDown(1);
-
     doc.fontSize(11).text(
-      'This section is intentionally left blank on the website form. TPI will complete it after the customer submission is received.',
-      { align: 'left' }
+        'This section is intentionally left blank on the website form. TPI will complete it after the customer submission is received.',
+        { align: 'left' }
     );
 
     doc.moveDown(1.5);
@@ -103,23 +90,25 @@ async function buildPdfBuffer(fields: Record<string, string>) {
     doc.font('Helvetica').text('______________________________________________');
     doc.moveDown(1);
 
-    doc.font('Helvetica-Bold').text('Signature:');
+    doc.font('Helvetica-Bold').text('Signature (penned):');
     doc.font('Helvetica').text('______________________________________________');
 
     doc.end();
   });
 }
 
-export async function submitPreInstallationForm(formData: FormData) {
+export async function POST(req: Request) {
   try {
-    const fields = formDataToObject(formData);
+    const formData = await req.formData();
+    const fields: Record<string, string> = {};
+    for (const [k, v] of formData.entries()) fields[k] = String(v);
 
     const pdfBuffer = await buildPdfBuffer(fields);
     const filename = `pre-installation-${Date.now()}.pdf`;
 
     await sgMail.send({
       to: 'john@tpicnc.com',
-      from: process.env.SENDFROM_EMAIL!, // must be verified in SendGrid
+      from: process.env.SENDFROM_EMAIL!,
       subject: `Pre-Installation Form Submission - ${fields.companyName || fields.contactName || 'New Submission'}`,
       text: 'A new Pre-Installation form was submitted. The completed form is attached as a PDF.',
       replyTo: fields.contactEmail ? { email: fields.contactEmail } : undefined,
@@ -133,9 +122,12 @@ export async function submitPreInstallationForm(formData: FormData) {
       ],
     } as any);
 
-    return { success: true };
-  } catch (error) {
-    console.error('Error submitting pre-installation form:', error);
-    return { success: false, error: 'Failed to submit form' };
+    return NextResponse.json({ success: true });
+  } catch (error: any) {
+    // This gives you the real SendGrid error details in Vercel logs
+    console.error('Pre-installation submit error:', error?.message);
+    console.error('SendGrid response body:', error?.response?.body);
+
+    return NextResponse.json({ success: false, error: 'Failed to submit form' }, { status: 500 });
   }
 }
