@@ -76,7 +76,8 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   line('Foundation has been leveled and is ready for machine placement:', yn('foundationLevel'));
 
   draw(
-    'Foundation Waiver: If foundation does not match specifications, customer assumes all responsibility for the accuracy, repeatability, and geometric alignment for this machine.',
+    'Foundation Waiver: If foundation does not match specifications, customer assumes all responsibility for the accuracy, \n'
+  + 'repeatability, and geometric alignment for this machine.',
     { size: 9, color: { r: 0.35, g: 0.35, b: 0.35 } }
   );
 
@@ -134,21 +135,56 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   line('Title:', v('customerTitle'));
   line('Date:', v('customerDate'));
 
-  // Signature box (near bottom)
-  const sigX = margin;
-  const sigY = margin + 40;
+  // --- Signature goes AFTER the fields (no overlap) ---
   const sigW = 320;
   const sigH = 90;
 
-  page1.drawText('Signature (pen):', { x: sigX, y: sigY + sigH + 10, size: 10, font: fontBold, color: rgb(0, 0, 0) });
-  page1.drawRectangle({ x: sigX, y: sigY, width: sigW, height: sigH, borderColor: rgb(0.6, 0.6, 0.6), borderWidth: 1 });
+  // Ensure we have room left on the page for the signature label + box
+  const requiredSpace = 14 + 8 + sigH + 10; // label + gap + box + padding
+  if (y < margin + requiredSpace) {
+    // start a fresh page if needed
+    const sigPage = pdfDoc.addPage([612, 792]);
+    // switch drawing context to the new page
+    // (rebind page1 + reset y)
+    (page1 as any) = sigPage;
+    y = 792 - margin;
+  }
+
+  // Label
+  page1.drawText('Signature (pen):', {
+    x: margin,
+    y,
+    size: 10,
+    font: fontBold,
+    color: rgb(0, 0, 0),
+  });
+  y -= 16;
+
+  // Box directly under the label
+  const sigX = margin;
+  const sigY = y - sigH;
+
+  page1.drawRectangle({
+    x: sigX,
+    y: sigY,
+    width: sigW,
+    height: sigH,
+    borderColor: rgb(0.6, 0.6, 0.6),
+    borderWidth: 1,
+  });
 
   const sigBytes = dataUrlToBytes(fields.customerSignature);
   if (sigBytes) {
     const isPng = (fields.customerSignature || '').startsWith('data:image/png');
     const sigImg = isPng ? await pdfDoc.embedPng(sigBytes) : await pdfDoc.embedJpg(sigBytes);
+
     const scaled = sigImg.scaleToFit(sigW - 16, sigH - 16);
-    page1.drawImage(sigImg, { x: sigX + 8, y: sigY + 8, width: scaled.width, height: scaled.height });
+    page1.drawImage(sigImg, {
+      x: sigX + 8,
+      y: sigY + 8,
+      width: scaled.width,
+      height: scaled.height,
+    });
   } else {
     page1.drawText('(No signature provided)', {
       x: sigX + 10,
@@ -159,7 +195,10 @@ async function buildPdfBuffer(fields: Record<string, string>) {
     });
   }
 
-  // Page 2: TPI Authorization
+  // Move the cursor below the box (in case you add more later)
+  y = sigY - 20;
+
+  // Page 2: TPI Authorization (blank fields)
   const page2 = pdfDoc.addPage([612, 792]);
   let y2 = 792 - margin;
 
@@ -177,7 +216,7 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   );
 
   const blank = '______________________________________________';
-  drawP2('TPI Representative Name (Print):', { bold: true, size: 11 });
+  drawP2('TPI Representative Name:', { bold: true, size: 11 });
   drawP2(blank);
   drawP2('Title:', { bold: true, size: 11 });
   drawP2(blank);

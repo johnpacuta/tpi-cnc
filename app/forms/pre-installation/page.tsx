@@ -815,7 +815,7 @@ return (
 
                     <div className="space-y-4">
                       <div>
-                        <label className="block font-semibold mb-2">Name (Print):</label>
+                        <label className="block font-semibold mb-2">Name:</label>
                         <input
                             type="text"
                             name="customerName"
