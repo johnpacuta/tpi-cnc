@@ -5,6 +5,7 @@ export type NewsArticle = {
   imgSrc?: string;
   excerpt: string;
   content: string; // for now: plain text/HTML-ish string
+  youtubeVideoId?: string;
 };
 
 export const NEWS_ARTICLES: NewsArticle[] = [
@@ -18,7 +19,8 @@ export const NEWS_ARTICLES: NewsArticle[] = [
         "Excetek is globally recognized for advanced EDM and high-precision CNC machining solutions—built for accuracy, reliability, and performance.\n" +
         "From wire EDM and die-sinker EDM systems to high-speed machining centers, Excetek equipment is engineered to meet the demands of today’s precision manufacturers.\n" +
         "\nWith intelligent controls, energy-efficient operation, and automation-ready platforms, Excetek helps shops increase throughput while maintaining exceptional surface finish and tight tolerances.\n" +
-        "We’re proud to bring these world-class machining solutions to our customers, and we look forward to driving productivity, precision, and performance together."},
+        "We’re proud to bring these world-class machining solutions to our customers, and we look forward to driving productivity, precision, and performance together.",
+    youtubeVideoId: "ZGoB9PkKJ_E?si=8t8VZobQInMaYEuU"},
   {
     slug: "new-cnc-service",
     title: "New CNC Lineup",

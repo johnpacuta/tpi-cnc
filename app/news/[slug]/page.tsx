@@ -34,9 +34,25 @@ export default async function Home({ params }: PageProps) {
                   </Link>
               </h1>
               <img src={article.imgSrc} alt={article.title} style={{ border: "2px solid #e5e7eb", borderRadius: 8 }}/>
-              <h2 className="mt-2 text-xl text-gray-700 whitespace-pre-line">{article.content}</h2>
-          </article>
-      </div>
-      </div>
-  );
+              {article.youtubeVideoId ? (
+                  <div className="mt-6 overflow-hidden rounded-lg border border-gray-200">
+                      <div className="aspect-video w-full">
+                          <iframe
+                              className="h-full w-full"
+                              src={`https://www.youtube-nocookie.com/embed/${article.youtubeVideoId}`}
+                              title={`${article.title} video`}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              allowFullScreen
+                          />
+                      </div>
+                  </div>
+              ) : null}
+              <h2 className="mt-2 text-xl text-gray-700 whitespace-pre-line">
+                {article.content}
+              </h2>
+            </article>
+          </div>
+        </div>
+      );
 }
