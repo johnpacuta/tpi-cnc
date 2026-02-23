@@ -7,12 +7,6 @@ export const dynamic = 'force-dynamic';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-function formDataToObject(formData: FormData) {
-  const obj: Record<string, string> = {};
-  for (const [key, value] of formData.entries()) obj[key] = String(value);
-  return obj;
-}
-
 function dataUrlToBuffer(dataUrl?: string) {
   if (!dataUrl) return null;
   const match = dataUrl.match(/^data:(image\/png|image\/jpeg);base64,(.+)$/);
