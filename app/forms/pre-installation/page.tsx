@@ -56,6 +56,48 @@ export default function Forms() {
     tpiDate: ''
   });
 
+  // All required STRING fields (checkboxes are not included here)
+  const requiredKeys: (keyof typeof formData)[] = [
+    'machineModel',
+    'poNumber',
+    'deliveryDate',
+    'companyName',
+    'streetAddress',
+    'postalCode',
+    'provinceState',
+    'contactName',
+    'contactPhone',
+    'contactEmail',
+    'doorWidth',
+    'doorHeight',
+    'ceilingHeight',
+    'integralSpindle',
+    'requiredVoltage',
+    'requiredAmperage',
+    'electricianCompany',
+    'electricianPhone',
+    'airRequired',
+    'preferredDeliveryDate',
+    'deliveryTime',
+    'riggingCompany',
+    'riggingContact',
+    'riggingPhone',
+    'liftingEquipment',
+    'liftingCapacity',
+    'coolantType',
+    'trainingDays',
+    'additionalNotes',
+    'customerName',
+    'customerTitle',
+    'customerDate',
+  ];
+
+  const RequiredMark = () => (
+    <span className="ml-2 text-red-600 font-bold">
+      * <span className="font-normal">(Required)</span>
+    </span>
+  );
+
   const [customerSignatureDataUrl, setCustomerSignatureDataUrl] = useState<string>('');
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
@@ -147,52 +189,6 @@ export default function Forms() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const requiredKeys: (keyof typeof formData)[] = [
-      'machineModel',
-      'poNumber',
-      'deliveryDate',
-      'companyName',
-      'streetAddress',
-      'postalCode',
-      'provinceState',
-      'contactName',
-      'contactPhone',
-      'contactEmail',
-      'doorWidth',
-      'doorHeight',
-      'ceilingHeight',
-      'integralSpindle',
-      'requiredVoltage',
-      'requiredAmperage',
-      'electricianCompany',
-      'electricianPhone',
-      'airRequired',
-      'preferredDeliveryDate',
-      'deliveryTime',
-      'riggingCompany',
-      'riggingContact',
-      'riggingPhone',
-      'liftingEquipment',
-      'liftingCapacity',
-      'coolantType',
-      'trainingDays',
-      'additionalNotes',
-      'customerName',
-      'customerTitle',
-      'customerDate',
-    ];
-
-    const requiredSet = useMemo(() => new Set<string>(requiredKeys as string[]), []);
-    const isRequired = (name: string) => requiredSet.has(name);
-
-    const RequiredMark = ({ name }: { name: string }) => (
-        isRequired(name) ? (
-            <span className="ml-2 text-red-600 font-bold">
-        * <span className="font-normal">(Required)</span>
-      </span>
-        ) : null
-    );
-
     const missing = requiredKeys.filter((k) => {
       const val = formData[k];
       return typeof val === 'string' ? val.trim().length === 0 : false;
@@ -233,7 +229,7 @@ export default function Forms() {
     }
   };
 
-return (
+  return (
     <main className="min-h-screen pt-20 py-4">
       <ContentSection
         title="Pre-Installation Form"
@@ -268,7 +264,7 @@ return (
                 </h2>
                 <div className="space-y-4">
                   <div>
-                    <label className="block font-semibold mb-2">Machine Model/Type:</label>
+                    <label className="block font-semibold mb-2">Machine Model/Type:<RequiredMark /></label>
                     <input
                       type="text"
                       name="machineModel"
@@ -280,7 +276,7 @@ return (
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Purchase Order Number:</label>
+                      <label className="block font-semibold mb-2">Purchase Order Number:<RequiredMark /></label>
                       <input
                         type="text"
                         name="poNumber"
@@ -291,7 +287,7 @@ return (
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">Expected Delivery Date:</label>
+                      <label className="block font-semibold mb-2">Expected Delivery Date:<RequiredMark /></label>
                       <input
                         type="date"
                         name="deliveryDate"
@@ -312,7 +308,7 @@ return (
                 </h2>
                 <div className="space-y-4">
                   <div>
-                    <label className="block font-semibold mb-2">Company Name:</label>
+                    <label className="block font-semibold mb-2">Company Name:<RequiredMark /></label>
                     <input
                       type="text"
                       name="companyName"
@@ -323,7 +319,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Street Address:</label>
+                    <label className="block font-semibold mb-2">Street Address:<RequiredMark /></label>
                     <input
                       type="text"
                       name="streetAddress"
@@ -335,7 +331,7 @@ return (
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Postal Code / ZIP:</label>
+                      <label className="block font-semibold mb-2">Postal Code / ZIP:<RequiredMark /></label>
                       <input
                         type="text"
                         name="postalCode"
@@ -346,7 +342,7 @@ return (
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">Province / State:</label>
+                      <label className="block font-semibold mb-2">Province / State:<RequiredMark /></label>
                       <input
                         type="text"
                         name="provinceState"
@@ -359,7 +355,7 @@ return (
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Primary Contact Name:</label>
+                      <label className="block font-semibold mb-2">Primary Contact Name:<RequiredMark /></label>
                       <input
                         type="text"
                         name="contactName"
@@ -370,7 +366,7 @@ return (
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">Contact Phone:</label>
+                      <label className="block font-semibold mb-2">Contact Phone:<RequiredMark /></label>
                       <input
                         type="tel"
                         name="contactPhone"
@@ -382,7 +378,7 @@ return (
                     </div>
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Contact Email:</label>
+                    <label className="block font-semibold mb-2">Contact Email:<RequiredMark /></label>
                     <input
                       type="email"
                       name="contactEmail"
@@ -410,7 +406,6 @@ return (
                       name="foundationComplete"
                       checked={formData.foundationComplete}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Foundation has been completed per specifications</span>
@@ -421,7 +416,6 @@ return (
                       name="foundationLevel"
                       checked={formData.foundationLevel}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Foundation has been leveled and is ready for machine placement</span>
@@ -444,7 +438,7 @@ return (
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                   <div>
-                    <label className="block font-semibold mb-2">Door Width (inches):</label>
+                    <label className="block font-semibold mb-2">Door Width (inches):<RequiredMark /></label>
                     <input
                       type="text"
                       name="doorWidth"
@@ -455,7 +449,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Door Height (inches):</label>
+                    <label className="block font-semibold mb-2">Door Height (inches):<RequiredMark /></label>
                     <input
                       type="text"
                       name="doorHeight"
@@ -466,7 +460,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Ceiling Height (feet):</label>
+                    <label className="block font-semibold mb-2">Ceiling Height (feet):<RequiredMark /></label>
                     <input
                       type="text"
                       name="ceilingHeight"
@@ -483,7 +477,6 @@ return (
                     name="spaceCleared"
                     checked={formData.spaceCleared}
                     onChange={handleInputChange}
-                    required
                     className="w-5 h-5 text-blue-600"
                   />
                   <span>Installation area has been cleared and is ready for machine placement</span>
@@ -498,7 +491,7 @@ return (
                 <p className="mb-4 text-gray-700">
                   If your machine is equipped with an integral spindle, special handling instructions must be followed.
                 </p>
-                <label className="block font-semibold mb-2">Does this machine have an integral spindle?</label>
+                <label className="block font-semibold mb-2">Does this machine have an integral spindle?<RequiredMark /></label>
                 <div className="flex space-x-6">
                   <label className="flex items-center space-x-2">
                     <input
@@ -537,7 +530,7 @@ return (
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block font-semibold mb-2">Required Voltage:</label>
+                    <label className="block font-semibold mb-2">Required Voltage:<RequiredMark /></label>
                     <input
                       type="text"
                       name="requiredVoltage"
@@ -549,7 +542,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Required Amperage:</label>
+                    <label className="block font-semibold mb-2">Required Amperage:<RequiredMark /></label>
                     <input
                       type="text"
                       name="requiredAmperage"
@@ -568,7 +561,6 @@ return (
                       name="electricInstalled"
                       checked={formData.electricInstalled}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Electrical service has been installed to machine location</span>
@@ -579,7 +571,6 @@ return (
                       name="electricGrounded"
                       checked={formData.electricGrounded}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>True earth ground has been installed</span>
@@ -590,7 +581,6 @@ return (
                       name="electricTested"
                       checked={formData.electricTested}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Electrical service has been tested and verified</span>
@@ -598,7 +588,7 @@ return (
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-semibold mb-2">Electrician Company Name:</label>
+                    <label className="block font-semibold mb-2">Electrician Company Name:<RequiredMark /></label>
                     <input
                       type="text"
                       name="electricianCompany"
@@ -609,7 +599,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Electrician Contact Phone:</label>
+                    <label className="block font-semibold mb-2">Electrician Contact Phone:<RequiredMark /></label>
                     <input
                       type="tel"
                       name="electricianPhone"
@@ -630,7 +620,7 @@ return (
                 <p className="mb-4 text-gray-700">
                   If your machine requires air, a minimum of 90 PSI must be available at the installation site. It is recommended that ample moisture removal techniques be used to minimize water in the lines.
                 </p>
-                <label className="block font-semibold mb-2">Does this machine require compressed air?</label>
+                <label className="block font-semibold mb-2">Does this machine require compressed air?<RequiredMark /></label>
                 <div className="flex space-x-6 mb-4">
                   <label className="flex items-center space-x-2">
                     <input
@@ -664,7 +654,6 @@ return (
                       name="airInstalled"
                       checked={formData.airInstalled}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Compressed air line has been installed to machine location</span>
@@ -675,7 +664,6 @@ return (
                       name="airTested"
                       checked={formData.airTested}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Air pressure has been tested (minimum 90 PSI required)</span>
@@ -693,7 +681,7 @@ return (
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block font-semibold mb-2">Preferred Delivery Date:</label>
+                    <label className="block font-semibold mb-2">Preferred Delivery Date:<RequiredMark /></label>
                     <input
                       type="date"
                       name="preferredDeliveryDate"
@@ -704,7 +692,7 @@ return (
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold mb-2">Delivery Time Window:</label>
+                    <label className="block font-semibold mb-2">Delivery Time Window:<RequiredMark /></label>
                     <input
                       type="text"
                       name="deliveryTime"
@@ -722,7 +710,6 @@ return (
                     name="deliveryAccess"
                     checked={formData.deliveryAccess}
                     onChange={handleInputChange}
-                    required
                     className="w-5 h-5 text-blue-600"
                   />
                   <span>Delivery truck will have clear access to loading dock/facility</span>
@@ -739,7 +726,7 @@ return (
                 </p>
                 <div className="space-y-4">
                   <div>
-                    <label className="block font-semibold mb-2">Rigging Company Name:</label>
+                    <label className="block font-semibold mb-2">Rigging Company Name:<RequiredMark /></label>
                     <input
                       type="text"
                       name="riggingCompany"
@@ -751,7 +738,7 @@ return (
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Rigging Contact Name:</label>
+                      <label className="block font-semibold mb-2">Rigging Contact Name:<RequiredMark /></label>
                       <input
                         type="text"
                         name="riggingContact"
@@ -762,7 +749,7 @@ return (
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">Rigging Contact Phone:</label>
+                      <label className="block font-semibold mb-2">Rigging Contact Phone:<RequiredMark /></label>
                       <input
                         type="tel"
                         name="riggingPhone"
@@ -775,7 +762,7 @@ return (
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-semibold mb-2">Available Lifting Equipment:</label>
+                      <label className="block font-semibold mb-2">Available Lifting Equipment:<RequiredMark /></label>
                       <input
                         type="text"
                         name="liftingEquipment"
@@ -787,7 +774,7 @@ return (
                       />
                     </div>
                     <div>
-                      <label className="block font-semibold mb-2">Lifting Capacity (tons):</label>
+                      <label className="block font-semibold mb-2">Lifting Capacity (tons):<RequiredMark /></label>
                       <input
                         type="text"
                         name="liftingCapacity"
@@ -816,7 +803,6 @@ return (
                       name="coolantPurchased"
                       checked={formData.coolantPurchased}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Coolant has been purchased</span>
@@ -827,14 +813,13 @@ return (
                       name="coolantOnsite"
                       checked={formData.coolantOnsite}
                       onChange={handleInputChange}
-                      required
                       className="w-5 h-5 text-blue-600"
                     />
                     <span>Coolant will be on-site before installation</span>
                   </label>
                 </div>
                 <div>
-                  <label className="block font-semibold mb-2">Coolant Type/Brand:</label>
+                  <label className="block font-semibold mb-2">Coolant Type/Brand:<RequiredMark /></label>
                   <input
                     type="text"
                     name="coolantType"
@@ -854,36 +839,34 @@ return (
                 <div className="space-y-3 mb-4">
                   <label className="flex items-center space-x-3">
                     <input
-                      type="checkbox"
-                      name="tpiInstallation"
-                      checked={formData.tpiInstallation}
-                      onChange={handleInputChange}
-                      required
-                      className="w-5 h-5 text-blue-600"
+                        type="checkbox"
+                        name="tpiInstallation"
+                        checked={formData.tpiInstallation}
+                        onChange={handleInputChange}
+                        className="w-5 h-5 text-blue-600"
                     />
                     <span>TPI CNC is responsible for installation</span>
                   </label>
                   <label className="flex items-center space-x-3">
                     <input
-                      type="checkbox"
-                      name="tpiTraining"
-                      checked={formData.tpiTraining}
-                      onChange={handleInputChange}
-                      required
-                      className="w-5 h-5 text-blue-600"
+                        type="checkbox"
+                        name="tpiTraining"
+                        checked={formData.tpiTraining}
+                        onChange={handleInputChange}
+                        className="w-5 h-5 text-blue-600"
                     />
                     <span>TPI CNC is responsible for training</span>
                   </label>
                 </div>
                 <div>
-                  <label className="block font-semibold mb-2">Number of training days requested:</label>
+                  <label className="block font-semibold mb-2">Number of training days requested:<RequiredMark /></label>
                   <input
-                    type="text"
-                    name="trainingDays"
-                    value={formData.trainingDays}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      type="text"
+                      name="trainingDays"
+                      value={formData.trainingDays}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </section>
@@ -891,16 +874,16 @@ return (
               {/* Additional Notes */}
               <section>
                 <h2 className="text-2xl font-bold text-blue-600 border-b-2 border-blue-600 pb-2 mb-4">
-                  Additional Notes
+                  Additional Notes<RequiredMark />
                 </h2>
                 <textarea
-                  name="additionalNotes"
-                  value={formData.additionalNotes}
-                  onChange={handleInputChange}
-                  rows={5}
-                  placeholder="Any additional information, special requirements, or concerns..."
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    name="additionalNotes"
+                    value={formData.additionalNotes}
+                    onChange={handleInputChange}
+                    rows={5}
+                    placeholder="Any additional information, special requirements, or concerns..."
+                    required
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </section>
 
@@ -925,7 +908,7 @@ return (
 
                     <div className="space-y-4">
                       <div>
-                        <label className="block font-semibold mb-2">Name:</label>
+                        <label className="block font-semibold mb-2">Name:<RequiredMark /></label>
                         <input
                             type="text"
                             name="customerName"
@@ -937,7 +920,7 @@ return (
                       </div>
 
                       <div>
-                        <label className="block font-semibold mb-2">Title:</label>
+                        <label className="block font-semibold mb-2">Title:<RequiredMark /></label>
                         <input
                             type="text"
                             name="customerTitle"
@@ -949,7 +932,7 @@ return (
                       </div>
 
                       <div>
-                        <label className="block font-semibold mb-2">Date:</label>
+                        <label className="block font-semibold mb-2">Date:<RequiredMark /></label>
                         <input
                             type="date"
                             name="customerDate"
@@ -961,7 +944,7 @@ return (
                       </div>
 
                       <div>
-                        <label className="block font-semibold mb-2">Signature (pen):</label>
+                        <label className="block font-semibold mb-2">Signature (pen):<RequiredMark /></label>
                         <div className="border border-gray-300 rounded-lg bg-white">
                           <canvas
                               ref={canvasRef}
@@ -983,6 +966,7 @@ return (
                           </span>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -991,8 +975,8 @@ return (
               {/* Submit Button */}
               <div className="text-center pt-6">
                 <button
-                  type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg"
+                    type="submit"
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg"
                 >
                   Submit Pre-Installation Form
                 </button>
