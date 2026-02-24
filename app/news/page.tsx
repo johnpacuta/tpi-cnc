@@ -2,17 +2,21 @@
 import Link from "next/link";
 import { getAllNewsArticles } from "@/lib/news";
 import ShareModalButton from "@/components/articles/ShareModalButton";
+import ContentSection from "@/components/ContentSection";
 
 export default function News() {
   const articles = getAllNewsArticles();
 
   return (
+      <ContentSection
+          title={
+              <Link href="/news">
+                  News
+              </Link>
+          }
+      >
       <div>
-          <h1 className="text-2xl font-semibold text-gray-900"><Link href="/news" className="hover:underline">
-              News
-          </Link></h1>
-
-          <div className="mt-6 space-y-6">
+          <div>
               {articles.map((a) => (
                   <article key={a.slug} className="rounded-lg border border-black bg-white p-5">
                       <div className="mt-2 mb-2">
@@ -33,5 +37,6 @@ export default function News() {
               ))}
           </div>
       </div>
+      </ContentSection>
   );
 }
