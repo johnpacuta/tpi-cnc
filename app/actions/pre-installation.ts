@@ -65,7 +65,7 @@ async function buildPdfBuffer(fields: Record<string, string>) {
 
   section('Authorization');
   draw('Customer Authorization', { bold: true, size: 12 });
-  line('Name (Print):', v('customerName'));
+  line('Name:', v('customerName'));
   line('Title:', v('customerTitle'));
   line('Date:', v('customerDate'));
 

@@ -30,6 +30,7 @@ const companyLinks = {
   links: [
     { name: 'About Us', href: '/about' },
     { name: 'Quote Request', href: '/quote' },
+    { name: 'Forms', href: '/forms' },
   ]
 }
 
