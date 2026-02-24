@@ -942,7 +942,7 @@ export default function Forms() {
                       </div>
 
                       <div>
-                        <label className="block font-semibold mb-2">Signature (pen):<RequiredMark /></label>
+                        <label className="block font-semibold mb-2">Signature (draw):<RequiredMark /></label>
                         <div className="border border-gray-300 rounded-lg bg-white">
                           <canvas
                               ref={canvasRef}

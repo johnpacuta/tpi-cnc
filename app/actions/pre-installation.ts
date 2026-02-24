@@ -213,10 +213,6 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   };
 
   drawP2('TPI Authorization (to be completed by TPI after submission)', { bold: true, size: 14 });
-  drawP2(
-    'This section is intentionally left blank on the website form. TPI will complete it after the customer submission is received.',
-    { size: 11 }
-  );
 
   const blank = '______________________________________________';
   drawP2('TPI Representative Name:', { bold: true, size: 11 });
@@ -228,7 +224,7 @@ async function buildPdfBuffer(fields: Record<string, string>) {
   drawP2('Date:', { bold: true, size: 11 });
   drawP2(blank, { size: 11 });
 
-  drawP2('Signature (penned):', { bold: true, size: 11 });
+  drawP2('Signature (draw):', { bold: true, size: 11 });
   drawP2(blank, { size: 11 });
 
   const pdfBytes = await pdfDoc.save();
@@ -241,7 +237,7 @@ export async function submitPreInstallationForm(formData: FormData) {
     const pdfBuffer = await buildPdfBuffer(fields);
 
     await sgMail.send({
-      to: 'john@tpicnc.com',
+      to: 'admin@tpicnc.com',
       from: process.env.SENDFROM_EMAIL!,
       subject: `Pre-Installation Form Submission - ${fields.companyName || fields.contactName || 'New Submission'}`,
       text: 'A new Pre-Installation form was submitted. The completed form is attached as a PDF.',
