@@ -86,7 +86,6 @@ export default function Forms() {
     'liftingCapacity',
     'coolantType',
     'trainingDays',
-    'additionalNotes',
     'customerName',
     'customerTitle',
     'customerDate',
