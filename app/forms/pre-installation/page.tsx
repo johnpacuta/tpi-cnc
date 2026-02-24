@@ -874,7 +874,7 @@ export default function Forms() {
               {/* Additional Notes */}
               <section>
                 <h2 className="text-2xl font-bold text-blue-600 border-b-2 border-blue-600 pb-2 mb-4">
-                  Additional Notes<RequiredMark />
+                  Additional Notes
                 </h2>
                 <textarea
                     name="additionalNotes"
@@ -882,7 +882,6 @@ export default function Forms() {
                     onChange={handleInputChange}
                     rows={5}
                     placeholder="Any additional information, special requirements, or concerns..."
-                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </section>
