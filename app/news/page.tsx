@@ -18,7 +18,7 @@ export default function News() {
       <div>
           <div>
               {articles.map((a) => (
-                  <article key={a.slug} className="rounded-lg border border-black bg-white p-5">
+                  <article key={a.slug} className="rounded-lg border border-black bg-white p-5 mb-4">
                       <div className="mt-2 mb-2">
                       <ShareModalButton
                           url={`https://tpicnc.com/news/${a.slug}`}

@@ -24,7 +24,7 @@ export default async function Home({ params }: PageProps) {
           }
       >
               <div>
-      <div className="mt-6 space-y-6">
+      <div>
           <article key={article.slug} className="rounded-lg border border-black bg-white p-5">
               <div className="mt-2 mb-2">
                   <ShareModalButton

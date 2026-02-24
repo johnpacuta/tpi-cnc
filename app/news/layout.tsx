@@ -14,7 +14,7 @@ export default function Layout({ children }: Props) {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-10 md:grid-cols-[1fr_320px]">
         <section>{children}</section>
 
-        <aside className="pt-14 md:sticky md:top-24 md:self-start">
+        <aside className="md:pt-14 md:sticky md:top-24 md:self-start mx-auto">
           <LatestArticlesSidebar latest={latest} />
         </aside>
       </div>
