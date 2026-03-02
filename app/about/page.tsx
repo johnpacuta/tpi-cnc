@@ -31,13 +31,6 @@ const teamMembers = [
     }
     ,
     {
-        name: "Jessica Allison",
-        role: "Inside Sales",
-        image: "/images/headshots/JessicaAllison.jpeg",
-        description: ""
-    }
-    ,
-    {
         name: "Mike Morris",
         role: "Technical Sales Lead",
         image: "/images/headshots/MikeMorris.jpeg",

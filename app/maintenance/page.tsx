@@ -26,7 +26,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Preventative Package",
+        title: "Basic Package",
         subtitle: "Stop Breakdowns",
         features: [
             "Machine Assessment",
@@ -42,7 +42,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Comprehensive Package",
+        title: "Standard Package",
         subtitle: "Support Operations",
         features: [
             "1,000 hours hours of routine and emergency maintenance per year",
@@ -54,7 +54,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Premium Package",
+        title: "Pro Package",
         subtitle: "Improve Operations",
         features: [
             "All Features of the Comprehensive Package",
@@ -268,9 +268,9 @@ export default function Maintenance() {
                                 >
                                     <option value="">Select a Service</option>
                                     <option value="Reactive">Reactive Package</option>
-                                    <option value="Preventative">Preventative Package</option>
-                                    <option value="Comprehensive">Comprehensive Package</option>
-                                    <option value="Premium">Premium Package</option>
+                                    <option value="Preventative">Basic Package</option>
+                                    <option value="Comprehensive">Standard Package</option>
+                                    <option value="Premium">Pro Package</option>
                                 </select>
                                 <ErrorMessage fieldName="serviceType"/>
                             </div>
