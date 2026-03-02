@@ -48,6 +48,18 @@ const teamMembers = [
         role: "Operations Manager",
         image: "/images/headshots/RossBurniston.jpeg",
         description: ""
+    },
+    {
+        name: "Greg Montgomery",
+        role: "Inside Sales",
+        image: "/images/headshots/GregMontgomery.jpg",
+        description: ""
+    },
+    {
+        name: "John Pacuta C.Tech.",
+        role: "Project Manager",
+        image: "/images/headshots/JohnPacuta.jpg",
+        description: ""
     }
 ];
 
