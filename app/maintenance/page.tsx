@@ -268,9 +268,9 @@ export default function Maintenance() {
                                 >
                                     <option value="">Select a Service</option>
                                     <option value="Reactive">Reactive Package</option>
-                                    <option value="Preventative">Preventative Package</option>
-                                    <option value="Comprehensive">Comprehensive Package</option>
-                                    <option value="Premium">Premium Package</option>
+                                    <option value="Preventative">Basic Package</option>
+                                    <option value="Comprehensive">Standard Package</option>
+                                    <option value="Premium">Pro Package</option>
                                 </select>
                                 <ErrorMessage fieldName="serviceType"/>
                             </div>
