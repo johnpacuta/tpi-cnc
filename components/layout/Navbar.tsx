@@ -82,11 +82,11 @@ export function Navbar() {
                                        height={96}/>
                             </Link>
                             <span className="text-xs md:text-sm lg:text-base tracking-wider font-medium">
-                <span className="text-brand-black">SERVICE</span>
+                <Link href="/service">SERVICE</Link>
                 <span className="text-primary/80 mx-2">•</span>
-                <span className="text-brand-black">SUPPORT</span>
+                <Link href="/support">SUPPORT</Link>
                 <span className="text-primary/80 mx-2">•</span>
-                <span className="text-brand-black">SUPPLY</span>
+                <Link href="/supply">SUPPLY</Link>
               </span>
             </div>
             

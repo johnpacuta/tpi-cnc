@@ -108,7 +108,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-white/80 max-w-xs tracking-wider font-medium">
-              <span className="text-accent">SERVICE</span> ● <span className="text-brand-blue">SUPPORT</span> ● <span className="text-white">SUPPLY</span>
+              <span className="text-accent"><Link href="/service">SERVICE</Link></span> ● <span className="text-brand-blue"><Link href="/support">SUPPORT</Link></span> ● <span className="text-white"><Link href="/supply">SUPPLY</Link></span>
             </p>
             {/* Social Media Links */}
             <div className="flex gap-4 mt-4">
