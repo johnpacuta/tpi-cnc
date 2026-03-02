@@ -26,7 +26,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Preventative Package",
+        title: "Basic Package",
         subtitle: "Stop Breakdowns",
         features: [
             "Machine Assessment",
@@ -42,7 +42,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Comprehensive Package",
+        title: "Standard Package",
         subtitle: "Support Operations",
         features: [
             "1,000 hours hours of routine and emergency maintenance per year",
@@ -54,7 +54,7 @@ const maintenanceServices = [
         link: "#"
     },
     {
-        title: "Premium Package",
+        title: "Pro Package",
         subtitle: "Improve Operations",
         features: [
             "All Features of the Comprehensive Package",
