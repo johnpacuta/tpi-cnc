@@ -16,9 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {url: url("/support"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
         {url: url("/supply"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
         {url: url("/quote"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
+        {url: url("/maintenance"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
         {url: url("/3d-printing"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
         {url: url("/renishaw-products"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
         {url: url("/spare-parts"), lastModified: now, changeFrequency: "monthly", priority: 0.5},
+        {url: url("/news"), lastModified: now, changeFrequency: "yearly", priority: 0.3},
         {url: url("/privacy"), lastModified: now, changeFrequency: "yearly", priority: 0.3},
         {url: url("/terms"), lastModified: now, changeFrequency: "yearly", priority: 0.3},
     ];
