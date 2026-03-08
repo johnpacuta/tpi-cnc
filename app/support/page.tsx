@@ -7,6 +7,8 @@ import {useState} from "react";
 import {toast} from "react-hot-toast";
 import {submitConsultingForm} from "@/app/actions/consulting";
 import type {ContactFormData} from "@/lib/schema";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 type FormErrors = {
     [K in keyof ContactFormData]?: string[];
@@ -114,7 +116,7 @@ export default function Support() {
                                 role="link"
                                 tabIndex={0}
                                 onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && router.push(service.link ?? "/contact")}
-                                className={`p-6 rounded-xl shadow-lg border-2 hover:shadow-xl border-brand-blue/10 bg-white`}
+                                className={`p-6 rounded-xl shadow-lg border-2 hover:shadow-xl border-brand-blue/10 bg-white flex flex-col`}
                             >
                                 <h2 className={`text-3xl font-bold mb-2 relative text-gray-800`}>
                                     {service.title}
@@ -164,6 +166,29 @@ export default function Support() {
                                         }
                                     )}
                                 </ul>
+                                <div className="flex justify-left mt-auto pt-8">
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    size="lg"
+                                    className="
+                px-8 py-6
+                text-base font-bold
+                shadow-xl hover:shadow-lg
+                transform scale-100 hover:scale-105
+                transition-all duration-200
+                border-2 border-black
+                text-black hover:text-black
+                bg-white hover:bg-white
+                rounded-md
+                whitespace-nowrap
+                "
+                                >
+                                    <Link href= "#">
+                                        <span className="text-3xl leading-none">➔</span>
+                                    </Link>
+                                </Button>
+                                </div>
                             </div>
                         ))}
                     </div>

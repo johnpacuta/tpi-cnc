@@ -31,13 +31,6 @@ const teamMembers = [
     }
     ,
     {
-        name: "Jessica Allison",
-        role: "Inside Sales",
-        image: "/images/headshots/JessicaAllison.jpeg",
-        description: ""
-    }
-    ,
-    {
         name: "Mike Morris",
         role: "Technical Sales Lead",
         image: "/images/headshots/MikeMorris.jpeg",
@@ -47,6 +40,18 @@ const teamMembers = [
         name: "Ross Burniston RSE",
         role: "Operations Manager",
         image: "/images/headshots/RossBurniston.jpeg",
+        description: ""
+    },
+    {
+        name: "Greg Montgomery",
+        role: "Inside Sales",
+        image: "/images/headshots/GregMontgomery.jpg",
+        description: ""
+    },
+    {
+        name: "John Pacuta C.Tech.",
+        role: "Project Manager",
+        image: "/images/headshots/JohnPacuta.jpg",
         description: ""
     }
 ];
