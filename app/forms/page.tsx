@@ -3,10 +3,10 @@ import ContentSection from '../components/about/ContentSection';
 
 export default function FormsPage() {
   return (
-    <main className="min-h-screen pt-20 py-4">
+    <main className="min-h-screen pt-24 py-4">
       <ContentSection title="Forms" subtitle="TPI CNC Forms">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white rounded-lg shadow-lg p-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
                 href="/forms/pre-installation"
@@ -27,7 +27,7 @@ export default function FormsPage() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white rounded-lg shadow-lg p-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
                   href="/forms/machine-acceptance"
