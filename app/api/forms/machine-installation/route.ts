@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { submitPreInstallationForm } from '@/app/actions/pre-installation';
+import {submitMachineAcceptanceForm} from "@/app/actions/machine-acceptance";
+
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

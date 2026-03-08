@@ -158,7 +158,7 @@ export default function Forms() {
     }
     fd.set('customerSignature', customerSignatureDataUrl);
 
-    const res = await fetch('/api/forms/pre-installation', {
+    const res = await fetch('/api/forms/machine-acceptance', {
       method: 'POST',
       body: fd,
     });

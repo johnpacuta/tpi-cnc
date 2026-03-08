@@ -231,7 +231,7 @@ async function buildPdfBuffer(fields: Record<string, string>) {
     return Buffer.from(pdfBytes);
 }
 
-export async function submitPreInstallationForm(formData: FormData) {
+export async function submitMachineAcceptanceForm(formData: FormData) {
     try {
         const fields = formDataToObject(formData);
         const pdfBuffer = await buildPdfBuffer(fields);
