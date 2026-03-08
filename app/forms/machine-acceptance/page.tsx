@@ -139,7 +139,7 @@ export default function Forms() {
 
     const missing = requiredKeys.filter((k) => {
       const val = formData[k];
-      return typeof val === 'string' ? val.trim().length === 0 : false;
+      return val.trim().length === 0;
     });
 
     if (missing.length > 0) {
@@ -154,7 +154,7 @@ export default function Forms() {
 
     const fd = new FormData();
     for (const [key, value] of Object.entries(formData)) {
-      fd.set(key, typeof value === 'boolean' ? (value ? 'yes' : 'no') : String(value ?? ''));
+      fd.set(key, String(value ?? ''));
     }
     fd.set('customerSignature', customerSignatureDataUrl);
 
@@ -345,11 +345,12 @@ export default function Forms() {
 
               {/* Important Notice */}
               <div className="bg-red-50 border-l-4 border-red-500 p-6">
-                <p className="font-bold mb-2">IMPORTANT:</p>
+                <p className="font-bold mb-2">Warranty Period:</p>
                 <ul className="list-disc list-inside space-y-2 text-sm">
-                  <li>When all elements of the pre-installation check-off list have been completed for this machine, please contact TPI CNC to schedule installation.</li>
-                  <li>To avoid damage to the machine tool, do not attempt to start up or operate the machine without first contacting TPI CNC.</li>
-                </ul>
+                  <li>The warranty period for the machine will commence on the
+                    date this document is signed by the customer and will continue for a period of one
+                    year from this date.</li>
+                  </ul>
               </div>
 
               {/* Signature Section */}
