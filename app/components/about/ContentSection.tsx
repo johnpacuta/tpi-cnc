@@ -19,9 +19,6 @@ export default function ContentSection({
             {title}
             <div className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-accent/90 to-transparent"></div>
           </h2>
-          <div className="flex items-center justify-center mb-4">
-            <div className="h-[2px] w-24 bg-brand-blue"></div>
-          </div>
           {subtitle && (
             <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
               {subtitle}

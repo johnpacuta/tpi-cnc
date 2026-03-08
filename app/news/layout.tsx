@@ -11,7 +11,7 @@ export default function Layout({ children }: Props) {
 
   return (
     <main className="pt-40 pb-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pt-10 md:grid-cols-[1fr_320px]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-4 md:grid-cols-[1fr_320px]">
         <section>{children}</section>
 
         <aside className="md:pt-14 md:sticky md:top-24 md:self-start mx-auto">
