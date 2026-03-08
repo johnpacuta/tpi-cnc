@@ -435,7 +435,7 @@ export default function Forms() {
                     type="submit"
                     className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200 shadow-lg"
                 >
-                  Submit Pre-Installation Form
+                  Submit Machine Installation Acceptance Form
                 </button>
               </div>
             </form>
