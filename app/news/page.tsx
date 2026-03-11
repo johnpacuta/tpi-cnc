@@ -36,13 +36,16 @@ export default function News() {
                 aria-label={`Read article: ${a.title}`}
                 className="block"
               >
+                  <div className="flex justify-center">
                 <img
                   src={a.imgSrc}
                   alt={a.title}
                   style={{ border: "2px solid #e5e7eb", borderRadius: 8 }}
-                  className="cursor-pointer transition-opacity hover:opacity-90"
+                  className="max-h-[500px] max-w-full h-auto w-auto rounded-[8px] border-2 border-gray-200"
                 />
+                  </div>
               </Link>
+
             ) : null}
 
             <h2 className="mt-2 text-xl text-gray-700">{a.excerpt}</h2>
