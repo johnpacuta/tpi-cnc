@@ -33,8 +33,10 @@ export default async function Home({ params }: PageProps) {
                       {article.title}
                   </Link>
               </h1>
-              <img src={article.imgSrc} alt={article.title} style={{ border: "2px solid #e5e7eb", borderRadius: 8 }}/>
-              {article.youtubeVideoId ? (
+              <div className="flex justify-center">
+              <img src={article.imgSrc} alt={article.title} style={{ border: "2px solid #e5e7eb", borderRadius: 8 }} className="max-h-[500px] max-w-full h-auto w-auto rounded-[8px] border-2 border-gray-200"/>
+              </div>
+                  {article.youtubeVideoId ? (
                   <div className="mt-6 overflow-hidden rounded-lg border border-gray-200">
                       <div className="aspect-video w-full">
                           <iframe

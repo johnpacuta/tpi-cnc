@@ -10,6 +10,15 @@ export type NewsArticle = {
 
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
+    slug: "johnford",
+    title: "Johnford Manufacturing Solutions",
+    date: "2026-03-10",
+    imgSrc: "/images/Johnford-DMC-5axis.png",
+    excerpt: "Discover Johnford: part of the TPI CNC Vendor Lineup. Johnford’s heavy casting, poured in their own foundry, delivers unsurpassed rigidity and longevity.",
+    content:
+        "Johnford machines are used in shops that need dependable performance for large-part machining, heavy-duty cutting, and precision work. Their product range includes moving-table and fixed-table bridge mills, slant-bed lathes in multiple configurations, and vertical machining centers for mold, die, and general machining applications.",
+    youtubeVideoId: "Sa2uS6eU7n4?si=WdVsFT8f41G-q0SO"},
+  {
     slug: "excetek",
     title: "Spark Your Innovation",
     date: "2026-02-22",
