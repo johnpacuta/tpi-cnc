@@ -17,7 +17,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     excerpt: "Johnford’s heavy casting, poured in their own foundry, delivers unsurpassed rigidity and longevity.",
     content:
         "Johnford machines are used in shops that need dependable performance for large-part machining, heavy-duty cutting, and precision work. Their product range includes moving-table and fixed-table bridge mills, slant-bed lathes in multiple configurations, and vertical machining centers for mold, die, and general machining applications",
-    youtubeVideoId: "ZGoB9PkKJ_E?si=8t8VZobQInMaYEuU"},
+    youtubeVideoId: "Sa2uS6eU7n4?si=WdVsFT8f41G-q0SO"},
   {
     slug: "excetek",
     title: "Spark Your Innovation",
